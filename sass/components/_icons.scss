@@ -1,0 +1,64 @@
+.btn:has(svg) {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+  &.check {
+    background-image: icon(check, #555555);
+  }
+}
+
+.verif {
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+
+  &:after {
+    flex: 0 0 auto;
+    background-image: url(../img/i_verif.svg);
+    width: 13px;
+    height: 13px;
+    margin-left: 4px;
+    @include i-bg;
+  }
+}
+
+.klay {
+  color: #030229;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #797979;
+  }
+
+  &:before {
+    background-image: url(../img/i_klay.svg);
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    transition: 0.3s;
+    @include i-bg;
+  }
+
+  &.wklay {
+    &:before {
+      background-image: url(../img/i_wklay.svg);
+    }
+  }
+}
+
+.i {
+  &.i-self {
+    margin: 0 0 0 6px;
+  }
+}

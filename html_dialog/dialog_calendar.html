@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- PC용 CALENDAR팝업창 -->
+      <div
+        class="modal pop-calendar pc-only"
+        id="popDoubleCalendar"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="wrap-calendar">
+                <h2 class="heading">Starting</h2>
+                <input
+                  id="inputCalendarStarting"
+                  type="datetime-local"
+                  class="form-control"
+                />
+              </div>
+              <div class="wrap-calendar">
+                <h2 class="heading">Ending</h2>
+                <input
+                  id="inputCalendarEnding"
+                  type="datetime-local"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-dismiss="modal"
+                >
+                  Done
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모바일용 CALENDAR팝업창 -->
+      <div
+        class="modal pop-lg pop-calendar m-only"
+        id="popDoubleCalendar"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="wrap-calendar">
+                <h2 class="heading">Calander</h2>
+                <input
+                  id="inputCalendarStarting"
+                  type="datetime-local"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-dismiss="modal"
+                >
+                  Done
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-a-line"
+                  data-bs-dismiss="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+
+      // flatpickr 캘린더 기능
+      // 모바일에서도 UI 유지 : disableMobile: "true"
+      // 캘린더 버튼 누르기 전에도 보이기, inline: true
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+        inline: true,
+
+        // dateFormat: false,
+        // dateFormat: "Y-m-d H:i",
+      };
+      flatpickr("input[type=datetime-local]", config);
+    </script>
+  </body>
+</html>

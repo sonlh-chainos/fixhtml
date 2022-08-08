@@ -1,0 +1,23 @@
+.caution {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #ff2f00;
+    margin: 0;
+    u {
+      font-weight: 700;
+    }
+  }
+}
+
+.txt-grad {
+  background: $grad;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}

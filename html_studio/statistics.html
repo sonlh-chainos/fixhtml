@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo_studio.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <div class="menu-top">
+            <div class="wrap-thumb">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <h3>Bllizard</h3>
+              <p>Wukong was about to be heated down by the scorching summer.</p>
+              <button type="button" class="btn btn-line-light">
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="menu-btm accordion">
+            <!-- accordion01 -->
+            <!-- Opened status: .accordion-button, .accordion-collapse.collapse.show -->
+            <!-- Closed status: .accordion-button.collapsed, .accordion-collapse.collapse -->
+            <!-- Active status: .accordion-button.active -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="SEQUENCE">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_SEQUENCE"
+                  aria-expanded="true"
+                  aria-controls="collapse_SEQUENCE"
+                >
+                  Drawshop Kingdom Reverse
+                </button>
+              </h4>
+              <div
+                id="collapse_SEQUENCE"
+                class="accordion-collapse collapse show"
+                aria-labelledby="SEQUENCE"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-menu">
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width="16"
+                          height="16"
+                          x="4"
+                          y="4"
+                          stroke="#697A8D"
+                          stroke-width="1.5"
+                          rx="8"
+                        />
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12.4 16v-4.8m-1.6 0h1.6m0-2.4V8"
+                        />
+                      </svg>
+                      Information
+                    </button>
+                    <button class="btn btn-block li-item active">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12 10.333v7.5m3.333-10v10m-6.666-4.166v4.167M5.333 6.167v11.5a1 1 0 0 0 1 1h11.5"
+                        />
+                      </svg>
+                      Statistics
+                    </button>
+                    <!-- accordion-inner -->
+                    <div class="accordion-inner">
+                      <div class="accordion-item">
+                        <h4 class="accordion-header" id="heading11">
+                          <button
+                            class="accordion-button btn btn-block li-item collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse11"
+                            aria-expanded="true"
+                            aria-controls="collapse11"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="#697A8D"
+                                stroke-width="1.5"
+                                d="m16.448 10.022 1.653.92.346.2c.737.426.737 1.524 0 1.95l-4.695 2.713a3.488 3.488 0 0 1-3.504 0l-4.695-2.713c-.737-.426-.737-1.524 0-1.95l.346-.2 1.561-.92m9.348 4.095 1.502.778c.775.401.8 1.537.043 1.974l-4.601 2.66a3.488 3.488 0 0 1-3.504 0l-4.534-2.621c-.77-.445-.727-1.606.072-1.989l1.674-.802m6.292-2.268 4.695-2.713c.737-.426.737-1.525 0-1.95l-4.695-2.714a3.488 3.488 0 0 0-3.504 0L5.553 7.185c-.737.426-.737 1.525 0 1.95l4.695 2.714c1.089.63 2.415.63 3.504 0Z"
+                              />
+                            </svg>
+                            Launch Tools
+                          </button>
+                        </h4>
+                        <div
+                          id="collapse11"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="heading11"
+                        >
+                          <div class="accordion-body">
+                            <button class="btn btn-block li-item">
+                              White List NFT
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Subscription Mechanism
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Mystery Box
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion02 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading02">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse02"
+                  aria-expanded="false"
+                  aria-controls="collapse02"
+                >
+                  Aurary
+                </button>
+              </h4>
+              <div
+                id="collapse02"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading02"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+
+            <!-- accordion03 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading03">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse03"
+                  aria-expanded="false"
+                  aria-controls="collapse03"
+                >
+                  AFK Battle Idle <br />Princess BB
+                </button>
+              </h4>
+              <div
+                id="collapse03"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading03"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <!-- .container-fluid : 가로폭 100%로 브라우저 크기에 따라 확장 -->
+      <div class="container-main container-fluid">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <form>
+            <div class="wrap-title">
+              <h1>Summary</h1>
+            </div>
+            <div class="wrap-con">
+              <div class="row gx-4 li-box li-box-sum">
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>10,000</h2>
+                    <h4>Number of NFTs</h4>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>$1,356,824</h2>
+                    <h4>Transaction Volume</h4>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>$56,824</h2>
+                    <h4>Subscription Volume</h4>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>10,000</h2>
+                    <h4>NFT Transactions</h4>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>$1,356,824</h2>
+                    <h4>Mystery Box Transaction</h4>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="box-item">
+                    <h2>$56,824</h2>
+                    <h4>Royalty Income</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="wrap-title d-flex align-items-center"
+              style="margin-top: 60px"
+            >
+              <h1>Statistics</h1>
+              <h5 class="xs ms-4">2022 Aug 21 17:00 기준 (UTC +9hours)</h5>
+              <div class="wrap-btn pull-right p-0">
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-sm btn-dark-line">
+                    Download CSV
+                  </button>
+                  <div class="dropdown dropdown-sm">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdown-sm01"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Last 24 hours
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-sm01">
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          Last 24 hours
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center mb-5">
+              <div class="col-1">
+                <h5 class="text-center">From</h5>
+              </div>
+              <div class="col-3">
+                <div class="wrap-calendar">
+                  <input
+                    id="inputCalendar"
+                    type="text"
+                    class="form-control flatpickr-input"
+                    readonly="readonly"
+                  />
+                  <label for="inputCalendar" class="i-calendar">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="19"
+                      height="18"
+                      fill="none"
+                      viewBox="0 0 19 18"
+                    >
+                      <path
+                        fill="#030229"
+                        d="M14.324 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M16.031 1.406h-.965V.703c0-.388-.332-.703-.742-.703s-.742.315-.742.703v.703h-3.377V.703c0-.388-.332-.703-.742-.703S8.72.315 8.72.703v.703H5.38V.703C5.38.315 5.049 0 4.639 0s-.743.315-.743.703v.703H2.97C1.332 1.406 0 2.668 0 4.22v10.968C0 16.738 1.332 18 2.969 18h5.677c.41 0 .743-.315.743-.703 0-.389-.333-.703-.743-.703H2.97c-.819 0-1.485-.631-1.485-1.407V4.22c0-.776.666-1.407 1.485-1.407h.927v.704c0 .388.333.703.743.703s.742-.315.742-.703v-.704h3.34v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h3.377v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h.965c.819 0 1.485.631 1.485 1.407v4.008c0 .388.332.703.742.703S19 8.615 19 8.227V4.219c0-1.551-1.332-2.813-2.969-2.813Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M14.51 9.492c-2.476 0-4.49 1.908-4.49 4.254 0 2.346 2.014 4.254 4.49 4.254 2.476 0 4.49-1.908 4.49-4.254 0-2.346-2.014-4.254-4.49-4.254Zm0 7.102c-1.658 0-3.006-1.278-3.006-2.848 0-1.57 1.348-2.848 3.006-2.848 1.657 0 3.006 1.278 3.006 2.848 0 1.57-1.349 2.848-3.006 2.848Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M15.586 13.043h-.334v-.738c0-.389-.332-.703-.742-.703s-.742.314-.742.703v1.441c0 .388.332.703.742.703h1.076c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703Zm-4.49-4.957c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Zm-3.229 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .389.332.704.742.704ZM4.639 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.743.314-.743.703c0 .388.333.703.743.703Zm0 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .389.333.704.743.704Zm0 3.058c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .388.333.703.743.703Zm3.228 0c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .388.332.703.742.703Zm0-6.117c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="col-1">
+                <h5 class="text-center">
+                  ~
+                  <span class="ms-3"></span>
+                  To
+                </h5>
+              </div>
+              <div class="col-3">
+                <div class="wrap-calendar">
+                  <input
+                    id="inputCalendar"
+                    type="text"
+                    class="form-control flatpickr-input"
+                    readonly="readonly"
+                  />
+                  <label for="inputCalendar" class="i-calendar">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="19"
+                      height="18"
+                      fill="none"
+                      viewBox="0 0 19 18"
+                    >
+                      <path
+                        fill="#030229"
+                        d="M14.324 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M16.031 1.406h-.965V.703c0-.388-.332-.703-.742-.703s-.742.315-.742.703v.703h-3.377V.703c0-.388-.332-.703-.742-.703S8.72.315 8.72.703v.703H5.38V.703C5.38.315 5.049 0 4.639 0s-.743.315-.743.703v.703H2.97C1.332 1.406 0 2.668 0 4.22v10.968C0 16.738 1.332 18 2.969 18h5.677c.41 0 .743-.315.743-.703 0-.389-.333-.703-.743-.703H2.97c-.819 0-1.485-.631-1.485-1.407V4.22c0-.776.666-1.407 1.485-1.407h.927v.704c0 .388.333.703.743.703s.742-.315.742-.703v-.704h3.34v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h3.377v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h.965c.819 0 1.485.631 1.485 1.407v4.008c0 .388.332.703.742.703S19 8.615 19 8.227V4.219c0-1.551-1.332-2.813-2.969-2.813Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M14.51 9.492c-2.476 0-4.49 1.908-4.49 4.254 0 2.346 2.014 4.254 4.49 4.254 2.476 0 4.49-1.908 4.49-4.254 0-2.346-2.014-4.254-4.49-4.254Zm0 7.102c-1.658 0-3.006-1.278-3.006-2.848 0-1.57 1.348-2.848 3.006-2.848 1.657 0 3.006 1.278 3.006 2.848 0 1.57-1.349 2.848-3.006 2.848Z"
+                      ></path>
+                      <path
+                        fill="#030229"
+                        d="M15.586 13.043h-.334v-.738c0-.389-.332-.703-.742-.703s-.742.314-.742.703v1.441c0 .388.332.703.742.703h1.076c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703Zm-4.49-4.957c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Zm-3.229 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .389.332.704.742.704ZM4.639 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.743.314-.743.703c0 .388.333.703.743.703Zm0 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .389.333.704.743.704Zm0 3.058c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .388.333.703.743.703Zm3.228 0c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .388.332.703.742.703Zm0-6.117c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <p class="mt-2 fc-g fw-400">
+                  * 데이터는 한 시간 단위로 집계되며, 따라서 최근 24시간 등
+                  시간단위로 설정하는 경우 분단위는 무시되어 기간이 집계됩니다.
+                </p>
+              </div>
+            </div>
+            <div class="wrap-table">
+              <table class="table align-middle table-statistics">
+                <thead>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <div class="d-flex">
+                        <button
+                          class="btn btn-arrow-circle btn-arrow-circle-right pull-right"
+                          style="margin-right: -35px"
+                        ></button>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="wrap-top">
+                        <div class="wrap-thumb">
+                          <div class="thumb">
+                            <img src="../img/ex/ex_img_sq.png" alt="" />
+                          </div>
+                        </div>
+                        <h5 class="my-2">
+                          Drawshop Kingdom Reserve Characters
+                        </h5>
+                        <h6>0x2t7w...rit6y3</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="wrap-top">
+                        <div class="wrap-thumb">
+                          <div class="thumb">
+                            <img src="../img/ex/ex_img_sq.png" alt="" />
+                          </div>
+                        </div>
+                        <h5 class="my-2">
+                          Drawshop Kingdom Reserve Characters
+                        </h5>
+                      </div>
+                      <h6>0x2t7w...rit6y3</h6>
+                    </td>
+                    <td>
+                      <div class="wrap-top">
+                        <div class="wrap-thumb">
+                          <div class="thumb">
+                            <img src="../img/ex/ex_img_sq.png" alt="" />
+                          </div>
+                        </div>
+                        <h5 class="my-2">Drawshop Kingdom Reserve Items</h5>
+                      </div>
+                      <h6>0x2t7w...rit6y3</h6>
+                    </td>
+                    <td>
+                      <div class="wrap-top">
+                        <div class="wrap-thumb">
+                          <div class="thumb">
+                            <img src="../img/ex/ex_img_sq.png" alt="" />
+                          </div>
+                        </div>
+                        <h5 class="my-2">Lands</h5>
+                      </div>
+                      <h6>0x2t7w...rit6y3</h6>
+                    </td>
+                    <td>
+                      <div class="wrap-top">
+                        <div class="wrap-thumb">
+                          <div class="thumb">
+                            <img src="../img/ex/ex_img_sq.png" alt="" />
+                          </div>
+                        </div>
+                        <h5 class="my-2">
+                          Drawshop Kingdom Reserve Characters
+                        </h5>
+                        <h6>0x2t7w...rit6y3</h6>
+                      </div>
+                    </td>
+                    <th class="sticky sticky-right">
+                      <div class="d-flex">
+                        <button
+                          class="btn btn-arrow-circle btn-arrow-circle-left"
+                          style="margin-left: -35px"
+                        ></button>
+                        <h5 class="pull-right">Total</h5>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Subscription <br />Drop</h5>
+                    </th>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5></h5>
+                      <p></p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Transaction <br />Volume</h5>
+                    </th>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5></h5>
+                      <p></p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Number of <br />Transaction</h5>
+                    </th>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>824</h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Royalty</h5>
+                    </th>
+                    <td>
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Offers</h5>
+                    </th>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>824</h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Average <br />Price</h5>
+                    </th>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td>
+                      <h5></h5>
+                      <p></p>
+                    </td>
+                    <td>
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>356,824 Klay</h5>
+                      <p>$156,824</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Sellers</h5>
+                    </th>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>824</h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="sticky stichy-left">
+                      <h5>Buyers</h5>
+                    </th>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td>
+                      <h5>824</h5>
+                    </td>
+                    <td class="sticky sticky-right">
+                      <h5>824</h5>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript"></script>
+  </body>
+</html>

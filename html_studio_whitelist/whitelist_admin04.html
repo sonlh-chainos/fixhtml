@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo_studio.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <div class="menu-top">
+            <div class="wrap-thumb">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <h3>Bllizard</h3>
+              <p>Wukong was about to be heated down by the scorching summer.</p>
+              <button type="button" class="btn btn-line-light">
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="menu-btm accordion">
+            <!-- accordion01 -->
+            <!-- Opened status: .accordion-button, .accordion-collapse.collapse.show -->
+            <!-- Closed status: .accordion-button.collapsed, .accordion-collapse.collapse -->
+            <!-- Active status: .accordion-button.active -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="SEQUENCE">
+                <button
+                  class="accordion-button active"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_SEQUENCE"
+                  aria-expanded="true"
+                  aria-controls="collapse_SEQUENCE"
+                >
+                  Drawshop Kingdom Reverse
+                </button>
+              </h4>
+              <div
+                id="collapse_SEQUENCE"
+                class="accordion-collapse collapse show"
+                aria-labelledby="SEQUENCE"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-menu">
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width="16"
+                          height="16"
+                          x="4"
+                          y="4"
+                          stroke="#697A8D"
+                          stroke-width="1.5"
+                          rx="8"
+                        />
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12.4 16v-4.8m-1.6 0h1.6m0-2.4V8"
+                        />
+                      </svg>
+                      Information
+                    </button>
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12 10.333v7.5m3.333-10v10m-6.666-4.166v4.167M5.333 6.167v11.5a1 1 0 0 0 1 1h11.5"
+                        />
+                      </svg>
+                      Statistics
+                    </button>
+                    <!-- accordion-inner -->
+                    <div class="accordion-inner">
+                      <div class="accordion-item">
+                        <h4 class="accordion-header" id="heading11">
+                          <button
+                            class="accordion-button btn btn-block li-item active"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse11"
+                            aria-expanded="true"
+                            aria-controls="collapse11"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="#697A8D"
+                                stroke-width="1.5"
+                                d="m16.448 10.022 1.653.92.346.2c.737.426.737 1.524 0 1.95l-4.695 2.713a3.488 3.488 0 0 1-3.504 0l-4.695-2.713c-.737-.426-.737-1.524 0-1.95l.346-.2 1.561-.92m9.348 4.095 1.502.778c.775.401.8 1.537.043 1.974l-4.601 2.66a3.488 3.488 0 0 1-3.504 0l-4.534-2.621c-.77-.445-.727-1.606.072-1.989l1.674-.802m6.292-2.268 4.695-2.713c.737-.426.737-1.525 0-1.95l-4.695-2.714a3.488 3.488 0 0 0-3.504 0L5.553 7.185c-.737.426-.737 1.525 0 1.95l4.695 2.714c1.089.63 2.415.63 3.504 0Z"
+                              />
+                            </svg>
+                            Launch Tools
+                          </button>
+                        </h4>
+                        <div
+                          id="collapse11"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="heading11"
+                        >
+                          <div class="accordion-body">
+                            <button class="btn btn-block li-item active">
+                              White List NFT
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Subscription Mechanism
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Mystery Box
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion02 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading02">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse02"
+                  aria-expanded="false"
+                  aria-controls="collapse02"
+                >
+                  Aurary
+                </button>
+              </h4>
+              <div
+                id="collapse02"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading02"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+
+            <!-- accordion03 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading03">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse03"
+                  aria-expanded="false"
+                  aria-controls="collapse03"
+                >
+                  AFK Battle Idle <br />Princess BB
+                </button>
+              </h4>
+              <div
+                id="collapse03"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading03"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <div class="container-main">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <div class="wrap-title">
+            <!-- breadcrumb -->
+            <nav
+              class="wrap-breadcrumb"
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Drawshop Kingdon Reserve</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Launch Tools</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  White List NFT
+                </li>
+              </ol>
+            </nav>
+            <h1>Mint new White List NFTs</h1>
+          </div>
+          <div class="wrap-con">
+            <!-- tab navigation -->
+            <nav class="admin-nav" id="tab">
+              <div class="nav nav-tabs" role="tablist">
+                <button
+                  class="nav-link checked"
+                  id="navTab-step1"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step1"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step1"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">1</span>
+                  </span>
+                  NFT Setup
+                </button>
+                <button
+                  class="nav-link checked"
+                  id="navTab-step2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step2"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step2"
+                  aria-selected="true"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">2</span>
+                  </span>
+                  Usability Option
+                </button>
+                <button
+                  class="nav-link active"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">3</span>
+                  </span>
+                  White List Wallets
+                </button>
+                <button
+                  class="nav-link"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">4</span>
+                  </span>
+                  Deploy Contract
+                </button>
+              </div>
+            </nav>
+            <!-- tab contents -->
+            <div class="tab-content" id="tabCon">
+              <!-- tab step01 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step1"
+                role="tabpanel"
+                aria-labelledby="navTab-step1"
+              ></div>
+              <!-- tab step02 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step2"
+                role="tabpanel"
+                aria-labelledby="navTab-step2"
+              ></div>
+              <!-- tab step03: active -->
+              <div
+                class="tab-pane fade active show"
+                id="tabCon-step3"
+                role="tabpanel"
+                aria-labelledby="navTab-step3"
+              >
+                <form>
+                  <!-- form - 누적 NFT 발행 수 -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">
+                        누적 NFT 발행 수
+                        <span class="sm ms-2">1,250 NFTs</span>
+                      </h3>
+                      <!-- <h5>1,250 NFTs</h5> -->
+                      <p class="form-text">
+                        지금까지 이 컨트랙트로 발행된 White List NFT의 총
+                        합계입니다.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- form - White Lists -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">White Lists</h3>
+                      <p class="form-text">
+                        Please create white list to issue WL NFTs to.
+                      </p>
+                    </div>
+                    <div class="row row-cols-1 wrap-box-dotted">
+                      <div class="col">
+                        <div class="wrap-box line-dotted">
+                          <a href="" class="box">
+                            <!-- plus icon (lg) -->
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="44"
+                              height="44"
+                              fill="none"
+                              viewBox="0 0 44 44"
+                            >
+                              <path
+                                fill="#9FA4AE"
+                                fill-rule="evenodd"
+                                d="M22 14.4a1 1 0 0 1 1 1V21h5.6a1 1 0 1 1 0 2H23v5.6a1 1 0 1 1-2 0V23h-5.6a1 1 0 1 1 0-2H21v-5.6a1 1 0 0 1 1-1Z"
+                                clip-rule="evenodd"
+                              />
+                              <path
+                                fill="#9FA4AE"
+                                fill-rule="evenodd"
+                                d="M22 6.5C13.44 6.5 6.5 13.44 6.5 22c0 8.56 6.94 15.5 15.5 15.5 8.56 0 15.5-6.94 15.5-15.5 0-8.56-6.94-15.5-15.5-15.5ZM4.5 22c0-9.665 7.835-17.5 17.5-17.5S39.5 12.335 39.5 22 31.665 39.5 22 39.5 4.5 31.665 4.5 22Z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
+                            <h3>Add new White List</h3>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap-li mt-3">
+                      <div class="row wrap-radio li-line-radio">
+                        <div class="row-cols-1 wrap-li-column">
+                          <!-- radio button list -->
+                          <div class="form-check li-item sm">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radio00"
+                              id="radio01"
+                              checked=""
+                            />
+                            <label class="form-check-label" for="radio01">
+                              <h5 class="w-35">
+                                Drawshop Kingdom 4차 White List
+                              </h5>
+                              <h5 class="w-20">500 Wallets</h5>
+                              <div class="wrap-btn pull-right">
+                                <button class="btn" type="button">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="38"
+                                    height="38"
+                                    fill="none"
+                                    viewBox="0 0 38 38"
+                                  >
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="m22.086 11.414-1.06-1.06.048-.05c.29-.29.603-.603.904-.832.352-.269.855-.558 1.522-.558s1.17.29 1.522.558c.3.229.614.543.904.833l.049.048 1.636 1.637.035.035.05.049c.29.29.603.603.832.903.269.352.558.856.558 1.523 0 .667-.29 1.17-.558 1.522-.229.3-.543.614-.833.904l-.049.049-11.694 11.694-.04.04c-.145.147-.386.39-.692.563-.305.174-.637.255-.838.304-.02.005-.038.01-.056.013l-4.654 1.164-.036.01c-.14.034-.38.095-.6.117-.259.025-.902.042-1.43-.486-.528-.528-.511-1.171-.486-1.43.022-.22.082-.46.118-.6l.009-.036 1.455.363c-.09.361-.135.542-.035.642.1.1.28.055.641-.035l4.655-1.164c.267-.067.4-.1.519-.167.118-.067.215-.164.41-.359l11.694-11.694c.667-.667 1-1 1-1.414 0-.414-.333-.748-1-1.414l-1.672-1.672c-.666-.667-1-1-1.414-1-.414 0-.747.333-1.414 1ZM9.866 24.037c.066-.267.1-.4.167-.519.067-.118.164-.215.359-.41l11.694-11.694-1.06-1.06L9.33 22.047l-.04.04c-.147.145-.39.385-.564.691-.173.306-.254.638-.303.839l-.014.056-1.163 4.654 1.455.363 1.164-4.654Z"
+                                      clip-rule="evenodd"
+                                    />
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="m25.22 18.78-6-6 1.06-1.06 6 6-1.06 1.06Z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                                <button class="btn" type="button">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="38"
+                                    height="38"
+                                    fill="none"
+                                    viewBox="0 0 38 38"
+                                  >
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="M16.083 18.75a.75.75 0 0 1 .75.75v6.042a.75.75 0 0 1-1.5 0V19.5a.75.75 0 0 1 .75-.75Zm4.834 0a.75.75 0 0 1 .75.75v6.042a.75.75 0 0 1-1.5 0V19.5a.75.75 0 0 1 .75-.75ZM8.083 13.458a.75.75 0 0 1 .75-.75h19.334a.75.75 0 0 1 0 1.5H8.833a.75.75 0 0 1-.75-.75Z"
+                                      clip-rule="evenodd"
+                                    />
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="M11.25 16.333a.75.75 0 0 1 .75.75v10.292a2.25 2.25 0 0 0 2.25 2.25h8.5a2.25 2.25 0 0 0 2.25-2.25V17.083a.75.75 0 0 1 1.5 0v10.292a3.75 3.75 0 0 1-3.75 3.75h-8.5a3.75 3.75 0 0 1-3.75-3.75V17.083a.75.75 0 0 1 .75-.75Zm2.875-5.708a2.75 2.75 0 0 1 2.75-2.75h3.25a2.75 2.75 0 0 1 2.75 2.75v2.833a.75.75 0 0 1-.75.75h-7.25a.75.75 0 0 1-.75-.75v-2.833Zm2.75-1.25c-.69 0-1.25.56-1.25 1.25v2.083h5.75v-2.083c0-.69-.56-1.25-1.25-1.25h-3.25Z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="form-check li-item sm">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radio00"
+                              id="radio02"
+                            />
+                            <label class="form-check-label" for="radio02">
+                              <h5 class="w-35">
+                                Drawshop Kingdom 3차 White List
+                              </h5>
+                              <h5 class="w-20">500 Wallets</h5>
+                              <div class="wrap-btn pull-right">
+                                <button class="btn" type="button">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="38"
+                                    height="38"
+                                    fill="none"
+                                    viewBox="0 0 38 38"
+                                  >
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="m22.086 11.414-1.06-1.06.048-.05c.29-.29.603-.603.904-.832.352-.269.855-.558 1.522-.558s1.17.29 1.522.558c.3.229.614.543.904.833l.049.048 1.636 1.637.035.035.05.049c.29.29.603.603.832.903.269.352.558.856.558 1.523 0 .667-.29 1.17-.558 1.522-.229.3-.543.614-.833.904l-.049.049-11.694 11.694-.04.04c-.145.147-.386.39-.692.563-.305.174-.637.255-.838.304-.02.005-.038.01-.056.013l-4.654 1.164-.036.01c-.14.034-.38.095-.6.117-.259.025-.902.042-1.43-.486-.528-.528-.511-1.171-.486-1.43.022-.22.082-.46.118-.6l.009-.036 1.455.363c-.09.361-.135.542-.035.642.1.1.28.055.641-.035l4.655-1.164c.267-.067.4-.1.519-.167.118-.067.215-.164.41-.359l11.694-11.694c.667-.667 1-1 1-1.414 0-.414-.333-.748-1-1.414l-1.672-1.672c-.666-.667-1-1-1.414-1-.414 0-.747.333-1.414 1ZM9.866 24.037c.066-.267.1-.4.167-.519.067-.118.164-.215.359-.41l11.694-11.694-1.06-1.06L9.33 22.047l-.04.04c-.147.145-.39.385-.564.691-.173.306-.254.638-.303.839l-.014.056-1.163 4.654 1.455.363 1.164-4.654Z"
+                                      clip-rule="evenodd"
+                                    />
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="m25.22 18.78-6-6 1.06-1.06 6 6-1.06 1.06Z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                                <button class="btn" type="button">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="38"
+                                    height="38"
+                                    fill="none"
+                                    viewBox="0 0 38 38"
+                                  >
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="M16.083 18.75a.75.75 0 0 1 .75.75v6.042a.75.75 0 0 1-1.5 0V19.5a.75.75 0 0 1 .75-.75Zm4.834 0a.75.75 0 0 1 .75.75v6.042a.75.75 0 0 1-1.5 0V19.5a.75.75 0 0 1 .75-.75ZM8.083 13.458a.75.75 0 0 1 .75-.75h19.334a.75.75 0 0 1 0 1.5H8.833a.75.75 0 0 1-.75-.75Z"
+                                      clip-rule="evenodd"
+                                    />
+                                    <path
+                                      fill="#CCD2E3"
+                                      fill-rule="evenodd"
+                                      d="M11.25 16.333a.75.75 0 0 1 .75.75v10.292a2.25 2.25 0 0 0 2.25 2.25h8.5a2.25 2.25 0 0 0 2.25-2.25V17.083a.75.75 0 0 1 1.5 0v10.292a3.75 3.75 0 0 1-3.75 3.75h-8.5a3.75 3.75 0 0 1-3.75-3.75V17.083a.75.75 0 0 1 .75-.75Zm2.875-5.708a2.75 2.75 0 0 1 2.75-2.75h3.25a2.75 2.75 0 0 1 2.75 2.75v2.833a.75.75 0 0 1-.75.75h-7.25a.75.75 0 0 1-.75-.75v-2.833Zm2.75-1.25c-.69 0-1.25.56-1.25 1.25v2.083h5.75v-2.083c0-.69-.56-1.25-1.25-1.25h-3.25Z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="form-check li-item sm">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radio00"
+                              id="radio03"
+                            />
+                            <label class="form-check-label" for="radio03">
+                              <h5 class="w-35">
+                                Drawshop Kingdom 2차 White List
+                              </h5>
+                              <h5 class="w-20">500 Wallets</h5>
+                              <div class="wrap-time">
+                                <span class="tag active">Issued</span>
+                                <time>2022. 8.15 13:00 PST</time>
+                              </div>
+                            </label>
+                          </div>
+                          <div class="form-check li-item sm">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radio00"
+                              id="radio04"
+                            />
+                            <label class="form-check-label" for="radio04">
+                              <h5 class="w-35">
+                                Drawshop Kingdom 1차 White List
+                              </h5>
+                              <h5 class="w-20">500 Wallets</h5>
+                              <div class="wrap-time">
+                                <span class="tag active">Issued</span>
+                                <time>2022. 8.15 13:00 PST</time>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- text - caution -->
+                  <!-- <div class="caution d-flex mt-5">
+                    <img src="../img/i_caution.svg" alt="" class="i me-1" />
+                    <p class="form-text mt-0">
+                      Once you have deployed the contract, the issued NFTs
+                      <u>are not retractable!</u> Please double check all the
+                      information you submitted is appropriate.
+                    </p>
+                  </div> -->
+                </form>
+                <!-- buttons -->
+                <div class="wrap-btn wrap-btn-btm">
+                  <div class="row">
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-light">Back</button>
+                    </div>
+                    <div class="col-auto pull-right">
+                      <button type="button" class="btn btn-grad-line">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-grad">
+                        <span class="txt">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // flatpickr 캘린더 기능
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+        defaultDate: "2022-10-20",
+        // dateFormat: false,
+        // dateFormat: "Y-m-d H:i",
+      };
+      flatpickr("input[type=datetime-local]", config);
+    </script>
+  </body>
+</html>

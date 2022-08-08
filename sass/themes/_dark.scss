@@ -1,0 +1,29 @@
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-theme nav.gnb,
+nav.gnb.darken {
+  background-color: #000;
+  border-bottom: 0;
+  ul.nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+  }
+  .btn-lang {
+    color: #9ba4bb;
+    span.active {
+      color: #fff;
+    }
+  }
+  .btn-account {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0.5px solid #bdbdbd;
+  }
+  .btn-connect {
+    color: #f0f2f4;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0.5px solid #bdbdbd;
+  }
+}

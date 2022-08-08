@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo_studio.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <div class="menu-top">
+            <div class="wrap-thumb">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <h3>Bllizard</h3>
+              <p>Wukong was about to be heated down by the scorching summer.</p>
+              <button type="button" class="btn btn-line-light">
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="menu-btm accordion">
+            <!-- accordion01 -->
+            <!-- Opened status: .accordion-button, .accordion-collapse.collapse.show -->
+            <!-- Closed status: .accordion-button.collapsed, .accordion-collapse.collapse -->
+            <!-- Active status: .accordion-button.active -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="SEQUENCE">
+                <button
+                  class="accordion-button active"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_SEQUENCE"
+                  aria-expanded="true"
+                  aria-controls="collapse_SEQUENCE"
+                >
+                  Drawshop Kingdom Reverse
+                </button>
+              </h4>
+              <div
+                id="collapse_SEQUENCE"
+                class="accordion-collapse collapse show"
+                aria-labelledby="SEQUENCE"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-menu">
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width="16"
+                          height="16"
+                          x="4"
+                          y="4"
+                          stroke="#697A8D"
+                          stroke-width="1.5"
+                          rx="8"
+                        />
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12.4 16v-4.8m-1.6 0h1.6m0-2.4V8"
+                        />
+                      </svg>
+                      Information
+                    </button>
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12 10.333v7.5m3.333-10v10m-6.666-4.166v4.167M5.333 6.167v11.5a1 1 0 0 0 1 1h11.5"
+                        />
+                      </svg>
+                      Statistics
+                    </button>
+                    <!-- accordion-inner -->
+                    <div class="accordion-inner">
+                      <div class="accordion-item">
+                        <h4 class="accordion-header" id="heading11">
+                          <button
+                            class="accordion-button btn btn-block li-item active"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse11"
+                            aria-expanded="true"
+                            aria-controls="collapse11"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="#697A8D"
+                                stroke-width="1.5"
+                                d="m16.448 10.022 1.653.92.346.2c.737.426.737 1.524 0 1.95l-4.695 2.713a3.488 3.488 0 0 1-3.504 0l-4.695-2.713c-.737-.426-.737-1.524 0-1.95l.346-.2 1.561-.92m9.348 4.095 1.502.778c.775.401.8 1.537.043 1.974l-4.601 2.66a3.488 3.488 0 0 1-3.504 0l-4.534-2.621c-.77-.445-.727-1.606.072-1.989l1.674-.802m6.292-2.268 4.695-2.713c.737-.426.737-1.525 0-1.95l-4.695-2.714a3.488 3.488 0 0 0-3.504 0L5.553 7.185c-.737.426-.737 1.525 0 1.95l4.695 2.714c1.089.63 2.415.63 3.504 0Z"
+                              />
+                            </svg>
+                            Launch Tools
+                          </button>
+                        </h4>
+                        <div
+                          id="collapse11"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="heading11"
+                        >
+                          <div class="accordion-body">
+                            <button class="btn btn-block li-item">
+                              White List NFT
+                            </button>
+                            <button class="btn btn-block li-item active">
+                              Subscription Mechanism
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Mystery Box
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion02 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading02">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse02"
+                  aria-expanded="false"
+                  aria-controls="collapse02"
+                >
+                  Aurary
+                </button>
+              </h4>
+              <div
+                id="collapse02"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading02"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+
+            <!-- accordion03 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading03">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse03"
+                  aria-expanded="false"
+                  aria-controls="collapse03"
+                >
+                  AFK Battle Idle <br />Princess BB
+                </button>
+              </h4>
+              <div
+                id="collapse03"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading03"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <div class="container-main">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <div class="wrap-title">
+            <!-- breadcrumb -->
+            <nav
+              class="wrap-breadcrumb"
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Drawshop Kingdon Reserve</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Launch Tools</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Subscription Mechanism
+                </li>
+              </ol>
+            </nav>
+            <h1>Create a new subscription session</h1>
+          </div>
+          <div class="wrap-con">
+            <!-- tab navigation -->
+            <nav class="admin-nav" id="tab">
+              <div class="nav nav-tabs" role="tablist">
+                <button
+                  class="nav-link checked"
+                  id="navTab-step1"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step1"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step1"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">1</span>
+                  </span>
+                  Session Setup
+                </button>
+                <button
+                  class="nav-link checked"
+                  id="navTab-step2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step2"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step2"
+                  aria-selected="true"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">2</span>
+                  </span>
+                  Calculation Setup
+                </button>
+                <button
+                  class="nav-link active"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">3</span>
+                  </span>
+                  Date & Duration Setup
+                </button>
+                <button
+                  class="nav-link"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">4</span>
+                  </span>
+                  Deploy Contract
+                </button>
+              </div>
+            </nav>
+            <!-- tab contents -->
+            <div class="tab-content" id="tabCon">
+              <!-- tab step01 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step1"
+                role="tabpanel"
+                aria-labelledby="navTab-step1"
+              ></div>
+              <!-- tab step02 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step2"
+                role="tabpanel"
+                aria-labelledby="navTab-step2"
+              ></div>
+              <!-- tab step03: active -->
+              <div
+                class="tab-pane fade active show"
+                id="tabCon-step3"
+                role="tabpanel"
+                aria-labelledby="navTab-step3"
+              >
+                <form>
+                  <!-- form - Launch Date and Time -->
+                  <div class="wrap-form">
+                    <div class="mb-4 row">
+                      <div class="col-auto">
+                        <h3 class="form-label">Launch Date and Time</h3>
+                        <p class="form-text">
+                          Please set release Date and Time.
+                        </p>
+                      </div>
+                      <div class="col-auto pull-right">
+                        <span class="form-text sm">
+                          PST(Pacific Standard Time, UTC - 8:00)
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-3 mt-0">
+                        <div class="wrap-calendar">
+                          <input
+                            id="inputCalendar"
+                            type="text"
+                            class="form-control flatpickr-input"
+                            readonly="readonly"
+                          />
+                          <label for="inputCalendar" class="i-calendar">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="19"
+                              height="18"
+                              fill="none"
+                              viewBox="0 0 19 18"
+                            >
+                              <path
+                                fill="#030229"
+                                d="M14.324 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M16.031 1.406h-.965V.703c0-.388-.332-.703-.742-.703s-.742.315-.742.703v.703h-3.377V.703c0-.388-.332-.703-.742-.703S8.72.315 8.72.703v.703H5.38V.703C5.38.315 5.049 0 4.639 0s-.743.315-.743.703v.703H2.97C1.332 1.406 0 2.668 0 4.22v10.968C0 16.738 1.332 18 2.969 18h5.677c.41 0 .743-.315.743-.703 0-.389-.333-.703-.743-.703H2.97c-.819 0-1.485-.631-1.485-1.407V4.22c0-.776.666-1.407 1.485-1.407h.927v.704c0 .388.333.703.743.703s.742-.315.742-.703v-.704h3.34v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h3.377v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h.965c.819 0 1.485.631 1.485 1.407v4.008c0 .388.332.703.742.703S19 8.615 19 8.227V4.219c0-1.551-1.332-2.813-2.969-2.813Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M14.51 9.492c-2.476 0-4.49 1.908-4.49 4.254 0 2.346 2.014 4.254 4.49 4.254 2.476 0 4.49-1.908 4.49-4.254 0-2.346-2.014-4.254-4.49-4.254Zm0 7.102c-1.658 0-3.006-1.278-3.006-2.848 0-1.57 1.348-2.848 3.006-2.848 1.657 0 3.006 1.278 3.006 2.848 0 1.57-1.349 2.848-3.006 2.848Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M15.586 13.043h-.334v-.738c0-.389-.332-.703-.742-.703s-.742.314-.742.703v1.441c0 .388.332.703.742.703h1.076c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703Zm-4.49-4.957c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Zm-3.229 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .389.332.704.742.704ZM4.639 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.743.314-.743.703c0 .388.333.703.743.703Zm0 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .389.333.704.743.704Zm0 3.058c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .388.333.703.743.703Zm3.228 0c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .388.332.703.742.703Zm0-6.117c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                              ></path>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- form - Subscription Duration Time -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <div class="col-auto">
+                        <h3 class="form-label">Subscription Duration Time</h3>
+                        <p class="form-text">
+                          청약 메카니즘의 한 Session은 Prepration, Subscription,
+                          Calculation, istribution의 단계를 거쳐 진행되며, 한
+                          세션의 총 소요시간은 최소 12시간에서 최대 72시간까지
+                          설정할 수 있습니다.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- 즉시발급 : 이번스펙에서 제외 -->
+                    <!-- <div class="row wrap-box-light mt-4">
+                      <div class="col-auto wrap-title">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="23"
+                          height="23"
+                          fill="none"
+                          viewBox="0 0 23 23"
+                        >
+                          <g clip-path="url(#a)">
+                            <path
+                              fill="#464F60"
+                              stroke="#464F60"
+                              stroke-miterlimit="10"
+                              stroke-width=".5"
+                              d="M12.908 22.758h-2.815c-.657 0-1.407-.563-1.407-1.688V19.1c0-.939-.47-1.783-1.22-2.44-1.689-1.314-2.533-3.19-2.533-5.254.094-3.565 3.002-6.38 6.473-6.473 1.783 0 3.472.656 4.692 1.876 1.219 1.22 1.97 2.908 1.97 4.691 0 1.97-.845 3.847-2.44 5.066-.844.657-1.313 1.689-1.313 2.627v2.158c0 .75-.657 1.407-1.407 1.407ZM11.5 5.871c-3.002 0-5.535 2.533-5.629 5.535 0 1.783.75 3.472 2.158 4.504 1.032.844 1.595 1.97 1.595 3.19v1.97c0 .187 0 .75.47.75h2.814c.281 0 .47-.188.47-.469v-2.158c0-1.22.656-2.533 1.688-3.377 1.313-1.033 2.064-2.627 2.064-4.316 0-1.5-.563-2.908-1.689-4.034-1.032-1.032-2.44-1.595-3.94-1.595Z"
+                            />
+                            <path
+                              fill="#464F60"
+                              stroke="#464F60"
+                              stroke-miterlimit="10"
+                              stroke-width=".5"
+                              d="M13.845 19.943h-4.69c-.282 0-.47-.187-.47-.469 0-.281.188-.47.47-.47h4.69c.282 0 .47.189.47.47 0 .282-.188.47-.47.47ZM11.5 3.057c-.281 0-.47-.188-.47-.47V.711c0-.281.189-.469.47-.469.281 0 .47.188.47.47v1.875c0 .282-.189.47-.47.47Zm6.285 2.626c-.093 0-.281 0-.375-.093a.453.453 0 0 1 0-.657l1.314-1.314a.453.453 0 0 1 .657 0 .453.453 0 0 1 0 .657L18.067 5.59s-.188.093-.282.093Zm4.505 6.287h-1.877c-.282 0-.47-.188-.47-.47 0-.281.188-.469.47-.469h1.876c.281 0 .47.188.47.47 0 .28-.189.469-.47.469Zm-3.19 7.599c-.095 0-.282 0-.376-.094l-1.314-1.314a.453.453 0 0 1 0-.656.453.453 0 0 1 .657 0l1.314 1.314a.453.453 0 0 1 0 .656c0 .094-.094.094-.282.094Zm-15.2 0c-.093 0-.28 0-.374-.094a.453.453 0 0 1 0-.656l1.313-1.314a.453.453 0 0 1 .657 0 .453.453 0 0 1 0 .657l-1.314 1.313c-.093.094-.188.094-.281.094ZM2.587 11.97H.711c-.282 0-.47-.188-.47-.47 0-.281.188-.469.47-.469h1.876c.281 0 .47.188.47.47 0 .28-.189.469-.47.469Zm2.627-6.287c-.093 0-.281 0-.375-.094L3.526 4.182a.453.453 0 0 1 0-.657.453.453 0 0 1 .656 0L5.496 4.84a.453.453 0 0 1 0 .657c-.094.093-.188.187-.282.187Zm10.038 6.286c-.28 0-.469-.188-.469-.47 0-1.782-1.5-3.283-3.284-3.283-.28 0-.469-.188-.469-.47 0-.28.188-.469.47-.469a4.204 4.204 0 0 1 4.22 4.223c0 .282-.188.47-.469.47Z"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="a">
+                              <path fill="#fff" d="M0 0h23v23H0z" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <h5>Subscription시 즉시발급</h5>
+                      </div>
+                      <div class="col-auto pull-right">
+                        <div class="form-check form-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id="flexSwitchCheckDefault1"
+                            checked
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <p>
+                          청약시 즉시발급 옵션은 White List NFT와 Mystery Box의
+                          발행량이 1:1로 동일한 경우, 별도의 Winner Selection
+                          Algorithm 절차를 거치지 않고 청약 즉시 랜덤하게
+                          미스터리박스를 발행하는 기능입니다. 이 경우,
+                          청약기간이 Immediate로 설정됩니다.
+                        </p>
+                      </div>
+                    </div> -->
+                    <div class="row wrap-duration mt-5">
+                      <div class="li-line-group">
+                        <div class="row li-item">
+                          <div class="col-3 td td-title">
+                            <span class="num circle">1</span>
+                            <h3>Subscription</h3>
+                          </div>
+                          <div class="col-5 td td-con">
+                            <div
+                              class="dropdown dropdown-block"
+                              style="max-width: 254px"
+                            >
+                              <button
+                                class="btn dropdown-toggle"
+                                type="button"
+                                id="dropdown01"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                72 Hours (3 Days)
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdown01"
+                              >
+                                <li>
+                                  <button class="dropdown-item" type="button">
+                                    24 Hours (1 Day)
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item" type="button">
+                                    48 Hours (2 Days)
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item" type="button">
+                                    72 Hours (3 Days)
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item" type="button">
+                                    Immediate
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-4 td td-time">
+                            <div class="line">
+                              <div class="wrap-label">
+                                <label for="">Start</label>
+                                <span>:</span>
+                              </div>
+                              <div class="wrap-time">
+                                <time>2022. 8. 15.</time>
+                                <time>00 : 00 : 00 PST</time>
+                              </div>
+                            </div>
+                            <div class="line">
+                              <div class="wrap-label">
+                                <label for="">End</label>
+                                <span>:</span>
+                              </div>
+                              <div class="wrap-time">
+                                <time>2022. 8. 15.</time>
+                                <time>00 : 00 : 00 PST</time>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row li-item" style="padding: 36px 0">
+                          <div class="col-3 td td-title">
+                            <span class="num circle">2</span>
+                            <h3>Calculation</h3>
+                          </div>
+                          <div class="col-5 td td-con">3 Hours</div>
+                          <div class="col-4 td td-time">
+                            <button class="btn btn-grad w-75">
+                              <span class="txt">Start Calculation</span>
+                            </button>
+                          </div>
+
+                          <!-- <div class="col-3 td"></div> -->
+
+                          <div
+                            class="col-9 offset-3 caution d-flex"
+                            style="margin-top: 36px"
+                          >
+                            <img
+                              src="../img/i_caution.svg"
+                              alt=""
+                              class="i me-1"
+                            />
+                            <p class="form-text mt-0">
+                              청약이 종료되면, “Start Calculation”버튼이
+                              활성화됩니다. 청약공모종료 후 24시간 내에 관리자
+                              지갑으로 로그인하신 후 이 버튼을 눌러 청약의
+                              결과를 계산하여야 청약참여자가 Claim을 할 수 있는
+                              단계로 진행됩니다.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row li-item">
+                          <div class="col-3 td td-title">
+                            <span class="num circle">3</span>
+                            <h3>Distribution</h3>
+                          </div>
+                          <div class="col-5 td td-con">n/a</div>
+                          <div class="col-4 td td-time">
+                            <div class="line">
+                              <div class="wrap-label">
+                                <label for="">Start</label>
+                                <span>:</span>
+                              </div>
+                              <div class="wrap-time">
+                                <time>2022. 8. 15.</time>
+                                <time>00 : 00 : 00 PST</time>
+                              </div>
+                            </div>
+                            <div class="line">
+                              <div class="wrap-label">
+                                <label for="">End</label>
+                                <span>:</span>
+                              </div>
+                              <div class="wrap-time">
+                                발급 완료시 (보통 3시간 이내에 완료)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row li-item">
+                          <div class="col-3">
+                            <h4 class="fw-600">Processing Time</h4>
+                          </div>
+                          <div class="col-5">
+                            <h4 class="fw-500">
+                              75 Hours (3 Days and 3 Hours)
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- form - Klaybay Fee -->
+                  <!-- Klaybay Admin 로그인시에만 보여짐! -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">Klaybay Fee</h3>
+                      <p class="form-text">
+                        This is the fee that subscriber will pay to Klaybay
+                        platform. Game Administrator account cannot modify the
+                        fee rate.
+                      </p>
+                    </div>
+
+                    <div class="input-group" style="max-width: 254px">
+                      <input
+                        type="number"
+                        class="form-control before-text"
+                        aria-label=""
+                      />
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </form>
+                <!-- buttons -->
+                <div class="wrap-btn wrap-btn-btm">
+                  <div class="row">
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-light">Back</button>
+                    </div>
+                    <div class="col-auto pull-right">
+                      <button type="button" class="btn btn-grad-line">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-grad" disabled>
+                        <span class="txt">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // flatpickr 캘린더 기능
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+        defaultDate: "2022-10-20",
+        // dateFormat: false,
+        // dateFormat: "Y-m-d H:i",
+      };
+      flatpickr("input[type=datetime-local]", config);
+    </script>
+  </body>
+</html>

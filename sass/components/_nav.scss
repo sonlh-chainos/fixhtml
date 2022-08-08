@@ -1,0 +1,84 @@
+// nav
+nav {
+  border-bottom: 0.5px solid #d5d5d5;
+  margin-bottom: 32px;
+
+  .nav-tabs {
+    height: 53px;
+    padding-top: 3px;
+    border: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    button.nav-link {
+      font-weight: 500;
+      font-size: 16px;
+      color: #030229;
+      margin-right: 15px;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-bottom: 3px solid transparent;
+      display: flex;
+      align-items: center;
+
+      &.active {
+        background: transparent;
+        color: #fc6825;
+        border: 0;
+        border-bottom: 3px solid #fc6825;
+      }
+    }
+    &.border-grad {
+      button.nav-link.active {
+        border-image: $grad;
+        border-image-slice: 1;
+      }
+    }
+  }
+  .badge {
+    font-weight: 500;
+    font-size: 10px;
+    color: #5a6376;
+    background: #e9edf5;
+    border-radius: 13px;
+    margin-left: 6px;
+    margin-right: -4px;
+    height: 16px;
+    &.active {
+      color: #ffffff;
+      background: #fc6825;
+    }
+  }
+}
+
+.nav-tabs .nav-link {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  nav:not(.admin-nav) {
+    margin-bottom: 20px;
+
+    .nav-tabs {
+      flex-wrap: nowrap;
+      padding: 2px 20px;
+      height: 40px;
+      justify-content: space-around;
+
+      button.nav-link {
+        font-size: 15px;
+        height: 40px;
+        margin: 0;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

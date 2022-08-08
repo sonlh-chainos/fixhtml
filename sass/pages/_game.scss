@@ -1,0 +1,364 @@
+// page: game
+.game-top {
+  padding-bottom: 26px;
+  border-bottom: 0.5px solid #d5d5d5;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  .wrap-btn .btn {
+    border-color: #9c9c9c;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    margin-left: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.btn-tw img {
+      height: 21px;
+    }
+
+    &.btn-disc img {
+      height: 21px;
+    }
+
+    &.btn-glob img {
+      height: 24px;
+    }
+  }
+
+  .jumbotron {
+    height: 398px;
+    &.sm {
+      height: 160px;
+    }
+  }
+
+  .game-intro {
+    margin-top: 27px;
+    padding-left: 53px;
+
+    .wrap-top {
+      height: auto;
+      display: flex;
+
+      .top {
+        height: auto;
+        display: flex;
+        align-items: start;
+        flex: 1 1 auto;
+        align-items: stretch;
+
+        .wrap-link {
+          flex-direction: column;
+          display: flex;
+          align-items: start;
+          justify-content: end;
+          margin-right: auto;
+        }
+      }
+
+      .btn {
+        border-radius: 16px;
+
+        &:disabled {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .wrap-btm {
+      display: flex;
+      align-items: start;
+
+      .intro {
+        margin-top: 27px;
+        // max-width: 540px;
+        margin-right: auto;
+        align-self: flex-start;
+
+        > p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        &.collapse {
+          display: block;
+
+          > .markdown {
+            @include t-ell2;
+          }
+        }
+
+        &:not(.collapse) {
+          .btn-more .i {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      .wrap-btn-more {
+        display: flex;
+        align-items: end;
+
+        .btn-more {
+          padding-bottom: 10px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1;
+          height: auto;
+          padding: 0;
+          color: #030229;
+
+          .i {
+            margin-left: 10px;
+            width: 8px;
+          }
+        }
+      }
+    }
+
+    .wrap-box {
+      display: inline-flex;
+      padding: 24px 44px;
+      background: #f7f9fc;
+      border-radius: 24px;
+      margin-left: 60px;
+      width: 50%;
+      max-width: 550px;
+      gap: 20px;
+      flex: 0 0 auto;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h5 {
+        font-size: 16px;
+        margin-bottom: 6px;
+        flex-wrap: nowrap;
+      }
+
+      h6 {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+    }
+
+    .link-thumb {
+      margin-top: -60px;
+
+      .thumb {
+        width: 136px;
+        height: 136px;
+        border: 1.2px solid #f0f2f4;
+        border-radius: 12px;
+        margin-right: 29px;
+        background: #fff;
+      }
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      color: #2b2b2b;
+      margin: 0;
+
+      &.verif:after {
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 26px;
+      color: #030229;
+      margin: 8px 0 0;
+    }
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  .game-top {
+    padding: 20px;
+
+    .jumbotron {
+      height: 150px;
+      border-radius: 14px;
+
+      &.sm {
+        height: 90px;
+      }
+
+      video {
+        border-radius: 14px;
+      }
+    }
+
+    .game-intro {
+      padding-left: 0;
+      margin-top: -20px;
+
+      .wrap-box {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin-left: 0;
+        padding: 18px 22px 22px;
+        flex-wrap: wrap;
+        gap: 22px;
+
+        > div {
+          flex: 1 0 auto;
+          width: 45%;
+          flex-direction: column-reverse;
+
+          h6 {
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: #464f60;
+          }
+
+          h5 {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .wrap-btm {
+        flex-direction: column;
+
+        .intro {
+          position: relative;
+          margin-top: 10px;
+          max-width: none;
+          padding-left: 14px;
+          -webkit-line-clamp: unset;
+
+          > p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          &:not(.collapse) {
+            .wrap-btn-more {
+              height: 53px;
+              align-items: center;
+            }
+          }
+
+          &.collapse {
+            max-height: 100px;
+            overflow: hidden;
+
+            > p {
+              overflow: visible;
+              -webkit-line-clamp: unset;
+            }
+
+            .wrap-btn-more {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+
+        .wrap-btn-more {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) -59.21%,
+            #ffffff 40.79%
+          );
+          height: 63px;
+          text-align: center;
+          display: flex;
+          align-items: end;
+
+          .btn-more {
+            padding-bottom: 10px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 16px;
+            color: #464f60;
+
+            .i {
+              margin-left: 10px;
+              width: 8px;
+            }
+          }
+        }
+      }
+
+      .wrap-top {
+        position: relative;
+        padding-left: 14px;
+        flex-direction: column;
+        align-items: start;
+
+        .top {
+          margin-top: 10px;
+        }
+
+        .wrap-btn {
+          position: absolute;
+          right: 0;
+          top: 35px;
+
+          .btn {
+            width: 37px;
+            height: 37px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 9.8px;
+            border: 0.6px solid #ccd2e3;
+
+            &.btn-tw img {
+              height: 15px;
+            }
+            &.btn-disc img {
+              height: 15px;
+            }
+            &.btn-glob img {
+              height: 17px;
+            }
+          }
+        }
+      }
+
+      .link-thumb {
+        margin-top: 0;
+
+        .thumb {
+          margin-right: 12px;
+          width: 72px;
+          height: 72px;
+        }
+      }
+
+      h3 {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      h2 {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0;
+      }
+    }
+  }
+}

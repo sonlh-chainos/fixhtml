@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 모바일 간격조정을 위해 .pop-step-convert 클래스 추가 -->
+      <div
+        class="modal pop-step pop-lg pop-step-convert"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Make your offer</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="wrap-step">
+                <!-- active: 완료/활성화된 스탭 -->
+                <div class="step active">
+                  <div class="bg-step"></div>
+                  <span>1</span>
+                  <!-- 현재스탭을 나타내는 원형이미지: 현 스탭에 추가 -->
+                  <img src="../img/circle_a.svg" alt="" class="ing" />
+                </div>
+                <div class="step">
+                  <div class="bg-step"></div>
+                  <span>2</span>
+                </div>
+                <div class="step">
+                  <div class="bg-step"></div>
+                  <span>3</span>
+                </div>
+              </div>
+              <span class="txt-a step">STEP 1 / 3</span>
+              <h3 class="sub">Convert your KLAY</h3>
+              <p class="">
+                For compatibility, please convert your KLAY into wrapped KLAY
+                (WKLAY).
+              </p>
+              <div class="wrap-form">
+                <h3 class="title">
+                  From
+                  <span class="balance pull-right"
+                    >Your Balance : 10.0 KLAY</span
+                  >
+                </h3>
+                <div class="form wrap-price">
+                  <label for="" class="klay">KLAY</label>
+                  <input
+                    type="number"
+                    class="form-control price"
+                    placeholder="Amount"
+                    value="3"
+                  />
+                  <span class="unit">$1.00</span>
+                </div>
+              </div>
+              <div class="wrap-form">
+                <h3 class="title">
+                  To
+                  <!-- result 값 불러오도록 영역 추가 -->
+                  <span class="balance pull-right"
+                    >Your Balance : 2.0 WKLAY (Result : 5.0 WKLAY)</span
+                  >
+                </h3>
+                <div class="form wrap-price">
+                  <label for="" class="klay wklay">WKLAY</label>
+                  <input
+                    type="number"
+                    class="form-control price"
+                    placeholder="Amount"
+                    value="3"
+                  />
+                  <span class="unit">$1.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn mt-lg">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target="#popOffer012"
+                  data-bs-toggle="modal"
+                >
+                  Convert
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+    </script>
+  </body>
+</html>

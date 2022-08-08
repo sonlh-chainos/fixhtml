@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 팝업창 기능을 위한 버튼 -->
+      <!-- nft_main_pay.html / 버튼(#btnBuy)을 누르면 팝업창이 열림 -->
+      <!-- nft_main_offer.html / 버튼(#btnOffer)을 누르면 팝업창이 열림 -->
+
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb fixed-top pc-only">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb 메뉴 (Mo) -->
+      <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home_main.html">
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+          </a>
+          <div class="pull-right">
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_wallet.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-wallet"
+                id="gnbWallet"
+              >
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_klay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_wklay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                    Disconnect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_menu.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-gnbmenu"
+                id="gnbMenu"
+              >
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Game</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Profile</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn btn-lang">EN <span> | KR</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 메인 영역 -->
+      <main class="nft-main">
+        <!-- 상단 -->
+        <section id="nftTop" class="nft-top">
+          <div class="wrap-thumb">
+            <div class="thumb">
+              <img src="../img/ex/ex_game_top.jpg" alt="" />
+            </div>
+          </div>
+          <div class="wrap-con">
+            <div class="nft-intro">
+              <div class="top">
+                <a href="" class="btn btn-id">
+                  <div class="thumb"><img src="../img/ex/ex_thumb1.jpg" /></div>
+                  Neowiz
+                </a>
+                <h2>NGG KOR명</h2>
+                <h5>Owned by <a href="" class="link link-a">7A8AA6</a></h5>
+              </div>
+              <div class="price">
+                <h6>Top bid -- Reserve price not met.</h6>
+                <!-- klay 아이콘 추가: .klay 클래스 부여 -->
+                <h3 class="klay">687 KLAY<span>($ 698.95)</span></h3>
+              </div>
+              <div class="box">
+                <h6 class="txt-a">Sale ends June 25, 2022 at 1:15am KST</h6>
+                <div class="date">
+                  <h6>01<span>Days</span></h6>
+                  <h6>01<span>Hours</span></h6>
+                  <h6>01<span>Mins</span></h6>
+                  <h6>01<span>Secs</span></h6>
+                </div>
+              </div>
+              <div class="wrap-btn-lg">
+                <button id="btnBid" class="btn btn-a btn-bid" type="button">
+                  <img class="i" src="../img/i_wallet_f.svg" />PLACE BID
+                </button>
+              </div>
+            </div>
+            <!-- 버튼 변경: exchange 버튼, share 버튼 dropdown -->
+            <div
+              class="wrap-btn btn-group dropdown wrap-btn-share"
+              role="group"
+              aria-label=""
+            >
+              <button type="button" class="btn btn-refresh">
+                <img class="i" src="../img/i_refresh.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-exchange">
+                <img class="i" src="../img/i_exchange.svg" alt="" />
+              </button>
+              <button
+                class="btn btn-share dropdown-toggle dropdown-toggle-split"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img class="i" src="../img/i_share.svg" alt="" />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="../img/i_copy_xs.svg" alt="" />
+                    Copy Link
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="../img/i_fb_xs.svg" alt="" />
+                    Share on Facebook
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="../img/i_tw_xs.svg" alt="" />
+                    Share to Twitter
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- 접힘/펼침 메뉴 -->
+        <div class="wrap-top">
+          <div class="wrap-left">
+            <div class="accordion">
+              <!-- 펼침상태(box Open default): .accordion-button에 "collapsed" 클래스 제외, .accordion-collapse에 "show" 클래스 추가 -->
+              <!-- 접힘상태(box Closed default): .accordion-button에 "collapsed" 클래스 추가, .accordion-collapse에 "show" 클래스 제외 -->
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingDescription">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseDescription"
+                    aria-expanded="true"
+                    aria-controls="collapseDescription"
+                  >
+                    Description
+                  </button>
+                </h4>
+                <div
+                  id="collapseDescription"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingDescription"
+                >
+                  <div class="accordion-body">
+                    <p class="intro">
+                      BLorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingProperties">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseProperties"
+                    aria-expanded="true"
+                    aria-controls="collapseProperties"
+                  >
+                    Properties
+                  </button>
+                </h4>
+                <div
+                  id="collapseProperties"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingProperties"
+                >
+                  <div class="accordion-body">
+                    <div class="row row-cols-2 wrap-box" role="list">
+                      <div class="col" role="listitem">
+                        <a href="" class="box">
+                          <h6 class="cate">BACKGROUND</h6>
+                          <h5 class="name">Black</h5>
+                          <h6 class="ratio">11.02%</h6>
+                        </a>
+                      </div>
+                      <div class="col" role="listitem">
+                        <a href="" class="box">
+                          <h6 class="cate">WEAPON</h6>
+                          <h5 class="name">Light Leather Armour Armour</h5>
+                          <h6 class="ratio">20.54%</h6>
+                        </a>
+                      </div>
+                      <div class="col" role="listitem">
+                        <a href="" class="box">
+                          <h6 class="cate">BACKGROUND</h6>
+                          <h5 class="name">Black</h5>
+                          <h6 class="ratio">11.02%</h6>
+                        </a>
+                      </div>
+                      <div class="col" role="listitem">
+                        <a href="" class="box">
+                          <h6 class="cate">WEAPON</h6>
+                          <h5 class="name">Light Leather Armour Armour</h5>
+                          <h6 class="ratio">20.54%</h6>
+                        </a>
+                      </div>
+                      <div class="col" role="listitem">
+                        <a href="" class="box">
+                          <h6 class="cate">BACKGROUND</h6>
+                          <h5 class="name">Black</h5>
+                          <h6 class="ratio">11.02%</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingCollection">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseCollection"
+                    aria-expanded="false"
+                    aria-controls="collapseCollection"
+                  >
+                    About Collection
+                  </button>
+                </h4>
+                <div
+                  id="collapseCollection"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingCollection"
+                >
+                  <div class="accordion-body">
+                    <div class="wrap-about">
+                      <div class="top">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-title">
+                          <h3 class="title">Bravenine</h3>
+                          <h4 class="sub">
+                            Created by <a href="" class="link link-a">Neowiz</a>
+                          </h4>
+                        </div>
+                        <div class="wrap-btn btn-group">
+                          <button type="button" class="btn btn-tw">
+                            <img class="i" src="../img/i_tw.svg" alt="" />
+                          </button>
+                          <button type="button" class="btn btn-disc">
+                            <img class="i" src="../img/i_disc.svg" alt="" />
+                          </button>
+                          <button type="button" class="btn btn-glob">
+                            <img class="i" src="../img/i_glob.svg" alt="" />
+                          </button>
+                        </div>
+                      </div>
+                      <p>
+                        Brave Nine is a strategic turn-based battle game
+                        featuring over 300 unique Mercenaries presented in
+                        stunning artwork. Create your own unique formations,
+                        challenge other Captains and engage in decisive combat
+                        in tons of modes. <br /><br />Build your team, create
+                        your own formations, engage in battle and earn!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingDetails">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseDetails"
+                    aria-expanded="false"
+                    aria-controls="collapseDetails"
+                  >
+                    Details
+                  </button>
+                </h4>
+                <div
+                  id="collapseDetails"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingDetails"
+                >
+                  <div class="accordion-body">
+                    <div class="f-table table-detail">
+                      <div class="tr justify-content-between">
+                        <div class="td">Contract Address</div>
+                        <div class="td">
+                          <a href="" class="link link-a">0x46db...6488</a>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">Token ID</div>
+                        <div class="td">
+                          <a href="" class="link link-a">7456</a>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">Token Standard</div>
+                        <div class="td">TERC-721</div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">Blockchain</div>
+                        <div class="td">Klaytn</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-right">
+            <div class="accordion">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingListings">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseListings"
+                    aria-expanded="false"
+                    aria-controls="collapseListings"
+                  >
+                    Listings
+                  </button>
+                </h4>
+                <div
+                  id="collapseListings"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingListings"
+                >
+                  <div class="accordion-body">
+                    <div class="f-table table-listing">
+                      <div class="tr">
+                        <div class="th">From</div>
+                        <div class="th">Price</div>
+                        <div class="th">Quantity</div>
+                        <div class="th">Date</div>
+                        <div class="th">Status</div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">
+                          <a href="" class="link link-a">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                            </div>
+                            <div class="t-ell">0xd2...62826282</div>
+                          </a>
+                        </div>
+                        <div class="td">
+                          <div class="klay">
+                            687 &nbsp;<span>($ 698.95)</span>
+                          </div>
+                        </div>
+                        <div class="td">1</div>
+                        <div class="td">10 hours ago</div>
+                        <div class="td">
+                          <button type="button" class="btn btn-a-line btn-buy">
+                            buy
+                          </button>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">
+                          <a href="" class="link link-a">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                            </div>
+                            <div class="t-ell">0xd2...62826282</div>
+                          </a>
+                        </div>
+                        <div class="td">
+                          <div class="klay">
+                            687 &nbsp;<span>($ 698.95)</span>
+                          </div>
+                        </div>
+                        <div class="td">1</div>
+                        <div class="td">10 hours ago</div>
+                        <div class="td">
+                          <button type="button" class="btn btn-a-line btn-buy">
+                            buy
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOffers">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOffers"
+                    aria-expanded="false"
+                    aria-controls="collapseOffers"
+                  >
+                    Offers
+                  </button>
+                </h4>
+                <div
+                  id="collapseOffers"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOffers"
+                >
+                  <div class="accordion-body">
+                    <!-- Offers 표에 행 4/5개 상관없이 wide 클래스 없이 가로폭 잡도록 수정 > .wide 클래스 부여 안해줘도 됩니다. (영향 없음) -->
+                    <div class="f-table table-offer">
+                      <div class="tr">
+                        <div class="th">From</div>
+                        <div class="th">Price</div>
+                        <div class="th">Floor Diff.</div>
+                        <div class="th">Expiration</div>
+                        <div class="th">Status</div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">
+                          <a href="" class="link link-a">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                            </div>
+                            <div class="t-ell">F76CD9</div>
+                          </a>
+                        </div>
+                        <div class="td">
+                          <div class="klay">
+                            3,500&nbsp;<span>($ 3,800.95)</span>
+                          </div>
+                        </div>
+                        <div class="td">
+                          <span
+                            data-bs-toggle="tooltip"
+                            data-bs-html="true"
+                            title="tooltip"
+                            >19% <br />below</span
+                          >
+                        </div>
+                        <div class="td">14 hours</div>
+                        <div class="td">
+                          <button
+                            type="button"
+                            class="btn btn-a-line btn-cancel"
+                          >
+                            cancel
+                          </button>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td">
+                          <a href="" class="link link-a">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                            </div>
+                            <div class="t-ell">chunosys</div>
+                          </a>
+                        </div>
+                        <div class="td">
+                          <div class="klay">
+                            2,500&nbsp;<span>($ 2,600.95)</span>
+                          </div>
+                        </div>
+                        <div class="td">
+                          <span
+                            data-bs-toggle="tooltip"
+                            data-bs-html="true"
+                            title="tooltip"
+                            >95% <br />below</span
+                          >
+                        </div>
+                        <div class="td">1 month</div>
+                        <div class="td">
+                          <button
+                            type="button"
+                            class="btn btn-a-line btn-cancel"
+                          >
+                            cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-btm">
+          <div class="accordion">
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="headingActivity">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseActivity"
+                  aria-expanded="false"
+                  aria-controls="collapseActivity"
+                >
+                  Item Activity
+                </button>
+              </h4>
+              <div
+                id="collapseActivity"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingActivity"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-btn-filter">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn dropdown-toggle d-inline-flex align-items-center btn-filter"
+                        type="button"
+                        id="dropdownSort"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="../img/i_filter_w.svg" class="i" />Filter
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="dropdownMenuButtonSM"
+                      >
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Sales
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Transfers
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Bids
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Listings
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="tag">
+                      Sales
+                      <button role="button" class="btn btn-x">
+                        <img src="../img/i_x.svg" class="i" alt="" />
+                      </button>
+                    </span>
+                    <span class="tag">
+                      Transfers
+                      <button role="button" class="btn btn-x">
+                        <img src="../img/i_x.svg" class="i" alt="" />
+                      </button>
+                    </span>
+                    <button role="button" class="btn link link-a">
+                      Clear All
+                    </button>
+                  </div>
+                  <div class="f-table table-activity">
+                    <div class="tr">
+                      <div class="th">Event</div>
+                      <div class="th">Price</div>
+                      <div class="th">From</div>
+                      <div class="th">To</div>
+                      <div class="th">Transaction Time</div>
+                    </div>
+                    <div class="tr">
+                      <div class="td">
+                        <img src="../img/i_transf.svg" class="i i-transfer" />
+                        Transfer
+                      </div>
+                      <div class="td"></div>
+                      <div class="td">
+                        <a href="" class="link link-a">2DA72C</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a">You</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a"
+                          >14 hours ago
+                          <img
+                            src="../img/i_link_a.svg"
+                            alt=""
+                            class="i i-link"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tr">
+                      <div class="td">
+                        <img src="../img/i_sale.svg" class="i i-sale" />
+                        Sale
+                      </div>
+                      <div class="td">
+                        <div class="klay">1,596</div>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a">minsmusk</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a">83095C</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a"
+                          >15 days ago
+                          <img
+                            src="../img/i_link_a.svg"
+                            alt=""
+                            class="i i-link"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tr">
+                      <div class="td">
+                        <img src="../img/i_minted.svg" class="i i-minted" />
+                        Minted
+                      </div>
+                      <div class="td"></div>
+                      <div class="td">
+                        <a href="" class="link link-a">2DA72C</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a">You</a>
+                      </div>
+                      <div class="td">
+                        <a href="" class="link link-a"
+                          >14 hours ago
+                          <img
+                            src="../img/i_link_a.svg"
+                            alt=""
+                            class="i i-link"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="wrap-left">
+          <a href="">
+            <img src="../img/logo.svg" alt="logo" class="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_fb.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_disc.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+
+      // tooltip
+      let tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
+</html>

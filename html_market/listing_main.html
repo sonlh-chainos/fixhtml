@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 캘린더 기능: Flatpickr link, script 태그 추가 -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb fixed-top pc-only">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb 메뉴 (Mo) -->
+      <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home_main.html">
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+          </a>
+          <div class="pull-right">
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_wallet.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-wallet"
+                id="gnbWallet"
+              >
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_klay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_wklay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                    Disconnect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_menu.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-gnbmenu"
+                id="gnbMenu"
+              >
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Game</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Profile</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn btn-lang">EN <span> | KR</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 메인 영역 -->
+      <main class="listing-main">
+        <!-- 상단 -->
+        <section class="listing-top">
+          <a href="" class="link item">
+            <div class="thumb">
+              <img src="../img/ex/ex_game_top.jpg" alt="" />
+            </div>
+            <div class="txt">
+              <h6>Bravenine</h6>
+              <h5>NGG KOR명</h5>
+            </div>
+          </a>
+        </section>
+
+        <div class="listing-con">
+          <h2>List item for sale</h2>
+          <div class="wrap-con">
+            <div class="thumb thumb-contain">
+              <img src="../img/ex/ex_img_s.jpeg" alt="" />
+            </div>
+            <div class="wrap-txt">
+              <div class="wrap-toggle">
+                <label class="toggle-innertxt" onclick="">
+                  <input type="checkbox" />
+                  <span>
+                    <span class="toggle-fixed">Fixed price</span>
+                    <span class="toggle-timed">Timed Auction</span>
+                  </span>
+                  <a class="btn btn-primary"></a>
+                </label>
+              </div>
+              <div class="wrap-form">
+                <div class="tr">
+                  <div class="td label">Method</div>
+                  <div class="td form">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn dropdown-toggle d-inline-flex align-items-center"
+                        type="button"
+                        id="dropdownSort"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="../img/i_arr_high.svg" alt="" class="i" />
+                        Sell to highest bidder
+                        <!-- <img src="../img/i_arr_low.svg" alt="" class="i">
+                                            Sell with declining price -->
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButtonSM"
+                      >
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Sell to highest bidder
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Sell with declining price
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td label">Duration</div>
+                  <div class="td form">
+                    <div class="dropdown">
+                      <button
+                        type="button"
+                        class="btn dropdown-toggle d-inline-flex align-items-center"
+                        id="dropdownDate"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          class="i"
+                          src="../img/i_calendar.svg"
+                          alt=""
+                        />&nbsp;
+                        <time
+                          title="Tue, 14 Jun 2022 07:32:00 GMT"
+                          datetime="Tue, 14 Jun 2022 07:32:00 GMT"
+                          >in 7 days</time
+                        >
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButtonSM"
+                      >
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            1 day
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            3 days
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            7 days
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            1 month
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            Select...
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <input
+                      class="form-control flatpickr-input"
+                      name="date"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td label">Starting price</div>
+                  <div class="td form">
+                    <!-- 가로폭 고정 fix-w 클래스 추가 -->
+                    <div class="dropdown fix-w">
+                      <button
+                        type="button"
+                        class="btn dropdown-toggle d-inline-flex align-items-center"
+                        type="button"
+                        id="dropdownSort"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="../img/i_wklay.svg" alt="" class="i" />
+                        WKLAY
+                        <!-- <img src="../img/i_klay.svg" alt="" class="i">
+                                            KLAY -->
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButtonSM"
+                      >
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <img src="../img/i_wklay.svg" alt="" class="i" />
+                            WKLAY
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <img src="../img/i_klay.svg" alt="" class="i" />
+                            KLAY
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wrap-input">
+                      <input
+                        type="number"
+                        class="form-control price"
+                        placeholder="Amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td label">Starting price</div>
+                  <div class="td form">
+                    <div class="wrap-label">
+                      <span class="label">
+                        <img src="../img/i_wklay.svg" alt="" class="i" />
+                        WKLAY
+                      </span>
+                    </div>
+                    <div class="wrap-input">
+                      <input
+                        type="number"
+                        class="form-control price"
+                        placeholder="Amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="tr">
+                <div class="td label">Duration</div>
+                <div class="td form">
+                  <button id="btnInputCalendar" type="button" class="btn btn-calendar">
+                    <input id="inputCalendar" type="datetime-local" class="form-control">
+                  </button>
+                  <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle d-inline-flex align-items-center" id="dropdownDate"
+                      data-bs-toggle="dropdown" aria-expanded="false">Custom Date</button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSM">
+                      <li><button type="button" class="dropdown-item">1 day</button></li>
+                      <li><button type="button" class="dropdown-item">3 days</button></li>
+                      <li><button type="button" class="dropdown-item">7 days</button></li>
+                      <li><button type="button" class="dropdown-item">1 month</button></li>
+                      <li><button type="button" class="dropdown-item">Custom Date</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+                <div class="tr">
+                  <div class="td label">
+                    Include <br class="pc-only" />reserve price
+                  </div>
+                  <!-- 토글버튼 -->
+                  <div class="form-check form-switch pull-right">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault1"
+                    />
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td label">
+                    Include <br class="pc-only" />reserve price
+                  </div>
+                  <div class="td form">
+                    <div class="dropdown fix-w">
+                      <button
+                        type="button"
+                        class="btn dropdown-toggle d-inline-flex align-items-center"
+                        type="button"
+                        id="dropdownSort"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="../img/i_wklay.svg" alt="" class="i" />
+                        WKLAY
+                        <!-- <img src="../img/i_klay.svg" alt="" class="i">
+                                            KLAY -->
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButtonSM"
+                      >
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <img src="../img/i_wklay.svg" alt="" class="i" />
+                            WKLAY
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <img src="../img/i_klay.svg" alt="" class="i" />
+                            KLAY
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wrap-input">
+                      <input
+                        type="number"
+                        class="form-control price"
+                        placeholder="Amount"
+                      />
+                    </div>
+                  </div>
+                  <!-- 토글버튼 -->
+                  <div class="form-check form-switch pull-right">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault2"
+                      checked
+                    />
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td label">
+                    Include <br class="pc-only" />reserve price
+                  </div>
+                  <div class="td form">
+                    <div class="wrap-label">
+                      <span class="label">
+                        <img src="../img/i_wklay.svg" alt="" class="i" />
+                        WKLAY
+                      </span>
+                    </div>
+                    <div class="wrap-input">
+                      <input
+                        type="number"
+                        class="form-control price"
+                        placeholder="Amount"
+                      />
+                    </div>
+                  </div>
+                  <!-- 토글버튼 -->
+                  <div class="form-check form-switch pull-right">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault3"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-btm">
+                <div class="label">Fees</div>
+                <div class="tr">
+                  <div class="td">Service Fee</div>
+                  <div class="td pull-right">2.5%</div>
+                </div>
+                <div class="tr">
+                  <div class="td">Creator Fee</div>
+                  <div class="td pull-right">2.5%</div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-grad" disabled>
+                    Complete Listing
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="wrap-left">
+          <a href="">
+            <img src="../img/logo.svg" alt="logo" class="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_fb.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img src="../img/btn_disc.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      // flatpickr 캘린더 기능
+      // 모바일에서도 UI 유지 : disableMobile: "true"
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+
+        // dateFormat: false,
+        // dateFormat: "Y-m-d H:i",
+      };
+      flatpickr("input[type=datetime-local]", config);
+
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+
+      // tooltip
+      let tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
+</html>

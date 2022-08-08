@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/range.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/m_common.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- gnb 메뉴 (PC) -->
+    <nav id="gnb" class="gnb fixed-top pc-only">
+      <div class="container-fluid">
+        <div class="wrap-menu">
+          <a href="home_main.html">
+            <img src="img/logo.svg" class="logo" alt="logo">
+          </a>
+          <ul class="nav">
+            <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+            <li><a href="#" class="nav-link">DEX</a></li>
+            <li><a href="#" class="nav-link">Rewards</a></li>
+          </ul>
+          <div class="text-end">
+            <a href="#" class="btn btn-lang">EN | KR</a>
+            <div class="wallet-menu">
+              <button role="button" class="btn btn-a-line btn-connect" data-bs-toggle="dropdown" aria-expanded="false"
+                id="filterEventButton">
+                <img class="i" src="img/i_wallet_a.svg" alt="i_wallet.svg">0x33F...E11e
+              </button>
+              <!-- 드롭다운 메뉴 변경 -->
+              <div class="dropdown-menu dropdown-menu-end dropdown-wallet" aria-labelledby="filterEventButton"
+                data-popper-placement="bottom-end">
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="img/i_klay.svg" alt="">
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="img/i_wklay.svg" alt="">
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="img/i_copy_sm.svg" alt="" class="i">
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="img/i_wallet_b_sm.svg" alt="" class="i">
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="img/i_walletx_a_sm.svg" alt="" class="i">
+                    Disconnect
+                  </button>
+                </div>
+
+              </div>
+            </div>
+            <button type="button" class="btn btn-account" onclick="location.href='profile_main.html';"><img class="i"
+                src="img/i_user.svg" alt="account"></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- gnb 메뉴 (Mo) -->
+    <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home_main.html">
+          <img src="img/logo.svg" class="logo" alt="logo">
+        </a>
+        <div class="pull-right">
+          <div class="dropdown">
+            <button class="navbar-toggler dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="img/m_gnb_wallet.svg" alt="">
+            </button>
+            <div class="navbar-collapse dropdown-menu dropdown-wallet" id="gnbWallet">
+              <div class="wrap-box">
+                <div class="box">
+                  <div class="thumb">
+                    <img src="img/i_klay.svg" alt="">
+                  </div>
+                  <div class="wrap-title">
+                    <h4>KLAY</h4>
+                    <span>Klaytn</span>
+                  </div>
+                  <div class="price">
+                    <h4>1600</h4>
+                    <span>$ 8370.7 USD</span>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="thumb">
+                    <img src="img/i_wklay.svg" alt="">
+                  </div>
+                  <div class="wrap-title">
+                    <h4>WKLAY</h4>
+                    <span>Klaytn</span>
+                  </div>
+                  <div class="price">
+                    <h4>1600</h4>
+                    <span>$ 8370.7 USD</span>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-btn">
+                <button type="button" class="btn btn-block btn-g">
+                  <img src="img/i_copy_sm.svg" alt="" class="i">
+                  Copy Address
+                </button>
+                <button type="button" class="btn btn-block btn-g">
+                  <img src="img/i_wallet_b_sm.svg" alt="" class="i">
+                  Connect Other Wallet
+                </button>
+                <button type="button" class="btn btn-block btn-a">
+                  <img src="img/i_walletx_a_sm.svg" alt="" class="i">
+                  Disconnect
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="navbar-toggler dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="img/m_gnb_menu.svg" alt="">
+            </button>
+            <div class="navbar-collapse dropdown-menu dropdown-gnbmenu" id="gnbMenu">
+              <div class="wrap-btn">
+                <a href="#" class="btn nav-link">Game</a>
+              </div>
+              <div class="wrap-btn">
+                <a href="#" class="btn nav-link">Profile</a>
+              </div>
+              <div class="wrap-btn">
+                <a href="#" class="btn btn-lang">EN <span> | KR</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- 메인 영역 -->
+    <!-- .game-main > .profile-main 으로 변경 -->
+    <main class="profile-main">
+      <!-- 모바일 하단 필터버튼 (고정) -->
+      <div class="wrap-btn-btm fixed-bottom m-only">
+        <button id="btnFilterM" type="button" class="btn btn-filter">
+          Filter
+          <span class="badge">11</span>
+        </button>
+      </div>
+
+      <!-- 상단 -->
+      <section id="profileTop" class="profile-top">
+        <div class="jumbotron thumb">
+          <img src="img/ex/ex_game_top.jpg" alt="">
+        </div>
+        <div class="profile-intro">
+          <a href="" class="link-thumb">
+            <div class="thumb">
+              <img src="img/ex/ex_thumb2.gif" alt="">
+            </div>
+          </a>
+          <h2>Bravenine</h2>
+          <div class="wrap-link">
+            <a href="" class="link">
+              0x9278.....WKsl91
+              <img src="img/i_copy_g.svg" alt="" class="i">
+            </a>
+          </div>
+        </div>
+        <!-- share 버튼 드롭다운 추가 -->
+        <div class="dropdown wrap-btn-share">
+          <button class="btn btn-share dropdown-toggle dropdown-toggle-split" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <iomg class="i" src="img/i_share_g.svg" alt="">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button">
+                <img src="img/i_copy_xs.svg" alt="">
+                Copy Link
+              </button></li>
+            <li><button class="dropdown-item" type="button">
+                <img src="img/i_fb_xs.svg" alt="">
+                Share on Facebook
+              </button></li>
+            <li><button class="dropdown-item" type="button">
+                <img src="img/i_tw_xs.svg" alt="">
+                Share to Twitter
+              </button></li>
+          </ul>
+        </div>
+      </section>
+      <!-- 탭메뉴 -->
+      <nav id="tab">
+        <div class="nav nav-tabs" role="tablist">
+          <button class="nav-link" id="navTab-mynft" onclick="location.href='profile_main.html';" data-bs-toggle="tab"
+            data-bs-target="#tabCon-mynft" type="button" role="tab" aria-controls="tabCon-all" aria-selected="true">
+            My NFT
+            <span class="badge">11</span>
+          </button>
+          <button class="nav-link" id="navTab-listing" onclick="location.href='profile_main_listing.html';"
+            data-bs-toggle="tab" data-bs-target="#tabCon-listing" type="button" role="tab" aria-controls="tabCon-top"
+            aria-selected="false">Listing</button>
+          <button class="nav-link" id="navTab-offer" onclick="location.href='profile_main_offer.html';"
+            data-bs-toggle="tab" data-bs-target="#tabCon-offer" type="button" role="tab" aria-controls="tabCon-recent"
+            aria-selected="false">Offer</button>
+          <button class="nav-link active" id="navTab-activity" onclick="location.href='profile_main_activity.html';"
+            data-bs-toggle="tab" data-bs-target="#tabCon-activity" type="button" role="tab"
+            aria-controls="tabCon-recent" aria-selected="false">Activity</button>
+        </div>
+      </nav>
+      <!-- 탭메뉴 선택시 나타나는 콘텐츠 -->
+      <div class="tab-content" id="tabCon">
+        <!-- 탭메뉴 콘텐츠1 -->
+        <div class="tab-pane fade" id="tabCon-mynft" role="tabpanel" aria-labelledby="navTab-mynft">
+        </div>
+        <!-- 탭메뉴 콘텐츠2 -->
+        <div class="tab-pane fade" id="tabCon-listing" role="tabpanel" aria-labelledby="navTab-listing">
+        </div>
+        <!-- 탭메뉴 콘텐츠3 -->
+        <div class="tab-pane fade" id="tabCon-offer" role="tabpanel" aria-labelledby="navTab-offer">
+        </div>
+        <!-- 탭메뉴 콘텐츠4 -->
+        <div class="tab-pane fade active show" id="tabCon-activity" role="tabpanel" aria-labelledby="navTab-activity">
+          <nav class="wrap-btn-top">
+            <div class="wrap-btn pc-only">
+              <button type="button" id="btnFilter" class="btn btn-filter">
+                <img class="i" src="img/i_filter_l.svg" alt="">
+              </button>
+            </div>
+            <div class="wrap-toggle">
+              <label class="toggle-innertxt" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>Active</span>
+                  <span>Inactive</span>
+                </span>
+                <a class="btn btn-primary"></a>
+              </label>
+            </div>
+            <div class="wrap-btn-right pc-only">
+              <button type="button" class="btn btn-cancel">
+                Cancel All
+                <img class="i" src="img/i_x.svg" alt="">
+              </button>
+            </div>
+          </nav>
+
+          <div class="wrap-list">
+            <aside id="sideFilter" class="side-filter">
+              <div class="accordion">
+
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="heading02">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse02" aria-expanded="false" aria-controls="collapse02">
+                      Game
+                    </button>
+                  </h4>
+                  <div id="collapse02" class="accordion-collapse collapse show" aria-labelledby="heading02">
+                    <div class="accordion-body">
+                      <div class="wrap-con">
+                        <button type="button" class="btn btn-side active">
+                          <!-- 사이드 버튼형태 변경으로, span.label 추가 -->
+                          <span class="label">Common</span>
+                          <span class="badge">127</span>
+                        </button>
+                        <button type="button" class="btn btn-side">
+                          <span class="label">Common</span>
+                          <span class="badge">127</span>
+                        </button>
+                        <button type="button" class="btn btn-side">
+                          <span class="label">Common a Comm on</span>
+                          <span class="badge">127</span>
+                        </button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <section class="wrap-f-table">
+              <!-- 표 상단 필터 -->
+              <div class="wrap-btn-filter">
+                <div class="dropdown">
+                  <button role="button" class="btn dropdown-toggle d-inline-flex align-items-center btn-filter show"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="filterEventButton">
+                    <img src="img/i_filter_w.svg" class="i" alt="">Filter
+                  </button>
+                  <!-- dropdown-menu-end 클래스, inline style 제거 (드롭다운 위치제어) -->
+                  <ul class="dropdown-menu show" aria-labelledby="filterEventButton" data-popper-placement="bottom-end">
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="minted">
+                        <label class="form-check-label dropdown-item" for="minted">Minted</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sale">
+                        <label class="form-check-label dropdown-item" for="sale">Sales</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="transfer">
+                        <label class="form-check-label dropdown-item" for="transfer">Transfers</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="list">
+                        <label class="form-check-label dropdown-item" for="list">Listed</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="bid">
+                        <label class="form-check-label dropdown-item" for="bid">Bids</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="offer">
+                        <label class="form-check-label dropdown-item" for="offer">Offers</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <span class="tag">Minted
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <span class="tag">Sales
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <span class="tag">Transfers
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <span class="tag">Listed
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <span class="tag">Bids
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <span class="tag">Offers
+                  <button role="button" class="btn btn-x">
+                    <img src="img/i_x.svg" class="i" alt="">
+                  </button>
+                </span>
+                <button role="button" class="btn link link-a">Clear All</button>
+              </div>
+              <!-- 리스트 (PC) -->
+              <div class="f-table table-profile table-profile-activity pc-only">
+                <div class="tr">
+                  <div class="th">Action</div>
+                  <div class="th">Item</div>
+                  <div class="th">Price</div>
+                  <div class="th">Quantity</div>
+                  <div class="th">From</div>
+                  <div class="th">To</div>
+                  <div class="th">Transaction Time</div>
+                </div>
+
+                <div class="tr">
+                  <div class="td">
+                    <a href="" class="link action">
+                      <img src="img/act_cancel.svg" alt="">
+                      <!-- <img src="img/act_transfer.svg" alt=""> -->
+                      <!-- <img src="img/act_minted.svg" alt=""> -->
+                      <!-- <img src="img/act_bid.svg" alt=""> -->
+                      <h5>Cancel</h5>
+                    </a>
+                  </div>
+                  <div class="td">
+                    <a href="" class="link item">
+                      <div class="thumb">
+                        <img src="img/ex/ex_game_top.jpg" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>gggBravenine</h6>
+                        <h5>NGG KOR명</h5>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="td">
+                    <div class="price">
+                      <img src="img/i_klay.svg" alt="" class="i">
+                      <div>
+                        <h5>1,000</h5>
+                        <h6>$1,250.00</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <h5>1</h5>
+                  </div>
+                  <div class="td">
+                    <a href="" class="link link-a">
+                      <h5>You</h5>
+                    </a>
+                  </div>
+                  <div class="td">
+                    <h5>---</h5>
+                  </div>
+                  <div class="td">
+                    <a href="" class="link link-a">
+                      <h5 class="">
+                        <time>10 hours ago</time>
+                      </h5>
+                      <img src="img/i_link_a.svg" alt="" class="i i-link">
+                    </a>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <a href="" class="link action">
+                      <!-- <img src="img/act_cancel.svg" alt=""> -->
+                      <!-- <img src="img/act_transfer.svg" alt=""> -->
+                      <!-- <img src="img/act_minted.svg" alt=""> -->
+                      <img src="img/act_bid.svg" alt="">
+                      <h5>Bid</h5>
+                    </a>
+                  </div>
+                  <div class="td">
+                    <a href="" class="link item">
+                      <div class="thumb">
+                        <img src="img/ex/ex_game_top.jpg" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>Bravenine</h6>
+                        <h5>NGG KOR명</h5>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="td">
+                    <div class="price">
+                      <img src="img/i_klay.svg" alt="" class="i">
+                      <div>
+                        <h5>1,000</h5>
+                        <h6>$1,250.00</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <h5>1</h5>
+                  </div>
+                  <div class="td">
+                    Null Address
+                  </div>
+                  <div class="td">
+                    <h5>---</h5>
+                  </div>
+                  <div class="td">
+                    ---
+                  </div>
+                </div>
+              </div>
+
+              <!-- 리스트 (Mo) -->
+              <div class="accordion li-profile li-profile-listing m-only">
+                <!-- 리스트 단위 -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingLi01">
+                    <a href="" class="link item">
+                      <div class="thumb">
+                        <img src="img/ex/ex_game_top.jpg" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>gggBravenine</h6>
+                        <h5>NGG KOR명</h5>
+                      </div>
+                    </a>
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseLi01" aria-expanded="false" aria-controls="collapseLi01"></button>
+                  </div>
+                  <div id="collapseLi01" class="accordion-collapse collapse show" aria-labelledby="headingLi01">
+                    <div class="accordion-body f-table">
+                      <div class="tr">
+                        <div class="td label">Action</div>
+                        <div class="td value">
+                          <!-- <h5>142% above</h5> -->
+                          <a href="" class="link action">
+                            <img src="img/act_cancel.svg" alt="">
+                            <!-- <img src="img/act_transfer.svg" alt=""> -->
+                            <!-- <img src="img/act_minted.svg" alt=""> -->
+                            <!-- <img src="img/act_bid.svg" alt=""> -->
+                            <h5>Cancel</h5>
+                          </a>
+                        </div>
+
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Price</div>
+                        <div class="td value">
+                          <div class="price">
+                            <h5 class="klay">10,000</h5>
+                            <h6>$1,250.00</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Quantity</div>
+                        <div class="td value">
+                          <h5>1</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">From</div>
+                        <div class="td value">
+                          <h5>You</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">To</div>
+                        <div class="td value">
+                          <h5>---</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Transaction Time</div>
+                        <div class="td value">
+                          <a href="" class="link link-a">
+                            <h5>
+                              <time>10 hours ago</time>
+                            </h5>
+                            <img src="img/i_link_a.svg" alt="" class="i i-link">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingLi02">
+                    <a href="" class="link item">
+                      <div class="thumb">
+                        <img src="img/ex/ex_game_top.jpg" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>Bravenine</h6>
+                        <h5>NGG KOR명</h5>
+                      </div>
+                    </a>
+                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseLi02" aria-expanded="false" aria-controls="collapseLi02"></button>
+                  </div>
+                  <div id="collapseLi02" class="accordion-collapse collapse show" aria-labelledby="headingLi02">
+                    <div class="accordion-body f-table">
+                      <div class="tr">
+                        <div class="td label">Action</div>
+                        <div class="td value">
+                          <!-- <h5>142% above</h5> -->
+                          <a href="" class="link action">
+                            <img src="img/act_cancel.svg" alt="">
+                            <!-- <img src="img/act_transfer.svg" alt=""> -->
+                            <!-- <img src="img/act_minted.svg" alt=""> -->
+                            <!-- <img src="img/act_bid.svg" alt=""> -->
+                            <h5>Cancel</h5>
+                          </a>
+                        </div>
+
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Price</div>
+                        <div class="td value">
+                          <div class="price">
+                            <h5 class="klay">10,000</h5>
+                            <h6>$1,250.00</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Quantity</div>
+                        <div class="td value">
+                          <h5>1</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">From</div>
+                        <div class="td value">
+                          <h5>You</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">To</div>
+                        <div class="td value">
+                          <h5>---</h5>
+                        </div>
+                      </div>
+                      <div class="tr">
+                        <div class="td label">Transaction Time</div>
+                        <div class="td value">
+                          <a href="" class="link link-a">
+                            <h5>
+                              <time>10 hours ago</time>
+                            </h5>
+                            <img src="img/i_link_a.svg" alt="" class="i i-link">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="wrap-left">
+        <a href="">
+          <img src="img/logo.svg" alt="logo" class="logo">
+        </a>
+      </div>
+      <div class="wrap-right">
+        <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs).
+          <br>Buy, sell, and discover exclusive digital items.
+        </p>
+        <div class="wrap-link">
+          <a href="" class="link">About</a>
+          <a href="" class="link">Contact</a>
+          <a href="" class="link">Help</a>
+          <a href="" class="link">Terms of use</a>
+        </div>
+        <div class="wrap-btn-circle">
+          <button type="button" class="btn btn-circle">
+            <img class="i" src="img/btn_fb.svg" alt="">
+          </button>
+          <button type="button" class="btn btn-circle">
+            <img class="i" src="img/btn_tw.svg" alt="">
+          </button>
+          <button type="button" class="btn btn-circle">
+            <img class="i" src="img/btn_disc.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+
+    // 카드 마크업 복제
+    for (var i = 0; i <= 1; i++) {
+      let $_clone = $('.wrap-card').clone();
+      $(".row").append($_clone);
+    }
+
+    // filter button card array
+    $("#btnFilter").click(function () {
+      $(".side-filter").toggleClass("hide");
+      $(".side-filter+section").toggleClass("wide");
+    });
+
+    // scroll gnb style
+    $(document).scroll(function () {
+      let $nav = $("nav.fixed-top");
+      $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+.form-switch {
+  padding-left: 0;
+
+  .form-check-input {
+    width: 55px;
+    height: 29px;
+    margin: 0;
+    // background-color: #464f60;
+    background-color: #ccd2e3;
+    background-image: url(../img/bg_switch.svg) !important;
+    border: 0;
+
+    &:checked {
+      background-color: $c-a;
+    }
+
+    &:focus {
+      border: 0 solid transparent !important;
+      border: none !important;
+      outline: none !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
+
+.wrap-toggle {
+  width: 204px;
+  background: rgba(217, 224, 236, 0.2);
+  border-radius: 31px;
+
+  .toggle-innertxt > span,
+  .switch-toggle > span {
+    color: #000000;
+  }
+
+  .toggle-innertxt span span,
+  .toggle-innertxt label,
+  .switch-toggle span span,
+  .switch-toggle label {
+    color: #2b2b2b;
+  }
+
+  .toggle-innertxt {
+    // display: block;
+    height: 38px;
+    position: relative;
+    overflow: visible;
+    padding: 0px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle-innertxt * {
+    box-sizing: border-box;
+  }
+
+  .toggle-innertxt a {
+    display: block;
+    transition: all 0.2s ease-out 0s;
+    border: 0;
+    outline: 0 !important;
+  }
+
+  .toggle-innertxt label,
+  .toggle-innertxt > span {
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+  .toggle-innertxt label {
+    font-weight: 700;
+    margin-bottom: px;
+    max-width: 100%;
+  }
+
+  .toggle-innertxt input:focus ~ a,
+  .toggle-innertxt input:focus + label {
+    outline: 1px dotted rgb(136, 136, 136);
+  }
+
+  .toggle-innertxt input {
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  .toggle-innertxt input:checked ~ a {
+    right: 0%;
+  }
+
+  .toggle-innertxt > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0px;
+    padding-right: 100px;
+    text-align: left;
+  }
+
+  .toggle-innertxt > span span {
+    transition: 0.3s;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    // display: block;
+    // text-align: center;
+    width: 50%;
+    height: 38px;
+    margin-left: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #030229;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      color: #fff;
+    }
+  }
+
+  .toggle-innertxt > input:checked + span {
+    span:last-child {
+      color: #fff;
+    }
+
+    span:first-child {
+      color: #030229;
+    }
+  }
+
+  .toggle-innertxt > span span:last-child {
+    left: 50%;
+  }
+
+  .toggle-innertxt a {
+    position: absolute;
+    right: 50%;
+    top: 0px;
+    z-index: 4;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0px;
+  }
+
+  .btn-primary {
+    background-color: #464f60;
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  .wrap-toggle {
+    width: 176px;
+
+    .toggle-innertxt {
+      height: 28px;
+
+      > span span {
+        height: 28px;
+        font-size: 14px;
+      }
+    }
+  }
+}

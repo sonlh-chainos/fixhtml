@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb fixed-top pc-only">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <div class="wallet-menu">
+                <!-- 지갑 연결 되기 전 (배경 빈 라인 버튼) -->
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 지갑 연결 되기 전 (배경 채워진 상태) -->
+                <!-- <button role="button" class="btn btn-grad btn-connect" data-bs-toggle="dropdown" aria-expanded="false" id="filterEventButton">
+                            <img class="i" src="../img/i_wallet.svg" alt="i_wallet.svg">CONNECT
+                        </button> -->
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <!-- <img class="i" src="../img/i_user.svg" alt="account"> -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="#111"
+                    d="M12.7 10.523a4.749 4.749 0 1 0-5.873 0A7.917 7.917 0 0 0 1.902 17a.797.797 0 0 0 1.584.174 6.334 6.334 0 0 1 12.587 0 .791.791 0 0 0 .792.705h.087a.792.792 0 0 0 .697-.871 7.917 7.917 0 0 0-4.948-6.484Zm-2.936-.562a3.167 3.167 0 1 1 0-6.333 3.167 3.167 0 0 1 0 6.333Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb 메뉴 (Mo) -->
+      <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home_main.html">
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+          </a>
+          <div class="pull-right">
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_wallet.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-wallet"
+                id="gnbWallet"
+              >
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_klay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_wklay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                    Disconnect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_menu.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-gnbmenu"
+                id="gnbMenu"
+              >
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Game</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Profile</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn btn-lang">EN <span> | KR</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 메인 영역 -->
+      <main class="game-main">
+        <!-- 모바일 하단 필터버튼 (고정) -->
+        <!-- 중복되는 클래스명 변경: .wrap-btn-filter > .wrap-btn-btm -->
+        <div class="wrap-btn-btm fixed-bottom m-only">
+          <button id="btnFilterM" type="button" class="btn btn-filter">
+            Filter
+            <span class="badge">11</span>
+          </button>
+        </div>
+
+        <!-- 상단 -->
+        <section id="gameTop" class="game-top">
+          <div class="jumbotron thumb">
+            <img src="../img/ex/ex_game_top.jpg" alt="" />
+            <!-- <video
+              autoplay="true"
+              playsinline=""
+              muted="true"
+              loop="true"
+              class="embed-responsive-item"
+              alt=""
+            >
+              <source
+                src="https://fractal-game.imgix.net/aurory/aurory-video.mp4"
+              />
+            </video> -->
+          </div>
+          <div class="game-intro">
+            <div class="wrap-top">
+              <a href="" class="link-thumb">
+                <div class="thumb">
+                  <img src="../img/ex/ex_thumb2.gif" alt="" />
+                </div>
+              </a>
+              <div class="top">
+                <div class="wrap-link">
+                  <a href="" class="link">
+                    <h3 class="verif">Neowiz</h3>
+                  </a>
+                  <a href="" class="link">
+                    <h2>Bravenine</h2>
+                  </a>
+                </div>
+                <div class="wrap-btn" role="group" aria-label="">
+                  <button type="button" class="btn btn-tw">
+                    <img class="i" src="../img/i_tw.svg" alt="" />
+                  </button>
+                  <button type="button" class="btn btn-disc">
+                    <img class="i" src="../img/i_disc.svg" alt="" />
+                  </button>
+                  <button type="button" class="btn btn-glob">
+                    <img class="i" src="../img/i_glob.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-btm">
+              <!-- default: .collapse 접힘상태 -->
+              <div class="intro collapse">
+                <div class="markdown mb-3">
+                  <h1>heading 1 : 타이틀 20, 500</h1>
+                  <h2>heading 2 : 소타이틀 18, 500</h2>
+                  <h3>heading 3 : 소타이틀 18, 500</h3>
+                  <h4>heading 4 : 소타이틀 18, 500</h4>
+                  <h5>heading 5 : 소타이틀 18, 500</h5>
+                  <h6>heading 6 : 소타이틀 18, 500</h6>
+                  <hr />
+                  <b>bold</b> / <em>Emphasis</em> /
+                  <strong>strong</strong>
+                  <del>deleted, strike-through</del>
+                  <a href="#">http://thisislink.com</a>
+
+                  <hr />
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>table th1</th>
+                        <th>table th2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>td1</td>
+                        <td>td2</td>
+                      </tr>
+                      <tr>
+                        <td>td1</td>
+                        <td>td2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <hr />
+
+                  <ol>
+                    <li>ol-li1</li>
+                    <li>ol-li2</li>
+                  </ol>
+                  <ul>
+                    <li>ul-li1</li>
+                    <li>ul-li2</li>
+                  </ul>
+
+                  <blockquote>blockquote 인용 블록</blockquote>
+                  <code>code inline - 14</code>
+                  <pre><code>code block - 14</code></pre>
+
+                  <hr />
+
+                  <p>
+                    p tag - BLorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+                <div class="wrap-btn-more">
+                  <button id="btnMoreM" type="button" class="btn btn-more">
+                    Read more
+                    <img class="i" src="../img/i_arr.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="wrap-box">
+                <div>
+                  <h5>9,829</h5>
+                  <h6>Items</h6>
+                </div>
+                <div>
+                  <h5>2,194</h5>
+                  <h6>Owners</h6>
+                </div>
+                <div>
+                  <h5 class="klay">35</h5>
+                  <h6>Floor Price</h6>
+                </div>
+                <div>
+                  <h5 class="klay">1,455,222</h5>
+                  <h6>Total Vol*</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 탭메뉴(3가지) -->
+        <nav id="tab">
+          <div class="nav nav-tabs" role="tablist">
+            <button
+              class="nav-link active"
+              id="navTab-all"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-all"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-all"
+              aria-selected="true"
+            >
+              All
+            </button>
+            <button
+              class="nav-link"
+              id="navTab-top"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-top"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-top"
+              aria-selected="false"
+            >
+              Top Trades
+            </button>
+            <button
+              class="nav-link"
+              id="navTab-recent"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-recent"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-recent"
+              aria-selected="false"
+            >
+              Recent Sales
+            </button>
+          </div>
+        </nav>
+        <!-- 탭메뉴 선택시 나타나는 콘텐츠(3가지) -->
+        <div class="tab-content" id="tabCon">
+          <!-- 탭메뉴 콘텐츠1: List All (default) -->
+          <div
+            class="tab-pane fade active show"
+            id="tabCon-all"
+            role="tabpanel"
+            aria-labelledby="navTab-all"
+          >
+            <!-- contract label -->
+            <div class="wrap-contract">
+              <div class="wrap-btn">
+                <button class="item active" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans sfs gjsdlgjsk afjka dfjsk</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartanssdfs Spartfdans sdf Spartans Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+                <button class="item" type="button">
+                  <div class="thumb">
+                    <img src="../img/ex/ex_game_top.jpg" alt="" />
+                  </div>
+                  <div class="txt">
+                    <h5>Spartans</h5>
+                    <h6>0x8606.........66879DBc266879DBc266879DBc2</h6>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <!-- fixed menu (nav) -->
+            <nav class="wrap-btn-top sticky-top">
+              <!-- filter button (PC only) -->
+              <div class="wrap-btn pc-only">
+                <button type="button" id="btnFilter" class="btn btn-filter">
+                  <img class="i" src="../img/i_filter_l.svg" alt="" />
+                </button>
+              </div>
+
+              <!-- search bar -->
+              <div class="wrap-search">
+                <div class="input-group">
+                  <span class="input-group-text" id="game-search"
+                    ><img src="../img/i_search.svg" alt=""
+                  /></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    aria-label="search"
+                    aria-describedby="game-search"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="result">206,632,222 result</div>
+              </div>
+
+              <!-- sort by (dropdown) -->
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle d-inline-flex align-items-center"
+                  type="button"
+                  id="dropdownSort"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Sort by
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownMenuButtonSM"
+                >
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Listed
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Created
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Sold
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Received
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Ending Soon
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Price : Low to High
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Price : High to Low
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Highest Last Sale
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Most Viewed
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Most Favorited
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">Oldest</button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="wrap-list">
+              <!-- 모바일 필터페이지 따로작업예정(이부분은 참고만 해주시고, 나중에 봐주세요) -->
+              <aside id="sideFilter" class="side-filter sticky-top">
+                <!-- 모바일 상단부분 추가 -->
+                <div class="filter-top m-only">
+                  <button role="button" class="btn link">Clear All</button>
+                  <h2>Filter</h2>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <!-- 모바일 apply 버튼 -->
+                <div class="wrap-btn-apply fixed-bottom m-only">
+                  <button type="button" class="btn btn-apply">Apply</button>
+                </div>
+
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="SEQUENCE">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_SEQUENCE"
+                        aria-expanded="true"
+                        aria-controls="collapse_SEQUENCE"
+                      >
+                        SEQUENCE
+                      </button>
+                    </h4>
+                    <div
+                      id="collapse_SEQUENCE"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="SEQUENCE"
+                    >
+                      <div class="accordion-body">
+                        <div class="form-floating">
+                          <div class="slider-range-block">
+                            <div class="slider">
+                              <div class="double-range-container svelte-zrkhbr">
+                                <div class="ui-slider svelte-zrkhbr">
+                                  <div
+                                    class="ui-slider-range svelte-zrkhbr"
+                                    style="left: 0%; right: 0%"
+                                  ></div>
+                                  <div
+                                    class="ui-slider-handle svelte-zrkhbr"
+                                    data-which="start"
+                                    style="left: 0%"
+                                  ></div>
+                                  <div
+                                    class="ui-slider-handle svelte-zrkhbr"
+                                    data-which="end"
+                                    style="left: 100%"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <input
+                                type="number"
+                                placeholder="Min"
+                                min="0"
+                                max="2551"
+                                id="min_value"
+                                class="slider-range-field"
+                              />
+                              <span>~</span>
+                              <input
+                                type="number"
+                                placeholder="Max"
+                                min="0"
+                                max="2551"
+                                id="max_value"
+                                class="slider-range-field"
+                              />
+                            </div>
+                            <!-- 피시용 apply 버튼 -->
+                            <!-- <div class="wrap-btn pc-only">
+                              <button type="button" class="btn btn-apply">
+                                Apply
+                              </button>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="heading02">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse02"
+                        aria-expanded="false"
+                        aria-controls="collapse02"
+                      >
+                        Rarity
+                      </button>
+                    </h4>
+                    <div
+                      id="collapse02"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="heading02"
+                    >
+                      <div class="accordion-body">
+                        <div class="wrap-con">
+                          <button type="button" class="btn btn-side active">
+                            <!-- 사이드 버튼형태 변경으로, span.label 추가 -->
+                            <span class="label">Common</span>
+                            <span class="badge">12724</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common</span>
+                            <span class="badge">1</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common a Comm on Co mmon</span>
+                            <span class="badge">12</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">Common a Comm on Co mmon</span>
+                            <span class="badge">12347</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- 카드사이즈 조절 기능 삭제 : li-card-col .wide 클래스 삭제 -->
+              <section class="li-card-col">
+                <!-- 주황태그 스타일의 경우, .wrap-btn-filter-a 클래스 추가 -->
+                <div class="wrap-btn-filter wrap-btn-filter-a">
+                  <span class="tag">
+                    <span class="txt">
+                      <span class="label t-ell">
+                        RarityCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommon
+                      </span>
+                      <span class="t-ell">
+                        CommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommonCommon
+                      </span>
+                    </span>
+                    <button role="button" class="btn btn-x">
+                      <img src="../img/i_x_a.svg" class="i" alt="" />
+                    </button>
+                  </span>
+                  <span class="tag">
+                    <span class="txt">
+                      <span class="label t-ell"> Rarity </span>
+                      <span class="t-ell">
+                        CommonCommonCommonCommonCommonCommon
+                      </span>
+                    </span>
+                    <button role="button" class="btn btn-x">
+                      <img src="../img/i_x_a.svg" class="i" alt="" />
+                    </button>
+                  </span>
+                  <span class="tag">
+                    <span class="txt">
+                      <span class="label t-ell"> Rarity </span>
+                      <span class="t-ell"> Common </span>
+                    </span>
+                    <button role="button" class="btn btn-x">
+                      <img src="../img/i_x_a.svg" class="i" alt="" />
+                    </button>
+                  </span>
+                  <span class="tag">
+                    <span class="txt">
+                      <span class="label t-ell"> Rarity </span>
+                      <span class="t-ell"> common </span>
+                    </span>
+                    <button role="button" class="btn btn-x">
+                      <img src="../img/i_x_a.svg" class="i" alt="" />
+                    </button>
+                  </span>
+                  <button role="button" class="btn link link-a">
+                    Clear All
+                  </button>
+                </div>
+                <div class="row" role="list">
+                  <!-- 카드 링크지정은 ".card-link"에 적용 -->
+                  <!-- 최하단 js에서 카드 여러개 복제 적용함 -->
+                  <div class="wrap-card" role="listitem">
+                    <div class="card">
+                      <div class="wrap-thumb">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="card-sub">
+                          Marvel future revolution
+                        </a>
+                        <h5 class="card-title">Card title</h5>
+                        <div class="card-price">
+                          <h6 class="price">Price</h6>
+                          <div class="wrap-right">
+                            <h6 class="klay">4092<span>KLAY</span></h6>
+                            <h6 class="last">2 days left</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="" class="card-link"></a>
+                    </div>
+                  </div>
+                  <div class="wrap-card" role="listitem">
+                    <div class="card">
+                      <div class="wrap-thumb">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="card-sub">
+                          Marvel future revolution Marvel future revolution
+                        </a>
+                        <h5 class="card-title">
+                          Card title Card title Card title
+                        </h5>
+                        <div class="card-price">
+                          <h6 class="price">Price</h6>
+                          <div class="wrap-right">
+                            <h6 class="klay wklay">4092<span>WKLAY</span></h6>
+                            <h6 class="last">
+                              Last
+                              <img
+                                src="../img/i_klay_g.svg"
+                                alt=""
+                                class="klay-g"
+                              />
+                              1,250,250,250
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="" class="card-link"></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- 탭메뉴 콘텐츠2: List Top Trades -->
+          <div
+            class="tab-pane fade"
+            id="tabCon-top"
+            role="tabpanel"
+            aria-labelledby="navTab-top"
+          >
+            <p>list - Top Trades</p>
+          </div>
+          <!-- 탭메뉴 콘텐츠3: List Recent Sales -->
+          <div
+            class="tab-pane fade"
+            id="tabCon-recent"
+            role="tabpanel"
+            aria-labelledby="navTab-recent"
+          >
+            <p>list - Recent Sales</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="wrap-left">
+          <a href="">
+            <img src="../img/logo.svg" alt="logo" class="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_disc.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle" disabled>
+              <img class="i" src="../img/btn_fb.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      // 카드 마크업 복제
+      for (var i = 0; i <= 1; i++) {
+        let $_clone = $(".wrap-card").clone();
+        $(".row").append($_clone);
+      }
+
+      // 모바일 read-more button
+      $("#btnMoreM").click(function () {
+        $(".intro").toggleClass("collapse");
+      });
+
+      // 모바일 filter button
+      $("#btnFilterM").click(function () {
+        $(".side-filter").toggleClass("show");
+      });
+
+      // filter button card array
+      $("#btnFilter").click(function () {
+        $(".side-filter").toggleClass("hide");
+        $(".side-filter+section").toggleClass("wide");
+      });
+
+      // scroll gnb style
+      // $(document).scroll(function () {
+      //   let $nav = $("nav.fixed-top");
+      //   $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+.tab-content {
+  height: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.tab-content nav.wrap-btn-top {
+  display: flex;
+  margin: 1px 0 6px 0;
+  border: 0;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 20px 60px;
+
+  width: calc(100% + 120px);
+  margin-left: -60px;
+  top: 75px;
+  background: #fff;
+
+  .wrap-btn {
+    .btn {
+      border: 1.2px solid #464f60;
+      box-sizing: border-box;
+      border-radius: 11px;
+      margin: 0;
+      padding: 0;
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:active {
+        border: 1.2px solid #464f60;
+        box-shadow: 0px -2px 3px rgba(24, 39, 75, 0.1),
+          0px 2px 3px rgba(24, 39, 75, 0.2), -2px 0px 3px rgba(24, 39, 75, 0.2),
+          2px 0px 3px rgba(24, 39, 75, 0.2);
+      }
+
+      .btn-filter .i {
+        height: 24px;
+      }
+
+      .btn-refresh .i {
+        height: 19px;
+      }
+    }
+  }
+
+  .btn-cate {
+    background: rgba(217, 224, 236, 0.2);
+    margin-right: 8px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &.active {
+      background-color: #fc6825;
+      color: #fff;
+    }
+  }
+
+  .dropdown,
+  .wrap-btn-right {
+    text-align: right;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .dropdown-toggle {
+    border: 1px solid #464f60;
+    font-weight: 400;
+    font-size: 14px;
+    color: #464f60;
+    gap: 10px;
+
+    &::after {
+      background-image: url(../img/i_arr.svg);
+      width: 9px;
+      height: 4.5px;
+    }
+  }
+
+  .wrap-btn-right .btn {
+    border: 1px solid #464f60;
+    font-weight: 400;
+    font-size: 14px;
+    color: #464f60;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  .tab-content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    nav.wrap-btn-top {
+      flex-direction: column;
+      margin: 15px 0 25px 0;
+      gap: 12px;
+
+      .wrap-cate {
+        display: flex;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        .btn {
+          width: auto;
+          max-width: none;
+          white-space: nowrap;
+          font-weight: 600;
+          font-size: 12px;
+          height: 31px;
+
+          &.active {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .dropdown {
+        text-align: left;
+        display: flex;
+        gap: 5px;
+
+        .dropdown-menu {
+          width: 100%;
+        }
+
+        .dropdown-toggle {
+          flex: 1 0 auto;
+          height: 36px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

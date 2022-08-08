@@ -1,0 +1,17 @@
+// width - page padding
+$w-pp: 60px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// color - black, active, lightgray
+$c-b: #030229;
+$c-a: #fc6825;
+$c-lg: #d9e0ec;
+$grad: linear-gradient(90deg, #ff2f00 0%, #fc6825 78.13%);

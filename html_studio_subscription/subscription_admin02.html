@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo_studio.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <div class="menu-top">
+            <div class="wrap-thumb">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <h3>Bllizard</h3>
+              <p>Wukong was about to be heated down by the scorching summer.</p>
+              <button type="button" class="btn btn-line-light">
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="menu-btm accordion">
+            <!-- accordion01 -->
+            <!-- Opened status: .accordion-button, .accordion-collapse.collapse.show -->
+            <!-- Closed status: .accordion-button.collapsed, .accordion-collapse.collapse -->
+            <!-- Active status: .accordion-button.active -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="SEQUENCE">
+                <button
+                  class="accordion-button active"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_SEQUENCE"
+                  aria-expanded="true"
+                  aria-controls="collapse_SEQUENCE"
+                >
+                  Drawshop Kingdom Reverse
+                </button>
+              </h4>
+              <div
+                id="collapse_SEQUENCE"
+                class="accordion-collapse collapse show"
+                aria-labelledby="SEQUENCE"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-menu">
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width="16"
+                          height="16"
+                          x="4"
+                          y="4"
+                          stroke="#697A8D"
+                          stroke-width="1.5"
+                          rx="8"
+                        />
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12.4 16v-4.8m-1.6 0h1.6m0-2.4V8"
+                        />
+                      </svg>
+                      Information
+                    </button>
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12 10.333v7.5m3.333-10v10m-6.666-4.166v4.167M5.333 6.167v11.5a1 1 0 0 0 1 1h11.5"
+                        />
+                      </svg>
+                      Statistics
+                    </button>
+                    <!-- accordion-inner -->
+                    <div class="accordion-inner">
+                      <div class="accordion-item">
+                        <h4 class="accordion-header" id="heading11">
+                          <button
+                            class="accordion-button btn btn-block li-item active"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse11"
+                            aria-expanded="true"
+                            aria-controls="collapse11"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="#697A8D"
+                                stroke-width="1.5"
+                                d="m16.448 10.022 1.653.92.346.2c.737.426.737 1.524 0 1.95l-4.695 2.713a3.488 3.488 0 0 1-3.504 0l-4.695-2.713c-.737-.426-.737-1.524 0-1.95l.346-.2 1.561-.92m9.348 4.095 1.502.778c.775.401.8 1.537.043 1.974l-4.601 2.66a3.488 3.488 0 0 1-3.504 0l-4.534-2.621c-.77-.445-.727-1.606.072-1.989l1.674-.802m6.292-2.268 4.695-2.713c.737-.426.737-1.525 0-1.95l-4.695-2.714a3.488 3.488 0 0 0-3.504 0L5.553 7.185c-.737.426-.737 1.525 0 1.95l4.695 2.714c1.089.63 2.415.63 3.504 0Z"
+                              />
+                            </svg>
+                            Launch Tools
+                          </button>
+                        </h4>
+                        <div
+                          id="collapse11"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="heading11"
+                        >
+                          <div class="accordion-body">
+                            <button class="btn btn-block li-item">
+                              White List NFT
+                            </button>
+                            <button class="btn btn-block li-item active">
+                              Subscription Mechanism
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Mystery Box
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion02 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading02">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse02"
+                  aria-expanded="false"
+                  aria-controls="collapse02"
+                >
+                  Aurary
+                </button>
+              </h4>
+              <div
+                id="collapse02"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading02"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+
+            <!-- accordion03 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading03">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse03"
+                  aria-expanded="false"
+                  aria-controls="collapse03"
+                >
+                  AFK Battle Idle <br />Princess BB
+                </button>
+              </h4>
+              <div
+                id="collapse03"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading03"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <div class="container-main">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <div class="wrap-title">
+            <!-- breadcrumb -->
+            <nav
+              class="wrap-breadcrumb"
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Drawshop Kingdon Reserve</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Launch Tools</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Subscription Mechanism
+                </li>
+              </ol>
+            </nav>
+            <h1>Create a new subscription session</h1>
+          </div>
+          <div class="wrap-con">
+            <!-- tab navigation -->
+            <nav class="admin-nav" id="tab">
+              <div class="nav nav-tabs" role="tablist">
+                <button
+                  class="nav-link active"
+                  id="navTab-step1"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step1"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step1"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">1</span>
+                  </span>
+                  Session Setup
+                </button>
+                <button
+                  class="nav-link"
+                  id="navTab-step2"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step2"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step2"
+                  aria-selected="true"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">2</span>
+                  </span>
+                  Calculation Setup
+                </button>
+                <button
+                  class="nav-link"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">3</span>
+                  </span>
+                  Date & Duration Setup
+                </button>
+                <button
+                  class="nav-link"
+                  id="navTab-step3"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">4</span>
+                  </span>
+                  Deploy Contract
+                </button>
+              </div>
+            </nav>
+            <!-- tab contents -->
+            <div class="tab-content" id="tabCon">
+              <!-- tab step01: active -->
+              <div
+                class="tab-pane fade active show"
+                id="tabCon-step1"
+                role="tabpanel"
+                aria-labelledby="navTab-step1"
+              >
+                <form>
+                  <!-- form - name -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">Session Name</h3>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder=""
+                      aria-label=""
+                      aria-describedby=""
+                      value="Drawshop Kingdom IGO 1차 Drop"
+                    />
+                  </div>
+                  <!-- form - introduction -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">Session Introduction</h3>
+                      <p class="form-text">
+                        Please describe what your production is like.
+                      </p>
+                    </div>
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="6"
+                      style="height: 180px"
+                    >
+Wukong was about to be heated down by the scorching summer. With the burn- ing of his pipe, he was about to explode. The setting was burning to red. Like Van Gogh's self-portrait, he was so dull that he could only mechanically observe the smoky cigarette butts making a faint sound in front of him....</textarea
+                    >
+                  </div>
+                  <!-- form - Staking Token -->
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <h3 class="form-label">Staking Token</h3>
+                      <p class="form-text">
+                        청약에서 스테이킹 받을 토큰을 선택해주세요.
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="dropdown dropdown-block">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            id="dropdownMenu2"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <div class="dropdown-inner">
+                              <img src="../img/i_klay.svg" alt="" class="i" />
+                              <span>Klay</span>
+                            </div>
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenu2"
+                          >
+                            <li>
+                              <button
+                                type="button"
+                                class="dropdown-item dropdown-item-i"
+                              >
+                                24 Hours (1 Day)
+                              </button>
+                            </li>
+                            <li>
+                              <button
+                                type="button"
+                                class="dropdown-item dropdown-item-i"
+                              >
+                                <svg
+                                  class="i"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="none"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    fill="#030229"
+                                    d="M12.667 7.334h-4v-4a.667.667 0 0 0-1.334 0v4h-4a.667.667 0 0 0 0 1.333h4v4a.667.667 0 1 0 1.334 0v-4h4a.667.667 0 1 0 0-1.333Z"
+                                  />
+                                </svg>
+                                Add KIP-7 Token
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- form - select mysterybox -->
+                  <div class="wrap-form">
+                    <div class="row">
+                      <div class="col-auto">
+                        <h3 class="form-label">청약대상 미스터리 박스</h3>
+                        <p class="form-text">
+                          이 세션에서 청약의 결과로 얻게되는 미스터리 박스를
+                          선택해주세요. <br />만약 이 리스트에 미스터리 박스가
+                          표시되지 않는다면, 미스터리박스 설정 > 릴리즈 셋업에서
+                          청약판매 옵션을 활성화 시켜주세요.
+                        </p>
+                      </div>
+                      <div class="col-auto pull-right">
+                        <div class="dropdown dropdown-sm dropdown-whitelist">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            id="dropdown-sm01"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Select Mystery Box
+                          </button>
+                          <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="dropdown-sm01"
+                          >
+                            <li>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box-subsc mt-4">
+                      <div class="wrap-thumb">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                      </div>
+                      <div class="wrap-con flex-fill">
+                        <h3>Lonely Astronaut Mystery Box</h3>
+                        <p class="fc-g">
+                          0x2t7w8jfud7w8jfudd9siodiwkd0s9fogisk48fy7d6rit6y3
+                        </p>
+                        <div class="wrap-input">
+                          <input
+                            type="number"
+                            class="form-control form-control-sm before-text"
+                            aria-label=""
+                            style="width: 178px"
+                          />
+                          <h5>/ 8,000 Items</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- form - White List Filtering -->
+                  <div class="wrap-form">
+                    <div class="row">
+                      <div class="col-auto">
+                        <h3 class="form-label">White List Filtering</h3>
+                        <p class="form-text">
+                          Please set release Date and Time
+                        </p>
+                      </div>
+                      <div class="col-auto pull-right">
+                        <div class="dropdown dropdown-sm dropdown-whitelist">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            id="dropdown-sm01"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Select from Klaybay WL NFT
+                          </button>
+                          <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="dropdown-sm01"
+                          >
+                            <li>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                              <button class="dropdown-item" type="button">
+                                <div class="wrap-thumb">
+                                  <div class="thumb">
+                                    <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                  </div>
+                                </div>
+                                <div class="wrap-txt">
+                                  <h5>Drawshop Kingdom Whitelist whitelist</h5>
+                                  <h6>
+                                    0xu87sueis...8suejsi0xu87sueis...8suejsi
+                                  </h6>
+                                </div>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id="flexSwitchCheckDefault1"
+                            checked=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="wrap-whitelist">
+                        <div class="li-line-group">
+                          <div class="li-item">
+                            <div class="wrap-con">
+                              <div class="wrap-thumb">
+                                <div class="thumb">
+                                  <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                </div>
+                              </div>
+                              <div class="wrap-txt">
+                                <h5 class="address">
+                                  Lonely Astronaut Mystery Box
+                                </h5>
+                                <div class="wrap-tags">
+                                  <span class="tag active"> Soulbound </span>
+                                  <span class="tag active"> 1회용 </span>
+                                  <!-- <span class="tag txt-sm">
+                                    0x2t7w8jfud7w8jfudd9siodiwkd0s9fogisk48fy7d6rit6y3
+                                  </span> -->
+                                  <p class="txt-sm">
+                                    0x2t7w8jfud7w8jfudd9siodiwkd0s9fogisk48fy7d6rit6y3
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wrap-btn">
+                              <!-- button - copy -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="22"
+                                  height="23"
+                                  fill="none"
+                                  viewBox="0 0 24 25"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M4.37 8.635A2.37 2.37 0 0 0 2 11.005v8.812a2.37 2.37 0 0 0 2.37 2.369h8.812a2.37 2.37 0 0 0 2.37-2.37v-8.812a2.37 2.37 0 0 0-2.37-2.37H4.369ZM0 11.005a4.37 4.37 0 0 1 4.37-4.37h8.812a4.37 4.37 0 0 1 4.37 4.37v8.812a4.37 4.37 0 0 1-4.37 4.369H4.369A4.37 4.37 0 0 1 0 19.816v-8.812Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M10.59 2.414a2.369 2.369 0 0 0-2.37 2.37 1 1 0 1 1-2 0 4.37 4.37 0 0 1 4.37-4.37h8.812a4.369 4.369 0 0 1 4.37 4.37v8.813a4.368 4.368 0 0 1-4.37 4.368 1 1 0 1 1 0-2 2.366 2.366 0 0 0 2.37-2.368V4.783a2.37 2.37 0 0 0-2.37-2.369H10.59Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                              <!-- button - open -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="23"
+                                  height="23"
+                                  fill="none"
+                                  viewBox="0 0 26 26"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M23.75 3.25a1 1 0 0 0-1-1h-8.667a1 1 0 1 0 0 2h6.253l-9.126 9.126a1 1 0 1 0 1.414 1.414l9.126-9.126v6.253a1 1 0 1 0 2 0V3.25Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M7.21 5.4c.6-.065 1.385-.067 2.54-.067a1 1 0 0 0 0-2h-.056c-1.085 0-1.98 0-2.7.079-.752.082-1.43.259-2.026.696a4 4 0 0 0-.86.86c-.437.596-.614 1.275-.696 2.026-.079.72-.079 1.615-.079 2.7v6.043c0 1.354 0 2.471.12 3.355.124.928.396 1.747 1.052 2.403.656.656 1.475.928 2.403 1.053.884.119 2 .119 3.355.119h6.043c1.085 0 1.98 0 2.7-.079.752-.082 1.43-.259 2.026-.695.329-.242.62-.532.86-.86.437-.597.614-1.275.696-2.026.079-.72.079-1.616.079-2.7v-.057a1 1 0 1 0-2 0c0 1.155-.002 1.941-.067 2.54-.063.58-.177.863-.32 1.06-.121.164-.266.31-.43.43-.197.144-.48.257-1.06.32-.599.065-1.385.067-2.54.067h-5.917c-1.442 0-2.423-.002-3.158-.101-.706-.095-1.033-.262-1.256-.485-.222-.223-.39-.55-.485-1.256-.099-.734-.1-1.716-.1-3.158V9.75c0-1.155 0-1.94.066-2.54.063-.58.176-.863.32-1.06a2 2 0 0 1 .43-.43c.197-.143.48-.257 1.06-.32Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                              <!-- button - delete -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="27"
+                                  height="27"
+                                  fill="none"
+                                  viewBox="0 0 27 27"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M11.25 12.6a.9.9 0 0 1 .9.9v5.625a.9.9 0 1 1-1.8 0V13.5a.9.9 0 0 1 .9-.9Zm4.5 0a.9.9 0 0 1 .9.9v5.625a.9.9 0 1 1-1.8 0V13.5a.9.9 0 0 1 .9-.9ZM3.6 7.875a.9.9 0 0 1 .9-.9h18a.9.9 0 1 1 0 1.8h-18a.9.9 0 0 1-.9-.9Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M6.75 10.35a.9.9 0 0 1 .9.9v9.375c0 1.16.94 2.1 2.1 2.1h7.5a2.1 2.1 0 0 0 2.1-2.1V11.25a.9.9 0 1 1 1.8 0v9.375a3.9 3.9 0 0 1-3.9 3.9h-7.5a3.9 3.9 0 0 1-3.9-3.9V11.25a.9.9 0 0 1 .9-.9Zm2.475-4.975a2.9 2.9 0 0 1 2.9-2.9h2.75a2.9 2.9 0 0 1 2.9 2.9v2.5a.9.9 0 0 1-.9.9h-6.75a.9.9 0 0 1-.9-.9v-2.5Zm2.9-1.1a1.1 1.1 0 0 0-1.1 1.1v1.6h4.95v-1.6a1.1 1.1 0 0 0-1.1-1.1h-2.75Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="li-item">
+                            <div class="wrap-con">
+                              <div class="wrap-thumb">
+                                <div class="thumb">
+                                  <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                                </div>
+                              </div>
+                              <div class="wrap-txt">
+                                <h5 class="address">
+                                  Drawshop Kingdom White..
+                                </h5>
+                                <div class="wrap-tags">
+                                  <!-- <span class="tag disabled"> Soulbound </span> -->
+                                  <!-- <span class="tag disabled"> 1회용 </span> -->
+                                  <!-- <span class="txt-sm tag">
+                                    0x2t7w8jfud7w8jfudd9siodiwkd0s9fogisk48fy7d6rit6y3
+                                  </span> -->
+                                  <p class="txt-sm">
+                                    0x2t7w8jfud7w8jfudd9siodiwkd0s9fogisk48fy7d6rit6y3
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wrap-btn">
+                              <!-- button - copy -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="22"
+                                  height="23"
+                                  fill="none"
+                                  viewBox="0 0 24 25"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M4.37 8.635A2.37 2.37 0 0 0 2 11.005v8.812a2.37 2.37 0 0 0 2.37 2.369h8.812a2.37 2.37 0 0 0 2.37-2.37v-8.812a2.37 2.37 0 0 0-2.37-2.37H4.369ZM0 11.005a4.37 4.37 0 0 1 4.37-4.37h8.812a4.37 4.37 0 0 1 4.37 4.37v8.812a4.37 4.37 0 0 1-4.37 4.369H4.369A4.37 4.37 0 0 1 0 19.816v-8.812Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M10.59 2.414a2.369 2.369 0 0 0-2.37 2.37 1 1 0 1 1-2 0 4.37 4.37 0 0 1 4.37-4.37h8.812a4.369 4.369 0 0 1 4.37 4.37v8.813a4.368 4.368 0 0 1-4.37 4.368 1 1 0 1 1 0-2 2.366 2.366 0 0 0 2.37-2.368V4.783a2.37 2.37 0 0 0-2.37-2.369H10.59Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                              <!-- button - open -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="23"
+                                  height="23"
+                                  fill="none"
+                                  viewBox="0 0 26 26"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M23.75 3.25a1 1 0 0 0-1-1h-8.667a1 1 0 1 0 0 2h6.253l-9.126 9.126a1 1 0 1 0 1.414 1.414l9.126-9.126v6.253a1 1 0 1 0 2 0V3.25Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M7.21 5.4c.6-.065 1.385-.067 2.54-.067a1 1 0 0 0 0-2h-.056c-1.085 0-1.98 0-2.7.079-.752.082-1.43.259-2.026.696a4 4 0 0 0-.86.86c-.437.596-.614 1.275-.696 2.026-.079.72-.079 1.615-.079 2.7v6.043c0 1.354 0 2.471.12 3.355.124.928.396 1.747 1.052 2.403.656.656 1.475.928 2.403 1.053.884.119 2 .119 3.355.119h6.043c1.085 0 1.98 0 2.7-.079.752-.082 1.43-.259 2.026-.695.329-.242.62-.532.86-.86.437-.597.614-1.275.696-2.026.079-.72.079-1.616.079-2.7v-.057a1 1 0 1 0-2 0c0 1.155-.002 1.941-.067 2.54-.063.58-.177.863-.32 1.06-.121.164-.266.31-.43.43-.197.144-.48.257-1.06.32-.599.065-1.385.067-2.54.067h-5.917c-1.442 0-2.423-.002-3.158-.101-.706-.095-1.033-.262-1.256-.485-.222-.223-.39-.55-.485-1.256-.099-.734-.1-1.716-.1-3.158V9.75c0-1.155 0-1.94.066-2.54.063-.58.176-.863.32-1.06a2 2 0 0 1 .43-.43c.197-.143.48-.257 1.06-.32Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                              <!-- button - delete -->
+                              <button type="button" class="btn btn-sq btn-tr">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="27"
+                                  height="27"
+                                  fill="none"
+                                  viewBox="0 0 27 27"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M11.25 12.6a.9.9 0 0 1 .9.9v5.625a.9.9 0 1 1-1.8 0V13.5a.9.9 0 0 1 .9-.9Zm4.5 0a.9.9 0 0 1 .9.9v5.625a.9.9 0 1 1-1.8 0V13.5a.9.9 0 0 1 .9-.9ZM3.6 7.875a.9.9 0 0 1 .9-.9h18a.9.9 0 1 1 0 1.8h-18a.9.9 0 0 1-.9-.9Z"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M6.75 10.35a.9.9 0 0 1 .9.9v9.375c0 1.16.94 2.1 2.1 2.1h7.5a2.1 2.1 0 0 0 2.1-2.1V11.25a.9.9 0 1 1 1.8 0v9.375a3.9 3.9 0 0 1-3.9 3.9h-7.5a3.9 3.9 0 0 1-3.9-3.9V11.25a.9.9 0 0 1 .9-.9Zm2.475-4.975a2.9 2.9 0 0 1 2.9-2.9h2.75a2.9 2.9 0 0 1 2.9 2.9v2.5a.9.9 0 0 1-.9.9h-6.75a.9.9 0 0 1-.9-.9v-2.5Zm2.9-1.1a1.1 1.1 0 0 0-1.1 1.1v1.6h4.95v-1.6a1.1 1.1 0 0 0-1.1-1.1h-2.75Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wrap-form-btm">
+                          <div class="row wrap-input">
+                            <div class="col-8 flex-fill">
+                              <input
+                                type="text"
+                                class="form-control"
+                                aria-label=""
+                              />
+                            </div>
+                            <div class="col-auto">
+                              <button type="button" class="btn btn-line btn-sq">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    fill="#464F60"
+                                    fill-rule="evenodd"
+                                    d="M11.508 0a1 1 0 0 1 1 1v9.508h9.507a1 1 0 1 1 0 2h-9.508v9.507a1 1 0 0 1-2 0v-9.508H1a1 1 0 0 1 0-2h9.508V1a1 1 0 0 1 1-1Z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <p class="form-text">
+                            If you set more than 2 NFTs for White List
+                            Filtering, it should be defined if they are required
+                            in AND or OR condition.
+                          </p>
+                          <div class="row wrap-radio">
+                            <div class="col-2 form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="radio10"
+                                id="radio11"
+                                checked
+                              />
+                              <label class="form-check-label" for="radio11">
+                                AND Condition
+                              </label>
+                            </div>
+                            <div class="col-2 form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="radio10"
+                                id="radio12"
+                              />
+                              <label class="form-check-label" for="radio12">
+                                OR Condition
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- buttons -->
+                <div class="wrap-btn wrap-btn-btm">
+                  <div class="row">
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-light">Back</button>
+                    </div>
+                    <div class="col-auto pull-right">
+                      <button type="button" class="btn btn-grad-line">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-grad" disabled>
+                        <span class="txt">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- tab step02 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step2"
+                role="tabpanel"
+                aria-labelledby="navTab-step2"
+              ></div>
+              <!-- tab step03 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step3"
+                role="tabpanel"
+                aria-labelledby="navTab-step3"
+              ></div>
+            </div>
+          </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+// btn-filter
+.wrap-btn-filter {
+  height: auto;
+  gap: 13px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .dropdown {
+    .form-check {
+      gap: 8px;
+      margin: 0;
+    }
+    .dropdown-menu.show {
+      min-width: 137px;
+    }
+  }
+
+  .tag {
+    font-weight: 500;
+    font-size: 14px;
+    color: #030229;
+    height: 30.33px;
+    background: rgba(217, 224, 236, 0.2);
+    border-radius: 100px;
+    border: 0;
+    padding: 0 12px 0 16px;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    button {
+      padding: 0;
+    }
+
+    .i {
+      height: 14px;
+      // margin-top: -2px;
+    }
+
+    .txt {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      @include t-ell;
+
+      .label {
+        font-size: 12px;
+      }
+    }
+
+    .btn {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  .btn-filter {
+    background: #404040;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    // width: 76px;
+    padding: 0 16px;
+    height: 30.33px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      display: none;
+    }
+
+    .i {
+      height: 14px;
+    }
+  }
+
+  .link {
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    height: 30.33px;
+  }
+
+  &.wrap-btn-filter-a {
+    .tag {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      min-height: 39px;
+      color: #fc6825;
+      background: rgba(252, 104, 37, 0.1);
+      border: 1px solid #fc6825;
+      border-radius: 100px;
+      padding: 6px 12px 6px 16px;
+      height: auto;
+      gap: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 250px;
+    }
+
+    .link {
+      height: 39px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .wrap-btn-filter {
+    margin-bottom: 20px;
+
+    .btn-filter {
+      font-size: 12px;
+    }
+
+    .tag {
+      font-size: 12px;
+      min-height: 28px;
+    }
+
+    .link {
+      height: 32px;
+      font-size: 12px;
+    }
+
+    &.wrap-btn-filter-a {
+      .tag {
+        font-size: 14px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      .link {
+        font-size: 13px;
+      }
+    }
+  }
+}

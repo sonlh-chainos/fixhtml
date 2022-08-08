@@ -1,0 +1,185 @@
+// steps
+
+.wrap-step {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 18px 3px;
+  width: 100%;
+
+  .step {
+    position: relative;
+    background-color: #fff;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:first-child):before {
+      height: 2.5px;
+      width: 500px;
+      background-color: #d9e0ec;
+      position: absolute;
+      right: 36px;
+      @include i-bg;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      color: #d9e0ec;
+      width: 36px;
+      height: 36px;
+      border-radius: 100px;
+      border: 2.5px solid #d9e0ec;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-step {
+      width: 54px;
+      height: 36px;
+      background-color: #fff;
+      position: absolute;
+      left: -9px;
+      z-index: 10;
+    }
+
+    &.active {
+      &:before {
+        background: $grad;
+        // background: #FF2F00;
+        z-index: 9;
+      }
+
+      span {
+        color: #ff2f00;
+        border-color: #ff2f00;
+      }
+    }
+
+    img.ing {
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      z-index: 11;
+    }
+  }
+
+  &.wrap-step-gray {
+    // padding-left: 0;
+    // padding-right: 0;
+    overflow: visible;
+
+    .col {
+      position: relative;
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 10px 0 0;
+      }
+
+      &:not(:first-child) .step {
+        &:before {
+          height: 2.5px;
+          width: 500px;
+          background-color: #d9e0ec;
+          position: absolute;
+          right: 36px;
+          width: 130px;
+          background: #e0e0e0;
+          right: 30px;
+          @include i-bg;
+        }
+
+        &.active:before,
+        &.checked:before {
+          background: #464f60;
+        }
+      }
+    }
+
+    .step {
+      span {
+        width: 30px;
+        height: 30px;
+        background: #f7f9fb;
+        border-color: #e0e0e0;
+      }
+
+      &.active {
+        z-index: 3;
+
+        > span {
+          background: #fff;
+          border-color: #fff;
+          box-shadow: 0px 4px 15px rgba(159, 159, 159, 0.25);
+
+          &:after {
+            animation: e-blink 1s step-end infinite;
+            -webkit-animation: e-blink 1s step-end infinite;
+            position: absolute;
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: #464f60;
+            z-index: 10;
+            border-radius: 100px;
+          }
+        }
+      }
+
+      &.checked {
+        > span {
+          background: #464f60;
+          border-color: #464f60;
+        }
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 14px;
+          height: 14px;
+          background: url(../img/i_check_w.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          z-index: 10;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  .wrap-step {
+    padding-top: 8px;
+    padding-bottom: 20px;
+
+    .step {
+      > span {
+        font-size: 13px;
+        width: 29px;
+        height: 29px;
+      }
+
+      img.ing {
+        width: 33px;
+        height: 33px;
+        left: -2px;
+        top: -2px;
+      }
+
+      .bg-step {
+        width: calc(29px + 12px);
+        left: -6px;
+      }
+    }
+  }
+}

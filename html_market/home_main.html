@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb fixed-top pc-only">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="#" class="navbar-brand align-items-center">
+              <!-- logo -->
+              <img src="../img/logo.svg" class="logo" alt="logo" />
+              <!-- tag - testnet -->
+              <img src="../img/tag_logo_testnet.svg" alt="testnet" />
+              <!-- tag - dev -->
+              <!-- <img src="../img/tag_logo_dev.svg" alt="dev" /> -->
+              <!-- tag - beta -->
+              <!-- <img src="../img/tag_logo_beta.svg" alt="beta" /> -->
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="wrap-btn pull-right">
+              <a href="#" class="btn btn-lang">
+                <span class="active">EN</span>|<span>KR</span>
+              </a>
+
+              <!-- 로그인 상태일때 프로필버튼, noti 추가 -->
+              <div class="wrap-account">
+                <div class="noti">
+                  <div class="inner">Received 12 offers</div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-account"
+                  onclick="location.href='profile_main.html';"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="#464F60"
+                      d="M13.129 10.523a4.75 4.75 0 1 0-5.875 0A7.917 7.917 0 0 0 2.33 17a.797.797 0 0 0 1.584.174 6.334 6.334 0 0 1 12.587 0 .792.792 0 0 0 .792.705h.087a.792.792 0 0 0 .697-.871 7.917 7.917 0 0 0-4.949-6.484Zm-2.938-.562a3.167 3.167 0 1 1 0-6.333 3.167 3.167 0 0 1 0 6.333Z"
+                    />
+                  </svg>
+                </button>
+                <span class="badge active">12</span>
+              </div>
+
+              <!-- 로그아웃 상태일때 지갑버튼 -->
+              <!-- <div class="wallet-menu">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-grad btn-connect"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="filterWalletButton"
+                  >
+                    <img src="../img/i_wallet_f.svg" class="i" alt="" /> CONNECT
+                  </button>
+                  <div
+                    aria-labelledby="filterWalletButton"
+                    data-popper-placement="bottom-end"
+                    class="dropdown-menu dropdown-menu-end dropdown-wallet dropdown-menu"
+                  >
+                    <div class="wrap-btn">
+                      <button class="btn-block btn-g btn" value="">
+                        <img src="../img/i_wallet_b_sm.svg" class="i" alt="" />
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- 로그인 상태일태 지갑버튼 -->
+              <div class="wallet-menu">
+                <div class="dropdown">
+                  <button
+                    role="button"
+                    class="btn btn-a-line btn-connect"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="filterEventButton"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="16"
+                      fill="none"
+                      viewBox="0 0 18 16"
+                    >
+                      <path
+                        stroke="#FF2F00"
+                        stroke-width="1.5"
+                        d="M10.896.96H6.96c-2.784 0-4.176 0-5.041.88-.865.878-.865 2.293-.865 5.12v2c0 2.83 0 4.244.865 5.122.865.879 2.257.879 5.041.879h3.938c2.784 0 4.176 0 5.04-.879.866-.878.866-2.293.866-5.121v-2c0-2.828 0-4.243-.865-5.121-.865-.88-2.257-.88-5.042-.88Z"
+                      />
+                      <path
+                        stroke="#FF2F00"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M4.553 4.46h2.625"
+                      />
+                      <path
+                        stroke="#FF2F00"
+                        stroke-width="1.5"
+                        d="M15.053 11.46h-1.75c-.703 0-1.054 0-1.306-.168a1 1 0 0 1-.276-.275c-.168-.253-.168-.604-.168-1.306 0-.702 0-1.053.168-1.306a1 1 0 0 1 .276-.276c.252-.168.604-.168 1.306-.168h1.75c.702 0 1.053 0 1.305.168a1 1 0 0 1 .276.276c.169.253.169.604.169 1.306 0 .702 0 1.053-.169 1.306a1 1 0 0 1-.276.275c-.252.169-.603.169-1.305.169Z"
+                      />
+                    </svg>
+                    0x33F...E11e
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                    aria-labelledby="filterEventButton"
+                    data-popper-placement="bottom-end"
+                  >
+                    <div class="wrap-box">
+                      <div class="box">
+                        <div class="thumb">
+                          <img src="../img/i_klay.svg" alt="" />
+                        </div>
+                        <div class="wrap-title">
+                          <h4>KLAY</h4>
+                          <span>Klaytn</span>
+                        </div>
+                        <div class="price">
+                          <h4>1600</h4>
+                          <span>$ 8370.7 USD</span>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <div class="thumb">
+                          <img src="../img/i_wklay.svg" alt="" />
+                        </div>
+                        <div class="wrap-title">
+                          <h4>WKLAY</h4>
+                          <span>Klaytn</span>
+                        </div>
+                        <div class="price">
+                          <h4>1600</h4>
+                          <span>$ 8370.7 USD</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap-btn">
+                      <button type="button" class="btn btn-block btn-g">
+                        <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                        Copy Address
+                      </button>
+                      <button type="button" class="btn btn-block btn-g">
+                        <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                        Connect Other Wallet
+                      </button>
+                      <button type="button" class="btn btn-block btn-a">
+                        <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                        Disconnect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb 메뉴 (Mo) -->
+      <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <!-- logo -->
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+            <!-- tag - testnet -->
+            <img src="../img/tag_logo_testnet.svg" alt="testnet" />
+            <!-- tag - dev -->
+            <!-- <img src="../img/tag_logo_dev.svg" alt="dev" /> -->
+            <!-- tag - beta -->
+            <!-- <img src="../img/tag_logo_beta.svg" alt="beta" /> -->
+          </a>
+          <div class="pull-right">
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_wallet.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-wallet"
+                id="gnbWallet"
+              >
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_klay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_wklay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                    Disconnect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_menu.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-gnbmenu"
+                id="gnbMenu"
+              >
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Game</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Profile</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn btn-lang">
+                    <span class="active">EN</span>|<span>KR</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 메인 영역 -->
+      <main class="home-main">
+        <!-- 상단 -->
+        <section id="homeTop" class="home-top">
+          <div class="jumbotron">
+            <h1>
+              START AN EXTRAORDINARY <br class="pc-only" />ERA OF GAME NFTS
+            </h1>
+            <p>
+              Digital marketplace for crypto collectibles and non-<br
+                class="pc-only"
+              />fungible tokens (NFTs). Buy, Sell, and discover
+              <br class="pc-only" />exclusive digital assets.
+            </p>
+            <div class="wrap-btn pull-right">
+              <button type="button" class="btn btn-a">Explore Now</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="home-main-section">
+          <div class="home-game">
+            <div class="section-title">
+              <h2>TRENDING GAMES</h2>
+              <a href="" class="btn btn-a-line pull-right">
+                <!-- span.pc-only 태그 추가 -->
+                <span class="pc-only">View All</span>
+                <img src="../img/i_arr_viewall.svg" />
+              </a>
+            </div>
+
+            <!-- pc carousel -->
+            <div class="wrap-carousel pc-only">
+              <div
+                id="carouselIndicators"
+                class="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+                data-bs-touch="true"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <!-- <img src="../img/ex/ex_game_top.jpg" alt=""> -->
+                          <video
+                            class=""
+                            controls="true"
+                            autoplay="true"
+                            muted="true"
+                            loop="true"
+                            alt="Aurory"
+                          >
+                            <source
+                              src="https://fractal-game.imgix.net/aurory/aurory-video.mp4"
+                            />
+                          </video>
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_game_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>
+                                BYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAO
+                              </h4>
+                              <h6 class="verif">
+                                <span>
+                                  SA61SA61BYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAO
+                                </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_game_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>BYLLYBOLADAO</h4>
+                              <h6 class="verif">
+                                <span> SA61SA6 </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_game_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>BYLLYBOLADAO</h4>
+                              <h6>
+                                <span> SA61SA6 </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>
+                                BYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAO
+                              </h4>
+                              <h6 class="verif">
+                                <span>
+                                  SA61SA61BYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAO
+                                </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>A.V.A</h4>
+                              <h6>
+                                <span> SA61SA6 </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="wrap-card"></div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tablet carousel (markup에서만) -->
+            <div class="wrap-carousel tablet-only">
+              <div
+                id="carouselIndicators"
+                class="carousel slide carousel-fade carousel-preview pointer-event"
+                data-bs-ride="carousel"
+                data-bs-touch="true"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="0"
+                    aria-label="Slide 0"
+                    class="active"
+                    aria-current="true"
+                  ></button
+                  ><button
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 1"
+                    class=""
+                    aria-current="false"
+                  ></button
+                  ><button
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 2"
+                    class=""
+                    aria-current="false"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="/game/drawshop" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img
+                            src="https://lh3.googleusercontent.com/MphWJ0ZM0u-AJnSjC7YjAl8RRCqKPzYR4bI7zhNo5Ldaat28S4RNL1NLndn0-HiDHp-ewW3ibPgE6qwknWVeO135e1ZrR0kCJ9CcPQ=h600"
+                            class=""
+                            alt="Drawshop Kingdom Reverse"
+                          />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img
+                                src="https://lh3.googleusercontent.com/ZTk3z-AbXhHiUYi2krQgohfRkgsHeNz-F5_sk4U16_dgC3yxOdYpIx7xtrbY7hUKLolgz0tH5v0ezcQOAkHBKo5hfef1ZMJHR2CtjQk=s130"
+                                alt=""
+                              />
+                            </div>
+                            <div class="txt">
+                              <h4>Drawshop Kingdom Reverse</h4>
+                              <h6 class="verif"><span>Klaybay!!</span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div> </a
+                    ><a href="/game/sheepfarm" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img
+                            src="https://lh3.googleusercontent.com/hKqRYZAANickapbgh3sVeM8ON_yqcy7B-L1tbbZHu0-ZL2DfP7tBRlb1sZ4zRX5E4FvPT7C3RGKt0E_HngIj4ebqCgqar4nY7TfDFA=h600"
+                            class=""
+                            alt="SheepFarm"
+                          />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img
+                                src="https://lh3.googleusercontent.com/ynlAQE698lEpXooP100VUIGQIUdFapJZweh8WhPuvnucEuRv5DcL0PFo80dgkdiQY3ydUaTl7ZzsGl51NCNpuAp-Wxswlq1O6RS6JQ=s130"
+                                alt=""
+                              />
+                            </div>
+                            <div class="txt">
+                              <h4>SheepFarm</h4>
+                              <h6 class="verif"><span>Klaybay!!</span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="/game/klay-3-kingdoms" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img
+                            src="https://lh3.googleusercontent.com/7QoUmWE9mDaY5cS1iubMBWOQT7GgsdFoyLq6oxBXhgqJdttQc4oMvqv4LplFKdlgoWUDt2FtVeMNqgwXRjAtzGmzi50Jn9ftXlZnoq0=h600"
+                            class=""
+                            alt="Klay 3 Kingdoms"
+                          />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img
+                                src="https://lh3.googleusercontent.com/q8r6C2147ULAXtKRtL1yOFIG-4SUiqDWMfC-4bgrNoC_y5tRwmMrjk-Sxbojj5RuOxrPkOKHHNLPKWNGGfqZ0YbYoM7oSnELX6E1=s130"
+                                alt=""
+                              />
+                            </div>
+                            <div class="txt">
+                              <h4>Klay 3 Kingdoms</h4>
+                              <h6 class="verif"><span>Klaybay!!</span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div> </a
+                    ><a href="/game/aurory" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <video
+                            autoplay="true"
+                            playsinline=""
+                            muted="true"
+                            loop="true"
+                            class="embed-responsive-item"
+                            alt="Aurory"
+                          >
+                            <source
+                              src="https://fractal-game.imgix.net/aurory/aurory-video.mp4"
+                            />
+                          </video>
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img
+                                src="https://storage.googleapis.com/fractal_game_assets/aurory_avatar_1639948538.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="txt">
+                              <h4>Aurory</h4>
+                              <h6 class="verif"><span>daniel</span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      href="/game/afk-battle-idle-princess-bb"
+                      class="wrap-card"
+                    >
+                      <div class="card">
+                        <div class="thumb">
+                          <img
+                            src="https://guiasteam.com/wp-content/uploads/2021/09/AFK-Battle-Idle-Princess-768x432.png"
+                            class=""
+                            alt="AFK Battle Idle Princess BB"
+                          />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img
+                                src="https://play-lh.googleusercontent.com/d01_OkAe9V61vbEYym47JqpKtzSbJf--lrt76Ji4oUuGGe2p4XRqwTbCL_JnQLA2BQ=w512"
+                                alt=""
+                              />
+                            </div>
+                            <div class="txt">
+                              <h4>AFK Battle Idle Princess BB</h4>
+                              <h6 class="verif"><span>Klaybay!!</span></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="wrap-card"></div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- M carousel -->
+            <div class="wrap-carousel m-only">
+              <!-- 다음카드 미리보기 ui : .carousel.carousel-preview -->
+              <div
+                id="carouselIndicators"
+                class="carousel carousel-preview slide carousel-fade"
+                data-bs-ride="carousel"
+                data-bs-touch="true"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_game_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>
+                                BYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAO
+                              </h4>
+                              <h6 class="verif">
+                                <span>
+                                  SA61SA61BYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAOYLLYBOLADAO
+                                </span>
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>A.V.A</h4>
+                              <span>Neowiz</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="" class="wrap-card">
+                      <div class="card">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_home_top.jpg" alt="" />
+                        </div>
+                        <div class="wrap-body">
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="../img/ex/ex_home_top.jpg" alt="" />
+                            </div>
+                            <div class="txt">
+                              <h4>A.V.A</h4>
+                              <span>Neowiz</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-top">
+            <div class="section-title">
+              <h2>TOP TRADES</h2>
+              <a href="" class="btn btn-a-line pull-right">
+                <!-- span.pc-only 태그 추가 -->
+                <span class="pc-only">View All</span>
+                <img src="../img/i_arr_viewall.svg" />
+              </a>
+            </div>
+            <div class="wrap-f-list">
+              <!-- f-list 전체 묶음으로 변경 (브라우저 사이즈마다 배열 바뀜) -->
+              <div class="f-list">
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <!-- 위아래 순서변경, h6 태그 추가 -->
+                        <h6 class="verif">
+                          <span
+                            >NeowizksCryptoFunksCryptoFunksCryptoFunksCryptoFunks</span
+                          >
+                        </h6>
+                        <h4>
+                          CryptoFunksCryptoFunksCryptoFunksCryptoFunksCryptoFunksCryptoFunks
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay wklay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div> </a
+                ><a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">2</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <!-- 위아래 순서변경, h6 태그 추가 -->
+                        <h6 class="verif">
+                          <span
+                            >NeowizksCryptoFunksCryptoFunksCryptoFunksCryptoFunks</span
+                          >
+                        </h6>
+                        <h4>
+                          CryptoFunksCryptoFunksCryptoFunksCryptoFunksCryptoFunksCryptoFunks
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay wklay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">3</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">4</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6>
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="wrap-li">
+                  <div class="li">
+                    <div class="item">
+                      <div class="num">1</div>
+                      <div class="thumb">
+                        <img src="../img/ex/ex_pf_top.jpg" alt="" />
+                      </div>
+                      <div class="txt">
+                        <h6 class="verif">
+                          <span>Neowiz</span>
+                        </h6>
+                        <h4>Cryp</h4>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <h5 class="klay">999K</h5>
+                      <span>$ 999K</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-recent">
+            <div class="section-title">
+              <h2>RECENT SALES</h2>
+              <a href="" class="btn btn-a-line pull-right">
+                <!-- span.pc-only 태그 추가 -->
+                <span class="pc-only">View All</span>
+                <img src="../img/i_arr_viewall.svg" />
+              </a>
+            </div>
+            <div class="wrap-f-table">
+              <div class="f-table table-recent">
+                <div class="thead">
+                  <div class="tr">
+                    <div class="th"></div>
+                    <div class="th">Price</div>
+                    <div class="th">Seller</div>
+                    <div class="th">Buyer</div>
+                    <div class="th">Transaction Time</div>
+                  </div>
+                </div>
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td">
+                      <!-- .num 삭제 -->
+                      <a href="" class="link item">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <!-- 인증딱지 추가, 위아래 순서 바뀜 -->
+                        <div class="txt">
+                          <h6 class="verif">
+                            <span
+                              >SA61BYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAO</span
+                            >
+                          </h6>
+                          <h4>
+                            BYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAOBYLLYBOLADAO
+                          </h4>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <span class="label m-only"> Price </span>
+                      <h5 class="klay">2,591,901.31</h5>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <span class="label m-only"> Transaction Time </span>
+                        <h5 class="">10 hours ago</h5>
+                        <img
+                          src="../img/i_hyplink.svg"
+                          alt=""
+                          class="i i-link"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <a href="" class="link item">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                          <h6 class="verif">
+                            <span>SA61</span>
+                          </h6>
+                          <h4>BYLLYBOLADAO</h4>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <span class="label m-only"> Price </span>
+                      <h5 class="klay">2,354</h5>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <span class="label m-only"> Transaction Time </span>
+                        <h5 class="">10 hours ago</h5>
+                        <img
+                          src="../img/i_hyplink.svg"
+                          alt=""
+                          class="i i-link"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <a href="" class="link item">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_game_top.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                          <h6 class="verif">
+                            <span>SA61</span>
+                          </h6>
+                          <h4>BYLLYBOLADAO</h4>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <span class="label m-only"> Price </span>
+                      <h5 class="klay">2,354</h5>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <div class="thumb">
+                          <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                        </div>
+                        <h5 class="t-ell">0xd2a0...e06282</h5>
+                      </a>
+                    </div>
+                    <div class="td">
+                      <a href="" class="link">
+                        <span class="label m-only"> Transaction Time </span>
+                        <h5 class="">10 hours ago</h5>
+                        <img
+                          src="../img/i_hyplink.svg"
+                          alt=""
+                          class="i i-link"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="wrap-left">
+          <a href="">
+            <!-- logo -->
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <!-- baobab -->
+          <div
+            class="wrap-link baobab-desc"
+            style="color: #ff2f00; font-weight: 500; font-size: 14px"
+          >
+            Please let us know if you have any suggestions or comments via
+            email,
+            <a
+              href="mailto:feedback@klaybay.io"
+              target="_blank"
+              style="color: #ff2f00; text-decoration: underline"
+              >feedback@klaybay.io</a
+            >
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_fb.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_disc.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+    </script>
+  </body>
+</html>

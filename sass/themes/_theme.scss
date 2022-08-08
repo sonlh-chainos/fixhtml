@@ -1,0 +1,126 @@
+// general styles
+:root {
+  accent-color: #fc6825;
+}
+
+body {
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  color: #030229;
+  background-color: #fff;
+
+  > div#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // padding-top: 75px;
+    padding-top: 95px;
+  }
+}
+
+main {
+  padding-bottom: 65px;
+  // overflow: hidden;
+}
+
+// home
+.home-top .jumbotron,
+.home-main-section,
+.home-top .wrap-btm {
+  padding-left: $w-pp;
+  padding-right: $w-pp;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0;
+  border: 0;
+  width: 100%;
+  max-width: 1254px + ($w-pp * 2);
+}
+
+// nft, listing
+.nft-top,
+.nft-main,
+.listing-main {
+  padding-left: $w-pp;
+  padding-right: $w-pp;
+  margin-left: auto;
+  margin-right: auto;
+  // padding-bottom: 0;
+  border: 0;
+  width: 100%;
+  max-width: 1100px + ($w-pp * 2);
+}
+
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+textarea:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+a,
+a:hover {
+  color: #fc6825;
+  transition: 0s;
+}
+
+button {
+  outline: none;
+}
+
+.btn {
+  transition: 0s;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-check-input:active {
+  -webkit-filter: none;
+  filter: none;
+}
+
+span {
+  font-weight: normal;
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  body > div#app {
+    padding-top: 60px;
+  }
+}

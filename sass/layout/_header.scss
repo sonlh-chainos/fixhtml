@@ -1,0 +1,272 @@
+// gnb
+nav.gnb {
+  height: 75px;
+  padding: 0 60px;
+  margin: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 0;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    display: flex;
+  }
+
+  .text-end > *:first-child {
+    margin-right: 20px;
+  }
+
+  .text-end > *:nth-child(2) {
+    margin-right: 10px;
+  }
+
+  &.scrolled {
+    box-shadow: 0px 4px 4px rgba(226, 226, 226, 0.25);
+  }
+
+  .wrap-menu {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 35px;
+    + img {
+      margin-left: 8px;
+    }
+  }
+
+  ul.nav {
+    margin-left: 22px;
+    margin-right: auto;
+
+    .nav-link {
+      font-weight: 500;
+      color: #464f60;
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+  }
+
+  ul.nav li {
+    font-size: 16px;
+    font-weight: 600;
+    color: #030229;
+    margin: 0 16px;
+  }
+
+  .btn-lang {
+    font-size: 14px;
+    color: #6c6c6c;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+
+    span {
+      margin: 0 5px;
+
+      &.active {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .wallet-menu {
+    display: inline-block;
+    position: relative;
+  }
+
+  .btn-connect {
+    height: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 18px;
+    display: inline-flex;
+    align-items: center;
+
+    &.btn-a-line {
+      color: #ff2f00;
+      font-weight: 600;
+      border: 1px solid #ff2f00;
+    }
+  }
+
+  .btn-account {
+    height: 37px;
+    width: 37px;
+    padding: 0;
+    border-radius: 11px;
+    box-sizing: border-box;
+    border: 1.5px solid #f0f2f4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .i {
+      height: 19px;
+    }
+  }
+
+  .wrap-btn.pull-right {
+    display: flex;
+    align-items: center;
+    .btn-lang {
+      margin-right: 20px;
+    }
+    .wrap-account {
+      display: flex;
+      position: relative;
+      margin-right: 12px;
+      .badge {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+      }
+    }
+    .noti {
+      position: relative;
+      margin-right: 12px;
+      // padding-right: 6px;
+      .inner {
+        box-shadow: 0px 2px 4px rgba(209, 209, 209, 0.25);
+        background: #f7f9fc;
+        border-radius: 11px;
+        height: 37px;
+        padding: 4px 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #464f60;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 0px;
+          right: 6px;
+          top: 50%;
+          border: 6px solid transparent;
+          border-right: 0;
+          border-left: 6px solid #f7f9fc;
+          transform: translate(calc(100% + 6px), -50%);
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  nav.gnb {
+    height: 60px;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: 0px 3px 4px rgba(192, 198, 208, 0.15);
+
+    &.scrolled {
+      height: 60px;
+    }
+
+    .navbar-toggler {
+      &:after {
+        display: none;
+      }
+    }
+
+    .navbar-collapse {
+      background: #fff;
+      box-shadow: 0px 3px 4px rgba(192, 198, 208, 0.15);
+      border-top: 1px solid #f0f2f4;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 60px;
+      width: 100vw;
+      border-radius: 0;
+      margin: 0 !important;
+
+      &.dropdown-wallet {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+      }
+
+      &.dropdown-gnbmenu {
+        padding: 10px 57px;
+
+        .btn-lang {
+          font-size: 14px;
+          font-weight: normal;
+          color: #9ba4bb;
+
+          span {
+            &.active {
+              color: #464f60;
+              font-weight: 500;
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 30px;
+      margin-left: 20px;
+    }
+
+    .navbar-brand {
+      margin-right: 0;
+    }
+
+    .pull-right {
+      height: 60px;
+      margin: 0 10px 0 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-toggler.hide {
+      display: none;
+    }
+
+    .btn-close {
+      background-size: 12px 12px;
+    }
+
+    .dropdown-gnbmenu {
+      padding-left: 57px;
+      padding-right: 57px;
+
+      .btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #464f60;
+        padding: 0;
+      }
+    }
+  }
+}

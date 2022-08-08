@@ -1,0 +1,54 @@
+// tooltip
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip-inner {
+  background-color: #464f60;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tooltip.bs-tooltip-right .tooltip-arrow:before {
+  border-right-color: #464f60;
+}
+
+.tooltip.bs-tooltip-left .tooltip-arrow:before {
+  border-left-color: #464f60;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow:before {
+  border-bottom-color: #464f60;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow:before {
+  border-top-color: #464f60;
+}
+
+.wrap-tooltip-light {
+  .tooltip-inner {
+    background: #f7f9fc;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #464f60;
+  }
+  .tooltip.bs-tooltip-right .tooltip-arrow:before {
+    border-right-color: #f7f9fc;
+  }
+
+  .tooltip.bs-tooltip-left .tooltip-arrow:before {
+    border-left-color: #f7f9fc;
+  }
+
+  .tooltip.bs-tooltip-bottom .tooltip-arrow:before {
+    border-bottom-color: #f7f9fc;
+  }
+
+  .tooltip.bs-tooltip-top .tooltip-arrow:before {
+    border-top-color: #f7f9fc;
+  }
+}

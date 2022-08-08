@@ -1,0 +1,41 @@
+.form-check {
+  display: flex;
+  align-items: center;
+
+  .form-check-input:checked {
+    background-color: transparent;
+  }
+
+  .form-check-input:not([role="switch"]) {
+    width: 18px;
+    height: 18px;
+    border: 0;
+    margin-right: 5px;
+    margin-top: 0;
+
+    &:after {
+      width: 18px;
+      height: 18px;
+      background-image: url(../img/btn_check_g.svg);
+      @include i-bg;
+    }
+
+    &[type="checkbox"] {
+      background-color: transparent;
+      background-image: none;
+    }
+
+    &:checked:after {
+      // width: 23px;
+      // height: 23px;
+      background-image: url(../img/btn_check_a.svg);
+      // @include i-bg;
+    }
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(70, 79, 96, 0.6);
+  }
+}

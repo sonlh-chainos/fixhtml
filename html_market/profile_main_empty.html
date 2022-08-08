@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <main class="profile-main">
+        <nav id="tab">
+          <div class="nav nav-tabs" role="tablist">
+            <button
+              class="nav-link active"
+              id="navTab-mynft"
+              onclick="location.href='profile_main.html';"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-mynft"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-all"
+              aria-selected="true"
+            >
+              My NFT
+              <span class="badge">11</span>
+            </button>
+            <button
+              class="nav-link"
+              id="navTab-listing"
+              onclick="location.href='profile_main_listing.html';"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-listing"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-top"
+              aria-selected="false"
+            >
+              Listing
+            </button>
+            <button
+              class="nav-link"
+              id="navTab-offer"
+              onclick="location.href='profile_main_offer.html';"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-offer"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-recent"
+              aria-selected="false"
+            >
+              Offer
+            </button>
+            <button
+              class="nav-link"
+              id="navTab-activity"
+              onclick="location.href='profile_main_activity.html';"
+              data-bs-toggle="tab"
+              data-bs-target="#tabCon-activity"
+              type="button"
+              role="tab"
+              aria-controls="tabCon-recent"
+              aria-selected="false"
+            >
+              Activity
+            </button>
+          </div>
+        </nav>
+
+        <div class="tab-content" id="tabCon">
+          <div
+            class="tab-pane fade active show"
+            id="tabCon-mynft"
+            role="tabpanel"
+            aria-labelledby="navTab-mynft"
+          >
+            <nav class="wrap-btn-top">
+              <div class="wrap-btn pc-only">
+                <button type="button" id="btnFilter" class="btn btn-filter">
+                  <img class="i" src="../img/i_filter_l.svg" alt="" />
+                </button>
+              </div>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle d-inline-flex align-items-center"
+                  type="button"
+                  id="dropdownSort"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Sort by
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownMenuButtonSM"
+                >
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Listed
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Created
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Sold
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Recently Received
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Ending Soon
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Price : Low to High
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Price : High to Low
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Highest Last Sale
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Most Viewed
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">
+                      Most Favorited
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item">Oldest</button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="wrap-list">
+              <aside id="sideFilter" class="side-filter">
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="heading00">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse00"
+                        aria-expanded="false"
+                        aria-controls="collapse00"
+                      >
+                        Price
+                      </button>
+                    </h4>
+                    <div
+                      id="collapse00"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="heading00"
+                    >
+                      <div class="accordion-body">
+                        <div class="wrap-con">
+                          <button type="button" class="btn btn-side active">
+                            <span class="label">Buy now</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">On Auction</span>
+                          </button>
+                          <button type="button" class="btn btn-side">
+                            <span class="label">New</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <section class="li-card-col">
+                <!-- 비어있을 땐 .row 보이지 않고, .wrap-empty만 보이도록 -->
+                <div class="wrap-empty">
+                  <img src="../img/img_empty.svg" alt="" />
+                  <h5>No items found</h5>
+                </div>
+                <!-- <div class="row" role="list">
+              </div> -->
+              </section>
+            </div>
+          </div>
+          <!-- 탭메뉴 콘텐츠2 -->
+          <div
+            class="tab-pane fade"
+            id="tabCon-listing"
+            role="tabpanel"
+            aria-labelledby="navTab-listing"
+          ></div>
+          <!-- 탭메뉴 콘텐츠3 -->
+          <div
+            class="tab-pane fade"
+            id="tabCon-offer"
+            role="tabpanel"
+            aria-labelledby="navTab-offer"
+          ></div>
+          <!-- 탭메뉴 콘텐츠4 -->
+          <div
+            class="tab-pane fade"
+            id="tabCon-activity"
+            role="tabpanel"
+            aria-labelledby="navTab-activity"
+          ></div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="wrap-left">
+          <a href="">
+            <img src="../img/logo.svg" alt="logo" class="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_fb.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_disc.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      // filter button card array
+      $("#btnFilter").click(function () {
+        $(".side-filter").toggleClass("hide");
+        $(".side-filter+section").toggleClass("wide");
+      });
+
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div
+        class="modal pop-step pop-md"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Complete your listing</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="wrap-step">
+                <!-- active: 완료/활성화된 스탭 -->
+                <div class="step active">
+                  <div class="bg-step"></div>
+                  <span>1</span>
+                </div>
+                <div class="step active">
+                  <div class="bg-step"></div>
+                  <span>2</span>
+                  <!-- 현재스탭을 나타내는 원형이미지: 현 스탭에 추가 -->
+                  <img src="../img/circle_a.svg" alt="" class="ing" />
+                </div>
+                <div class="step">
+                  <div class="bg-step"></div>
+                  <span>3</span>
+                </div>
+                <div class="step">
+                  <div class="bg-step"></div>
+                  <span>4</span>
+                </div>
+              </div>
+              <span class="txt-a step">STEP 2 / 4</span>
+              <h3 class="sub">Unlock currency</h3>
+              <p class="">
+                Submit a transaction with your wallet to trade with this
+                currency. This only needs to be done once.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn mt-lg">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target="#popOffer014"
+                  data-bs-toggle="modal"
+                >
+                  Unlock
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+    </script>
+  </body>
+</html>

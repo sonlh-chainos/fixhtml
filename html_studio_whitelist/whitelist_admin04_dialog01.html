@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <div
+        class="modal pop-admin pop-xl"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Add a new White List</h2>
+              <!-- <h2 class="modal-title">Edit White List</h2> -->
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <!-- form -  -->
+                <div class="wrap-form mt-3 mb-5">
+                  <div class="thead row-cols-1">
+                    <div class="th">White List Name</div>
+                  </div>
+                  <div class="tbody">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder=""
+                      aria-label=""
+                      aria-describedby=""
+                      value="Bllizard Super Players"
+                    />
+                  </div>
+                </div>
+                <!-- form - minting address -->
+                <div class="wrap-form">
+                  <div class="row mb-0">
+                    <div class="col-auto">
+                      <!-- <h3 class="modal-title"></h3> -->
+                      <div class="th">Minting Addresses</div>
+                      <p class="form-text">
+                        Please submit addresses that you want to issue the NFTs
+                        to.
+                      </p>
+                    </div>
+                    <div class="col-auto pull-right align-self-center">
+                      <button type="button" class="btn btn-sm btn-dark-line">
+                        Download CSV
+                      </button>
+                      <button type="button" class="btn btn-sm btn-dark">
+                        Upload CSV
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mb-2 align-items-center">
+                    <h4 class="col-auto fw-400 mb-0">Wallet Count : 8</h4>
+                    <div class="col-auto pull-right">
+                      <div class="dropdown dropdown-sm">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          id="dropdown-sm01"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          100 Rows
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdown-sm01"
+                        >
+                          <li>
+                            <button class="dropdown-item" type="button">
+                              100 Rows
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- address 추가시, .row 단위로 늘어남 -->
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>1</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>2</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>3</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>4</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>5</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>6</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>7</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-auto box-sq">
+                      <h3>8</h3>
+                    </div>
+                    <div class="col-8 flex-fill">
+                      <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        aria-label=""
+                      />
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-line btn-sq btn-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          viewBox="0 0 36 36"
+                        >
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M15 17a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1Zm6 0a1 1 0 0 1 1 1v7.5a1 1 0 1 1-2 0V18a1 1 0 0 1 1-1ZM5 10.5a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill="#464F60"
+                            fill-rule="evenodd"
+                            d="M9 14a1 1 0 0 1 1 1v13.5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V15a1 1 0 1 1 2 0v13.5a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V15a1 1 0 0 1 1-1Zm3.5-7.5a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1v-4Zm3-1a1 1 0 0 0-1 1v3h7v-3a1 1 0 0 0-1-1h-5Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- <div class="wrap-btn mt-2">
+                    <div class="pull-right">
+                      <button type="button" class="btn link link-a btn-add">
+                        <span>ADD A NEW ADDRESS</span>
+                        <img class="i" src="../img/btn_add_a.svg" alt="" />
+                      </button>
+                    </div>
+                  </div> -->
+                </div>
+                <!-- pagination -->
+                <div class="text-center mt-4">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a
+                        class="btn btn-circle btn-arrow"
+                        href="#"
+                        aria-label="Previous"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="11"
+                          height="11"
+                          fill="none"
+                          viewBox="0 0 11 11"
+                        >
+                          <path
+                            stroke="#626978"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                            d="m10 1.5-4 4 4 4m-5-8-4 4 4 4"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="btn btn-circle btn-arrow" href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="6"
+                          height="11"
+                          fill="none"
+                          viewBox="0 0 6 11"
+                        >
+                          <path
+                            stroke="#626978"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                            d="m5 1.5-4 4 4 4"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item current-page">201-300</li>
+                    <li class="page-item">
+                      <a class="btn btn-circle btn-arrow" href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="6"
+                          height="11"
+                          fill="none"
+                          viewBox="0 0 6 11"
+                        >
+                          <path
+                            stroke="#626978"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                            d="m1 9.5 4-4-4-4"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="btn btn-circle btn-arrow"
+                        href="#"
+                        aria-label="Next"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="11"
+                          height="11"
+                          fill="none"
+                          viewBox="0 0 11 11"
+                        >
+                          <path
+                            stroke="#626978"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                            d="m1 9.5 4-4-4-4m5 8 4-4-4-4"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target="#popOffer032"
+                  data-bs-toggle="modal"
+                >
+                  <span class="txt"> Save </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dialog 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+
+      <script type="text/javascript">
+        $(".modal").show();
+
+        // tooltip
+        let tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      </script>
+    </div>
+  </body>
+</html>

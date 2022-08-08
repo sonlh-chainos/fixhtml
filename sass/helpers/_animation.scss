@@ -1,0 +1,30 @@
+// animation
+@keyframes e-blink {
+  50% {
+    opacity: 0;
+    animation-timing-function: ease;
+  }
+}
+
+.e-blink {
+  -webkit-animation: e-blink 1s step-end infinite;
+  animation: e-blink 1s step-end infinite;
+}
+
+@keyframes e-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.e-rotate {
+  -webkit-animation: e-rotate 1.2s infinite;
+  animation: e-rotate 1.2s infinite;
+}

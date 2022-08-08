@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/m_common.css"> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <!-- <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li> -->
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-account">
+                <img class="i" src="img/i_user.svg" alt="account" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <button type="button" class="btn">
+            <img class="i" src="img/admin_cart.svg" alt="" />
+            Sales
+          </button>
+          <button type="button" class="btn active">
+            <img class="i" src="img/admin_box_a.svg" alt="" />
+            Mystery Box
+          </button>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <div class="container-main">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <div class="wrap-title">
+            <h1>Create a new Mystery Box set</h1>
+          </div>
+          <div class="wrap-con">
+            <!-- 탭메뉴 -->
+            <nav class="admin-nav" id="tab">
+              <div class="nav nav-tabs" role="tablist">
+                <!-- 이전 step .nav-link에 .checked 클래스 부여 -->
+                <button
+                  class="nav-link checked"
+                  id="navTab-step1"
+                  onclick="location.href='mbox_admin03.html';"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step1"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step1"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">1</span>
+                  </span>
+                  Mystery Box Info
+                </button>
+                <button
+                  class="nav-link checked"
+                  id="navTab-step2"
+                  onclick="location.href='mbox_admin04.html';"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step2"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step2"
+                  aria-selected="true"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">2</span>
+                  </span>
+                  Mystery Box Setup
+                </button>
+                <button
+                  class="nav-link active"
+                  id="navTab-step3"
+                  onclick="location.href='mbox_admin05.html';"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">3</span>
+                  </span>
+                  NFT Compose
+                </button>
+                <button
+                  class="nav-link disabled"
+                  id="navTab-step4"
+                  onclick="location.href='mbox_admin06.html';"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tabCon-step3"
+                  type="button"
+                  role="tab"
+                  aria-controls="tabCon-step3"
+                  aria-selected="false"
+                >
+                  <span class="step">
+                    <span class="bg"></span>
+                    <span class="num">4</span>
+                  </span>
+                  Release Setup
+                </button>
+              </div>
+            </nav>
+            <!-- 탭메뉴 선택시 나타나는 콘텐츠 -->
+            <div class="tab-content" id="tabCon">
+              <!-- 탭메뉴 콘텐츠1 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step1"
+                role="tabpanel"
+                aria-labelledby="navTab-step1"
+              ></div>
+              <!-- 탭메뉴 콘텐츠2 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step2"
+                role="tabpanel"
+                aria-labelledby="navTab-step2"
+              ></div>
+              <!-- 탭메뉴 콘텐츠3 -->
+              <div
+                class="tab-pane fade active show"
+                id="tabCon-step3"
+                role="tabpanel"
+                aria-labelledby="navTab-step3"
+              >
+                <h3 class="desc mb-5">
+                  Please composite items of the Mystery Box and set rarities and
+                  issue numbers of each item sets.
+                </h3>
+                <form>
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <label class="form-label">
+                        Mystery Box Packaging Image
+                      </label>
+                      <p class="form-text">(Before Reveal)</p>
+                    </div>
+                    <div class="row">
+                      <div class="col col-auto">
+                        <div
+                          class="wrap-thumb"
+                          style="width: 235px; height: 235px"
+                        >
+                          <!-- 이미지가 들어가있는 경우 -->
+                          <!-- <div class="thumb">
+                          <img src="img/ex/ex_game_top.jpg" alt="">
+                          <div class="wrap-file">
+                            <label for="formFile02" class="form-label form-file">
+                              <img src="img/img_uploadcloud_w.svg" alt="">
+                              <div>Drag &amp; drop<br>to upload<br><u class="active">or browse</u></div>
+                            </label>
+                          </div>
+                        </div> -->
+                          <!-- default: 이미지 업로드 -->
+                          <div class="wrap-file">
+                            <label for="formFile01" class="form-label">
+                              <img src="img/img_uploadcloud.svg" alt="" />
+                              <div>
+                                Drag &amp; drop<br />to upload<br /><u
+                                  class="active"
+                                  >or browse</u
+                                >
+                              </div>
+                            </label>
+                            <input
+                              class="form-control fade"
+                              type="file"
+                              id="formFile01"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col col-9">
+                        <p class="form-text dark ms-3">
+                          Please upload the default Mystery Box packaging image.
+                          <br />This will appear during NFT owners stay unboxed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-form">
+                    <div class="mb-4">
+                      <label class="form-label"> Add single item </label>
+                      <p class="form-text">
+                        Please upload the default Mystery Box image. This will
+                        appear during NFT owners stay unboxed.
+                      </p>
+                    </div>
+                    <div class="acc-table">
+                      <div class="thead">
+                        <div class="th"></div>
+                        <div class="th">No</div>
+                        <div class="th">Item</div>
+                        <div class="th">Name</div>
+                        <div class="th">Rarity</div>
+                        <div class="th">Issue amount</div>
+                        <div class="th">Probability</div>
+                        <div class="th"></div>
+                        <div class="th"></div>
+                      </div>
+                      <div class="tbody">
+                        <!-- list 01 -->
+                        <div class="tr">
+                          <div class="td">
+                            <img src="img/i_menu_handle.svg" />
+                          </div>
+                          <div class="td">1</div>
+                          <div class="td">
+                            <div class="wrap-thumb">
+                              <div class="thumb">
+                                <img src="img/ex/ex_game_top.jpg" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="td">Van der Sar - 11.4.6 v CHE</div>
+                          <div class="td">Legend</div>
+                          <div class="td">5</div>
+                          <div class="td">0.01%</div>
+                          <div class="td">
+                            <button
+                              type="button"
+                              class="btn btn-grad btn-sm disabled"
+                            >
+                              Save
+                            </button>
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapse01"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapse01"
+                            ></button>
+                          </div>
+                        </div>
+
+                        <!-- list 02 (open) -->
+                        <!-- 열린 리스트 .tr 에는 .open 클래스 부여 -->
+                        <div class="tr open">
+                          <div class="td">
+                            <img src="img/i_menu_handle.svg" />
+                          </div>
+                          <div class="td">2</div>
+                          <div class="td colspan">
+                            <div class="row row-cols-1 mt-1">
+                              <div class="col col-auto">
+                                <div class="wrap-thumb">
+                                  <!-- 이미지가 들어가있는 경우 -->
+                                  <div class="thumb">
+                                    <img src="img/ex/ex_game_top.jpg" alt="" />
+                                    <div class="wrap-file">
+                                      <label
+                                        for="formFile02"
+                                        class="form-label form-file"
+                                      >
+                                        <img
+                                          src="img/img_uploadcloud_w.svg"
+                                          alt=""
+                                        />
+                                        <div>
+                                          Drag &amp; drop<br />to upload<br /><u
+                                            class="active"
+                                            >or browse</u
+                                          >
+                                        </div>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <!-- default: 이미지 업로드 -->
+                                  <!-- <div class="wrap-file">
+                                  <label for="formFile02" class="form-label">
+                                    <img src="img/img_uploadcloud.svg" alt="">
+                                    <div>Drag &amp; drop<br>to upload<br><u class="active">or browse</u></div>
+                                  </label>
+                                  <input class="form-control fade" type="file" id="formFile02">
+                                </div> -->
+                                </div>
+                              </div>
+                              <div class="col col-6">
+                                <div class="row">
+                                  <div class="col col-12">
+                                    <label>Name</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      aria-label=""
+                                    />
+                                  </div>
+                                </div>
+                                <div class="row mt-2">
+                                  <div class="col col-4">
+                                    <label>Rarity</label>
+                                    <div class="dropdown dropdown-block">
+                                      <button
+                                        class="btn dropdown-toggle"
+                                        type="button"
+                                        id="dropdown01"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                      >
+                                        Legend
+                                      </button>
+                                      <ul
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdown01"
+                                      >
+                                        <li>
+                                          <button
+                                            class="dropdown-item"
+                                            type="button"
+                                          >
+                                            Normal
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            class="dropdown-item"
+                                            type="button"
+                                          >
+                                            Rare
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            class="dropdown-item"
+                                            type="button"
+                                          >
+                                            Unique
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            class="dropdown-item"
+                                            type="button"
+                                          >
+                                            Epic
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            class="dropdown-item"
+                                            type="button"
+                                          >
+                                            Legand
+                                          </button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="col col-4">
+                                    <label>Issue amount</label>
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      aria-label=""
+                                    />
+                                  </div>
+                                  <div class="col col-4">
+                                    <label>Probability</label>
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      aria-label=""
+                                      disabled
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- description -->
+                            <div class="row">
+                              <div class="subt mt-4">
+                                <h4>Description</h4>
+                              </div>
+                              <div class="col-12">
+                                <textarea
+                                  class="form-control"
+                                  name=""
+                                  id=""
+                                  cols="30"
+                                  rows="3"
+                                >
+Wukong was about to be heated down by the scorching summer. With the burn- ing of his pipe, he was about to explode. The setting was burning to red. Like Van Gogh's self-portrait, he was so dull that he could only mechanically observe the smoky cigarette butts making a faint sound in front of him....</textarea
+                                >
+                              </div>
+                            </div>
+                            <!-- properites -->
+                            <div class="row">
+                              <div class="col">
+                                <div class="d-flex subt">
+                                  <img
+                                    src="img/i_properties.svg"
+                                    alt=""
+                                    class="i mt-2"
+                                  />
+                                  <div class="txt">
+                                    <h4>Properties</h4>
+                                    <p>
+                                      Textual traits that show up as rectangles
+                                    </p>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    class="btn link link-a btn-add"
+                                  >
+                                    <span>ADD PROPERTIES</span>
+                                    <img
+                                      class="i"
+                                      src="img/btn_add_a.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                </div>
+                                <!-- properites list -->
+                                <div class="row-list wrap-props">
+                                  <div class="row row-cols-5">
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <span>JJJJJ</span>
+                                        <h5>SSR</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- levels -->
+                            <div class="row">
+                              <div class="col">
+                                <div class="d-flex subt">
+                                  <img
+                                    src="img/i_levels.svg"
+                                    alt=""
+                                    class="i mt-1"
+                                  />
+                                  <div class="txt">
+                                    <h4>Levels</h4>
+                                    <p>
+                                      Numerical traits that show as a progress
+                                      bar
+                                    </p>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    class="btn link link-a btn-add"
+                                  >
+                                    <span>ADD LEVELS</span>
+                                    <img
+                                      class="i"
+                                      src="img/btn_add_a.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                </div>
+                                <!-- levels list -->
+                                <div class="row-list wrap-levels">
+                                  <div class="row row-cols-2">
+                                    <div class="col">
+                                      <div class="li">
+                                        <div
+                                          class="wrap-txt d-flex justify-content-between"
+                                        >
+                                          <span>Dd</span>
+                                          <span>3 of 5</span>
+                                        </div>
+                                        <div class="progress mt-3">
+                                          <div
+                                            class="progress-bar"
+                                            role="progressbar"
+                                            style="width: 60%"
+                                            aria-valuenow="60"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <div
+                                          class="wrap-txt d-flex justify-content-between"
+                                        >
+                                          <span>Dd</span>
+                                          <span>3 of 5</span>
+                                        </div>
+                                        <div class="progress mt-3">
+                                          <div
+                                            class="progress-bar"
+                                            role="progressbar"
+                                            style="width: 60%"
+                                            aria-valuenow="60"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- stats -->
+                            <div class="row">
+                              <div class="col">
+                                <div class="d-flex subt">
+                                  <img src="img/i_stats.svg" alt="" class="i" />
+                                  <div class="txt">
+                                    <h4>Stats</h4>
+                                    <p>
+                                      Numerical traits that just show as numbers
+                                    </p>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    class="btn link link-a btn-add"
+                                  >
+                                    <span>ADD STATS</span>
+                                    <img
+                                      class="i"
+                                      src="img/btn_add_a.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                </div>
+                                <!-- stats list -->
+                                <div class="row-list wrap-stats">
+                                  <div class="row row-cols-2">
+                                    <div class="col">
+                                      <div class="li">
+                                        <div
+                                          class="wrap-txt d-flex justify-content-between"
+                                        >
+                                          <span>Dd</span>
+                                          <span>3 of 5</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="li">
+                                        <div
+                                          class="wrap-txt d-flex justify-content-between"
+                                        >
+                                          <span>Dd</span>
+                                          <span>3 of 5</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wrap-btn text-center mt-5 mb-4">
+                              <button type="button" class="btn btn-md btn-grad">
+                                Save
+                              </button>
+                            </div>
+                          </div>
+                          <div class="td">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapse02"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapse02"
+                            ></button>
+                          </div>
+                        </div>
+
+                        <!-- list 03 -->
+                        <div class="tr">
+                          <div class="td">
+                            <img src="img/i_menu_handle.svg" />
+                          </div>
+                          <div class="td">3</div>
+                          <div class="td">
+                            <div class="wrap-thumb">
+                              <div class="thumb">
+                                <img src="img/ex/ex_game_top.jpg" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="td">Van der Sar - 11.4.6 v CHE</div>
+                          <div class="td">Legend</div>
+                          <div class="td">5</div>
+                          <div class="td">0.01%</div>
+                          <div class="td">
+                            <button type="button" class="btn btn-grad btn-sm">
+                              Save
+                            </button>
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapse03"
+                              aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapse03"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box box-btm">
+                      Number of Items : <b>15</b> / Total issue amount :
+                      <b>8,120</b>
+                    </div>
+                  </div>
+                  <div class="caution d-flex mt-5">
+                    <img src="img/i_caution.svg" alt="" class="i me-1" />
+                    <p class="form-text mt-0">
+                      Please be aware that the information of this page
+                      <u
+                        >could not be editted or modifyed once you deploy NFT
+                        contracts</u
+                      >
+                      on Step 4.
+                    </p>
+                  </div>
+                </form>
+
+                <div class="wrap-btn wrap-btn-btm">
+                  <div class="row">
+                    <div class="col col-4">
+                      <button type="button" class="btn btn-light">
+                        Cancel
+                      </button>
+                    </div>
+                    <div class="col col-8 justify-content-end">
+                      <button type="button" class="btn btn-grad">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 탭메뉴 콘텐츠4 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step4"
+                role="tabpanel"
+                aria-labelledby="navTab-step4"
+              ></div>
+            </div>
+          </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+    </script>
+  </body>
+</html>

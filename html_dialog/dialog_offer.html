@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="modal pop-lg" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Make your offer</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="box box-line">
+                <div class="thumb">
+                  <img src="../img/ex/ex_game_top.jpg" alt="" />
+                </div>
+                <div class="wrap-title">
+                  <h4 class="sub">
+                    BravenineBravenineBravenineBravenineBravenine
+                  </h4>
+                  <h3 class="title">
+                    NGG KOR 명NGG KOR 명NGG KOR 명NGG KOR 명NGG KOR 명NGG KOR 명
+                  </h3>
+                </div>
+                <div class="price">
+                  <span>Top Offer</span>
+                  <div class="klay wklay">1600</div>
+                </div>
+              </div>
+              <div class="wrap-form">
+                <h3 class="title">
+                  Price
+                  <span class="balance pull-right"
+                    >Your Balance : 0.0 WKLAY</span
+                  >
+                </h3>
+                <div class="form wrap-price">
+                  <label for="" class="klay wklay">WKLAY</label>
+                  <input
+                    type="number"
+                    class="form-control price"
+                    placeholder="Amount"
+                  />
+                  <span class="unit">$0.00</span>
+                </div>
+                <p class="alert">
+                  <img src="../img/i_x_r.svg" alt="" class="i" />
+                  Offer must be at least the minimum price per unit of 2 WKLAY
+                </p>
+              </div>
+              <div class="wrap-form wrap-exp">
+                <h3 class="title">Offer Expiration</h3>
+                <div class="form">
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle d-inline-flex align-items-center"
+                      type="button"
+                      id="dropdownDate"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img class="i" src="../img/i_calendar.svg" alt="" />
+                      <img
+                        src="../img/i_calendar_dg.svg"
+                        alt=""
+                        class="i dropdown-i"
+                      />
+                      <!-- Custom Date -->
+                      <time
+                        title="Tue, 14 Jun 2022 09:58:00 GMT"
+                        datetime="Tue, 14 Jun 2022 09:58:00 GMT"
+                        >in 7 days</time
+                      >
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButtonSM"
+                    >
+                      <li>
+                        <button type="button" class="dropdown-item">
+                          1 day
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="dropdown-item">
+                          3 days
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="dropdown-item">
+                          7 days
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="dropdown-item">
+                          1 month
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" class="dropdown-item">
+                          Custom Date
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- input type 변경 -->
+                  <div class="input-group input-group-time">
+                    <input
+                      type="text"
+                      class="form-control hour"
+                      aria-label=""
+                    />
+                    <!-- <input type="number" class="form-control hour" aria-label="">
+                                <span class="input-group-text">:</span>
+                                <input type="number" class="form-control min" aria-label="">
+                                <button class="btn btn-unit" type="button">AM</button> -->
+                  </div>
+                </div>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  By checking this box, I agree to Klaybay’s
+                  <a href="" class="link link-a">Terms of Service</a>
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target="#popOffer011"
+                  data-bs-toggle="modal"
+                >
+                  Make offer
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-a-line"
+                  data-bs-target="#popDeposit"
+                  data-bs-toggle="modal"
+                >
+                  Deposit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+        inline: true,
+      };
+    </script>
+  </body>
+</html>

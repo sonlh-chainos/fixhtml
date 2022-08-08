@@ -1,0 +1,52 @@
+.flip-clock-wrapper {
+  display: flex;
+  margin: 25px 0 40px 0;
+  position: relative;
+  .flip {
+    box-shadow: none;
+  }
+  ul {
+    width: 45px;
+    height: 66px;
+    li a div {
+      div.inn {
+        font-family: "Akshar";
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 66px;
+        text-shadow: none;
+        color: #fff;
+        // z-index: 6;
+        // background-color: transparent;
+        background-color: #444549;
+      }
+      .shadow {
+        // background: rgba(225, 228, 240, 0.3);
+      }
+      &.up:after {
+        background-color: #000;
+        top: 31px;
+      }
+    }
+  }
+  .flip-clock-divider {
+    .flip-clock-dot {
+      display: none;
+    }
+    .flip-clock-label {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 44px;
+      text-align: center;
+      color: #989da6;
+      top: auto;
+      bottom: -15px;
+      right: auto;
+      left: 20px;
+      width: 114px;
+    }
+    &:first-child .flip-clock-label {
+      left: 0;
+    }
+  }
+}

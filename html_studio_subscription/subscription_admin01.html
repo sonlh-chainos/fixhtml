@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="home_main.html">
+              <img src="../img/logo_studio.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">EN | KR</a>
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <img class="i" src="../img/i_user.svg" alt="account" />
+              </button>
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <img
+                    class="i"
+                    src="../img/i_wallet_a.svg"
+                    alt="i_wallet.svg"
+                  />0x33F...E11e
+                </button>
+                <!-- 드롭다운 메뉴 변경 -->
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 사이드바 (admin) -->
+      <aside class="admin-side">
+        <div class="d-grid wrap-btn wrap-btn-menu">
+          <div class="menu-top">
+            <div class="wrap-thumb">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <h3>Bllizard</h3>
+              <p>Wukong was about to be heated down by the scorching summer.</p>
+              <button type="button" class="btn btn-line-light">
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="menu-btm accordion">
+            <!-- accordion01 -->
+            <!-- Opened status: .accordion-button, .accordion-collapse.collapse.show -->
+            <!-- Closed status: .accordion-button.collapsed, .accordion-collapse.collapse -->
+            <!-- Active status: .accordion-button.active -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="SEQUENCE">
+                <button
+                  class="accordion-button active"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_SEQUENCE"
+                  aria-expanded="true"
+                  aria-controls="collapse_SEQUENCE"
+                >
+                  Drawshop Kingdom Reverse
+                </button>
+              </h4>
+              <div
+                id="collapse_SEQUENCE"
+                class="accordion-collapse collapse show"
+                aria-labelledby="SEQUENCE"
+              >
+                <div class="accordion-body">
+                  <div class="wrap-menu">
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width="16"
+                          height="16"
+                          x="4"
+                          y="4"
+                          stroke="#697A8D"
+                          stroke-width="1.5"
+                          rx="8"
+                        />
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12.4 16v-4.8m-1.6 0h1.6m0-2.4V8"
+                        />
+                      </svg>
+                      Information
+                    </button>
+                    <button class="btn btn-block li-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="#697A8D"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M12 10.333v7.5m3.333-10v10m-6.666-4.166v4.167M5.333 6.167v11.5a1 1 0 0 0 1 1h11.5"
+                        />
+                      </svg>
+                      Statistics
+                    </button>
+                    <!-- accordion-inner -->
+                    <div class="accordion-inner">
+                      <div class="accordion-item">
+                        <h4 class="accordion-header" id="heading11">
+                          <button
+                            class="accordion-button btn btn-block li-item active"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse11"
+                            aria-expanded="true"
+                            aria-controls="collapse11"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="#697A8D"
+                                stroke-width="1.5"
+                                d="m16.448 10.022 1.653.92.346.2c.737.426.737 1.524 0 1.95l-4.695 2.713a3.488 3.488 0 0 1-3.504 0l-4.695-2.713c-.737-.426-.737-1.524 0-1.95l.346-.2 1.561-.92m9.348 4.095 1.502.778c.775.401.8 1.537.043 1.974l-4.601 2.66a3.488 3.488 0 0 1-3.504 0l-4.534-2.621c-.77-.445-.727-1.606.072-1.989l1.674-.802m6.292-2.268 4.695-2.713c.737-.426.737-1.525 0-1.95l-4.695-2.714a3.488 3.488 0 0 0-3.504 0L5.553 7.185c-.737.426-.737 1.525 0 1.95l4.695 2.714c1.089.63 2.415.63 3.504 0Z"
+                              />
+                            </svg>
+                            Launch Tools
+                          </button>
+                        </h4>
+                        <div
+                          id="collapse11"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="heading11"
+                        >
+                          <div class="accordion-body">
+                            <button class="btn btn-block li-item">
+                              White List NFT
+                            </button>
+                            <button class="btn btn-block li-item active">
+                              Subscription Mechanism
+                            </button>
+                            <button class="btn btn-block li-item">
+                              Mystery Box
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion02 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading02">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse02"
+                  aria-expanded="false"
+                  aria-controls="collapse02"
+                >
+                  Aurary
+                </button>
+              </h4>
+              <div
+                id="collapse02"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading02"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+
+            <!-- accordion03 -->
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading03">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse03"
+                  aria-expanded="false"
+                  aria-controls="collapse03"
+                >
+                  AFK Battle Idle <br />Princess BB
+                </button>
+              </h4>
+              <div
+                id="collapse03"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading03"
+              >
+                <div class="accordion-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 콘테이너 -->
+      <div class="container-main">
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="admin-main">
+          <div class="wrap-title">
+            <!-- breadcrumb -->
+            <nav
+              class="wrap-breadcrumb"
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Drawshop Kingdon Reserve</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Launch Tools</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Subscription Mechanism
+                </li>
+              </ol>
+            </nav>
+            <h1>Subscription Mechanism</h1>
+          </div>
+          <!-- Subscription Mechanism 소개 -->
+          <div class="wrap-con wrap-intro">
+            <div class="row">
+              <div class="col-4">img</div>
+              <div class="col-8">
+                <h2 class="txt-grad mb-4">For Fare & Equal Opportunity</h2>
+                <p>
+                  Klaybay introduces a new way for users to fairly participate
+                  in the latest drops and exclusive releases on Klaybay NFT. By
+                  utilizing this new subscription mechanism, we will ensure a
+                  fair and equal way for Klay holders or NFT holders to commit
+                  tokens towards a Klaybay NFT sale. There is a subscription cap
+                  for each user, and the final NFT allocation will be
+                  distributed in a fair and square manner.
+                </p>
+                <div class="mt-5">
+                  <div class="box-item" style="margin-bottom: 30px">
+                    <div
+                      class="wrap-img circle"
+                      style="width: 90px; height: 90px"
+                    >
+                      <img src="../img/img_cm01_a.svg" width="50" />
+                    </div>
+                    <div class="wrap-con">
+                      <h3>균등배정</h3>
+                      <p>
+                        Klaybay introduces a new way for <br />users to fairly
+                        participate in the lates
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box-item">
+                    <div
+                      class="wrap-img circle"
+                      style="width: 90px; height: 90px"
+                    >
+                      <img src="../img/img_cm02_a.svg" width="50" />
+                    </div>
+                    <div class="wrap-con">
+                      <h3>고정가격비례배정</h3>
+                      <p>
+                        Klaybay introduces a new way for <br />users to fairly
+                        participate in the lates
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn text-end mt-4">
+                  <a href="" class="link">Read more on Gitbook ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscription Sessions -->
+          <div class="wrap-con" style="margin-top: 100px">
+            <div class="mb-4">
+              <h3 class="form-label">Subscription Sessions</h3>
+              <!-- <p class="form-text"></p> -->
+            </div>
+            <div class="row row-cols-1 wrap-session">
+              <div class="col">
+                <div class="wrap-box line-dotted">
+                  <a href="" class="box">
+                    <!-- plus icon (lg) -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44"
+                      height="44"
+                      fill="none"
+                      viewBox="0 0 44 44"
+                    >
+                      <path
+                        fill="#9FA4AE"
+                        fill-rule="evenodd"
+                        d="M22 14.4a1 1 0 0 1 1 1V21h5.6a1 1 0 1 1 0 2H23v5.6a1 1 0 1 1-2 0V23h-5.6a1 1 0 1 1 0-2H21v-5.6a1 1 0 0 1 1-1Z"
+                        clip-rule="evenodd"
+                      />
+                      <path
+                        fill="#9FA4AE"
+                        fill-rule="evenodd"
+                        d="M22 6.5C13.44 6.5 6.5 13.44 6.5 22c0 8.56 6.94 15.5 15.5 15.5 8.56 0 15.5-6.94 15.5-15.5 0-8.56-6.94-15.5-15.5-15.5ZM4.5 22c0-9.665 7.835-17.5 17.5-17.5S39.5 12.335 39.5 22 31.665 39.5 22 39.5 4.5 31.665 4.5 22Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+
+                    <h3>Open a New Subscription Session</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="wrap-li">
+                <!-- Standby list -->
+                <a href="" class="li-item">
+                  <div class="wrap-num">
+                    <span class="num circle">3</span>
+                  </div>
+                  <div class="wrap-img">
+                    <img
+                      class="i default"
+                      src="../img/img_cm02_b.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i hover"
+                      src="../img/img_cm02_a.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i disabled"
+                      src="../img/img_cm02.svg"
+                      width="50"
+                    />
+                  </div>
+                  <div class="wrap-con">
+                    <div class="tr top">
+                      <div class="td">
+                        <span class="tag"> Standby </span>
+                      </div>
+                      <div class="td">
+                        <h4>Drawshop Kingdom IGO 1차 Drop</h4>
+                      </div>
+                    </div>
+                    <div class="tr btm">
+                      <div class="td">
+                        <p>고정가격비례배분</p>
+                      </div>
+                      <div class="td">
+                        <p>2022. 8.15 13:00 PST ~ 8.16 13:00 PST</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <!-- Ongoing list -->
+                <a href="" class="li-item">
+                  <div class="wrap-num">
+                    <span class="num circle">2</span>
+                  </div>
+                  <div class="wrap-img">
+                    <img
+                      class="i default"
+                      src="../img/img_cm02_b.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i hover"
+                      src="../img/img_cm02_a.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i disabled"
+                      src="../img/img_cm02.svg"
+                      width="50"
+                    />
+                  </div>
+                  <div class="wrap-con">
+                    <div class="tr top">
+                      <div class="td">
+                        <span class="tag active"> Ongoing </span>
+                      </div>
+                      <div class="td">
+                        <h4>Drawshop Kingdom IGO 1차 Drop</h4>
+                      </div>
+                    </div>
+                    <div class="tr btm">
+                      <div class="td">
+                        <p>고정가격비례배분</p>
+                      </div>
+                      <div class="td">
+                        <p>2022. 8.15 13:00 PST ~ 8.16 13:00 PST</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <!-- Closed list : .disabled -->
+                <a href="" class="li-item disabled">
+                  <div class="wrap-num">
+                    <span class="num circle">1</span>
+                  </div>
+                  <div class="wrap-img">
+                    <img
+                      class="i default"
+                      src="../img/img_cm02_b.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i hover"
+                      src="../img/img_cm02_a.svg"
+                      width="50"
+                    />
+                    <img
+                      class="i disabled"
+                      src="../img/img_cm02.svg"
+                      width="50"
+                    />
+                  </div>
+                  <div class="wrap-con">
+                    <div class="tr top">
+                      <div class="td">
+                        <span class="tag"> Closed </span>
+                      </div>
+                      <div class="td">
+                        <h4>Drawshop Kingdom IGO 1차 Drop</h4>
+                      </div>
+                    </div>
+                    <div class="tr btm">
+                      <div class="td">
+                        <p>고정가격비례배분</p>
+                      </div>
+                      <div class="td">
+                        <p>2022. 8.15 13:00 PST ~ 8.16 13:00 PST</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+          <div class="wrap-left">
+            <a href="">
+              <img src="../img/logo.svg" alt="logo" class="logo" />
+            </a>
+          </div>
+          <div class="wrap-right">
+            <p>
+              The world’s first and largest digital marketplace for crypto
+              collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+              discover exclusive digital items.
+            </p>
+            <div class="wrap-link">
+              <a href="" class="link">About</a>
+              <a href="" class="link">Contact</a>
+              <a href="" class="link">Help</a>
+              <a href="" class="link">Terms of use</a>
+            </div>
+            <div class="wrap-btn-circle">
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_fb.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_tw.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-circle">
+                <img class="i" src="../img/btn_disc.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // flatpickr 캘린더 기능
+      config = {
+        enableTime: true,
+        monthSelectorType: "static",
+        disableMobile: "true",
+        defaultDate: "2022-10-20",
+        // dateFormat: false,
+        // dateFormat: "Y-m-d H:i",
+      };
+      flatpickr("input[type=datetime-local]", config);
+    </script>
+  </body>
+</html>

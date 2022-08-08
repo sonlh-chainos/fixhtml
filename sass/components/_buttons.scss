@@ -1,0 +1,332 @@
+// a, button, btn
+a,
+.btn-link {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #030229;
+
+  &:hover,
+  &:active {
+    color: #030229;
+  }
+}
+
+.link-a,
+.link-a:hover,
+.link-a:active,
+.txt-a {
+  color: #fc6825;
+}
+
+.link-ar {
+  color: #ff2f00;
+  &:hover {
+    color: #ff2f00;
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  border-radius: 110px;
+  height: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  &.btn.btn-noline {
+    border-color: transparent !important;
+  }
+
+  &.btn-sm {
+    font-weight: 500;
+  }
+
+  &.btn-a,
+  &.active {
+    background: #fc6825;
+    color: #fff;
+  }
+
+  &.btn-a-line {
+    background: #fff;
+    border: 1px solid #fc6825;
+    color: #fc6825;
+  }
+
+  &.btn-grad {
+    color: #fff;
+    background: $grad;
+    border: 0 !important;
+  }
+
+  &.btn-grad-line {
+    background: $grad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 100px;
+      padding: 1px;
+      background: $grad;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &.btn-grad-lineb {
+      &:before {
+        padding: 2px;
+      }
+      &.disabled,
+      &:disabled {
+        &:before {
+          display: none;
+        }
+        background-clip: inherit;
+        -webkit-background-clip: inherit;
+        background: transparent;
+        opacity: 1;
+        color: #bac2cf;
+        -webkit-text-fill-color: #bac2cf;
+        border: 2px solid #f7f9fc;
+      }
+    }
+  }
+
+  &.btn-sub {
+    font-weight: 500;
+    color: #030229;
+    background-color: #d9e0ec;
+  }
+
+  &.link {
+    height: auto;
+    padding: 0;
+  }
+
+  &.btn-block {
+    width: 100%;
+  }
+
+  &.btn-circle {
+    padding: 0;
+    border: 0;
+    border-radius: 100px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &.btn-i {
+    padding: 2px;
+  }
+}
+
+.btn-id {
+  background-color: #f7f9fc;
+  font-size: 12px;
+  font-weight: normal;
+  padding-right: 12px;
+  padding-left: 6px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 135px);
+  .thumb {
+    border-radius: 100px;
+    height: 21.5px;
+    width: 21.5px;
+  }
+}
+
+.btn-group {
+  .btn {
+    border-radius: 16px;
+    border-collapse: collapse;
+  }
+
+  > .btn-group:not(:last-child) > .btn,
+  > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  > .btn-group:not(:first-child) > .btn,
+  > .btn:not(:first-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-right: 0 !important;
+  }
+}
+
+// contract card buttons
+.wrap-contract {
+  position: relative;
+  width: 100%;
+  // &:after {
+  //   content: "";
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 50px;
+  //   height: 75px;
+  //   background: linear-gradient(270deg, white, rgba(255, 255, 255, 0.001));
+  // }
+
+  .wrap-btn {
+    display: flex;
+    overflow: auto;
+    gap: 14px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    // min-width: 228px;
+    width: 228px;
+    height: 71px;
+    background: rgba(217, 224, 236, 0.2);
+    border: 1px solid #d7d9db;
+    border-radius: 12px;
+    padding: 5px 10px 5px 5px;
+
+    .thumb {
+      width: 61px;
+      height: 61px;
+      border-radius: 12px;
+    }
+
+    .txt {
+      flex: 0 0 auto;
+      overflow: hidden;
+      text-align: left;
+      // width: 135px;
+      width: calc(100% - 75px);
+    }
+
+    h5 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #464f60;
+      margin-bottom: 4px;
+      @include t-ell2;
+    }
+
+    h6 {
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #464f60;
+      margin-bottom: 0;
+      @include t-ell;
+    }
+
+    &.active {
+      background: #1e1f21;
+      border: 1px solid #101010;
+
+      h5,
+      h6 {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// @media (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+  .btn-side {
+    min-height: 35px;
+
+    .label {
+      flex: 0 0 auto;
+      font-size: 12px;
+    }
+
+    .badge {
+      font-size: 8px;
+    }
+
+    &.active {
+      .badge {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .wrap-contract {
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -20px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+
+    .item {
+      width: 228px;
+      &:first-child {
+        margin-left: 20px;
+      }
+
+      &:last-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .wrap-btn-apply.fixed-bottom {
+    text-align: center;
+    z-index: 1050;
+    background: #fff;
+    padding: 16px 16px 30px 16px;
+
+    .btn {
+      width: 162px;
+      height: 41px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #ffffff;
+      background: #fc6825;
+    }
+  }
+
+  .wrap-btn-btm.fixed-bottom {
+    .btn {
+      width: 100%;
+      font-weight: 600;
+      font-size: 20px;
+      height: 56px;
+      background: #fc6825;
+      color: #fff;
+      box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 100px;
+
+      .badge {
+        height: 24px;
+        background: rgba(233, 237, 245, 0.3);
+        border-radius: 100px;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

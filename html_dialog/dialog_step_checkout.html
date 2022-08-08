@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 모바일 간격조정을 위해 .pop-step-checkout 클래스 부여 -->
+      <div
+        class="modal pop-lg pop-step-checkout"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Complete checkout</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="wrap-step">
+                <!-- active: 완료/활성화된 스탭 -->
+                <div class="step active">
+                  <div class="bg-step"></div>
+                  <span>1</span>
+                </div>
+                <div class="step active">
+                  <div class="bg-step"></div>
+                  <span>2</span>
+                  <!-- 현재스탭을 나타내는 원형이미지: 현 스탭에 추가 -->
+                  <img src="../img/circle_a.svg" alt="" class="ing" />
+                </div>
+                <div class="step">
+                  <div class="bg-step"></div>
+                  <span>2</span>
+                </div>
+              </div>
+              <span class="txt-a step">STEP 2 / 3</span>
+              <h3 class="sub">Sign message</h3>
+              <p class="">To complete your listing, sign message</p>
+              <div class="box box-line">
+                <div class="thumb">
+                  <img src="../img/ex/ex_game_top.jpg" alt="" />
+                </div>
+                <div class="wrap-title">
+                  <h4 class="sub">
+                    Drawshop Kingdom
+                    ReverseBravenineBravenineBravenineBravenineBravenine
+                  </h4>
+                  <h3 class="title">
+                    Drawshop KingdomDrawshop KingdomNGG KOR 명NGG KOR 명NGG KOR
+                    명NGG KOR 명NGG KOR 명
+                  </h3>
+                </div>
+                <div class="price">
+                  <span>Top Offer</span>
+                  <div class="klay">5,555.555</div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="wrap-title">
+                  <h3 class="title">Total</h3>
+                  <span>Creator Fees: 5%</span>
+                </div>
+                <div class="klay klay-lg">678,456,456,456</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  id="btnCheckout"
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-dismiss="modal"
+                >
+                  Check out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+    </script>
+  </body>
+</html>

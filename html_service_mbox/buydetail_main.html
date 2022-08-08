@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/flipclock.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="dark-theme">
+    <div id="app">
+      <!-- gnb 메뉴 (PC) -->
+      <nav id="gnb" class="gnb fixed-top pc-only">
+        <div class="container-fluid">
+          <div class="wrap-menu">
+            <a href="#" class="d-flex align-items-center">
+              <img src="../img/logo_w.svg" class="logo" alt="logo" />
+            </a>
+            <ul class="nav">
+              <li><a href="home_main_game.html" class="nav-link">Game</a></li>
+              <li><a href="#" class="nav-link">DEX</a></li>
+              <li><a href="#" class="nav-link">Rewards</a></li>
+            </ul>
+            <div class="text-end">
+              <a href="#" class="btn btn-lang">
+                <span class="active">EN</span>|<span>KR</span>
+              </a>
+              <!-- 프로필버튼 -->
+              <button
+                type="button"
+                class="btn btn-account"
+                onclick="location.href='profile_main.html';"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="#FFFFFF"
+                    d="M13.129 10.523a4.75 4.75 0 1 0-5.875 0A7.917 7.917 0 0 0 2.33 17a.797.797 0 0 0 1.584.174 6.334 6.334 0 0 1 12.587 0 .792.792 0 0 0 .792.705h.087a.792.792 0 0 0 .697-.871 7.917 7.917 0 0 0-4.949-6.484Zm-2.938-.562a3.167 3.167 0 1 1 0-6.333 3.167 3.167 0 0 1 0 6.333Z"
+                  />
+                </svg>
+              </button>
+              <!-- 로그아웃 상태일때 지갑버튼 -->
+              <!-- <div class="wallet-menu">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-grad btn-connect"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="filterWalletButton"
+                  >
+                    <img src="../img/i_wallet_f.svg" class="i" alt="" /> CONNECT
+                  </button>
+                  <div
+                    aria-labelledby="filterWalletButton"
+                    data-popper-placement="bottom-end"
+                    class="dropdown-menu dropdown-menu-end dropdown-wallet dropdown-menu"
+                  >
+                    <div class="wrap-btn">
+                      <button class="btn-block btn-g btn" value="">
+                        <img src="../img/i_wallet_b_sm.svg" class="i" alt="" />
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- 로그인 상태일태 지갑버튼 -->
+              <div class="wallet-menu">
+                <button
+                  role="button"
+                  class="btn btn-a-line btn-connect"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filterEventButton"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="16"
+                    fill="none"
+                    viewBox="0 0 18 16"
+                  >
+                    <path
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      d="M10.896.96H6.96c-2.784 0-4.176 0-5.041.88-.865.878-.865 2.293-.865 5.12v2c0 2.83 0 4.244.865 5.122.865.879 2.257.879 5.041.879h3.938c2.784 0 4.176 0 5.04-.879.866-.878.866-2.293.866-5.121v-2c0-2.828 0-4.243-.865-5.121-.865-.88-2.257-.88-5.042-.88Z"
+                    />
+                    <path
+                      stroke="#FFFFFF"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                      d="M4.553 4.46h2.625"
+                    />
+                    <path
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      d="M15.053 11.46h-1.75c-.703 0-1.054 0-1.306-.168a1 1 0 0 1-.276-.275c-.168-.253-.168-.604-.168-1.306 0-.702 0-1.053.168-1.306a1 1 0 0 1 .276-.276c.252-.168.604-.168 1.306-.168h1.75c.702 0 1.053 0 1.305.168a1 1 0 0 1 .276.276c.169.253.169.604.169 1.306 0 .702 0 1.053-.169 1.306a1 1 0 0 1-.276.275c-.252.169-.603.169-1.305.169Z"
+                    />
+                  </svg>
+                  0x33F...E11e
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-wallet"
+                  aria-labelledby="filterEventButton"
+                  data-popper-placement="bottom-end"
+                >
+                  <div class="wrap-box">
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_klay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>KLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="thumb">
+                        <img src="../img/i_wklay.svg" alt="" />
+                      </div>
+                      <div class="wrap-title">
+                        <h4>WKLAY</h4>
+                        <span>Klaytn</span>
+                      </div>
+                      <div class="price">
+                        <h4>1600</h4>
+                        <span>$ 8370.7 USD</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap-btn">
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                      Copy Address
+                    </button>
+                    <button type="button" class="btn btn-block btn-g">
+                      <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                      Connect Other Wallet
+                    </button>
+                    <button type="button" class="btn btn-block btn-a">
+                      <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                      Disconnect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- gnb 메뉴 (Mo) -->
+      <nav id="m_gnb" class="navbar gnb fixed-top m-only">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/logo.svg" class="logo" alt="logo" />
+          </a>
+          <div class="pull-right">
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_wallet.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-wallet"
+                id="gnbWallet"
+              >
+                <div class="wrap-box">
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_klay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>KLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="thumb">
+                      <img src="../img/i_wklay.svg" alt="" />
+                    </div>
+                    <div class="wrap-title">
+                      <h4>WKLAY</h4>
+                      <span>Klaytn</span>
+                    </div>
+                    <div class="price">
+                      <h4>1600</h4>
+                      <span>$ 8370.7 USD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-btn">
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_copy_sm.svg" alt="" class="i" />
+                    Copy Address
+                  </button>
+                  <button type="button" class="btn btn-block btn-g">
+                    <img src="../img/i_wallet_b_sm.svg" alt="" class="i" />
+                    Connect Other Wallet
+                  </button>
+                  <button type="button" class="btn btn-block btn-a">
+                    <img src="../img/i_walletx_a_sm.svg" alt="" class="i" />
+                    Disconnect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="navbar-toggler dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../img/m_gnb_menu.svg" alt="" />
+              </button>
+              <div
+                class="navbar-collapse dropdown-menu dropdown-gnbmenu"
+                id="gnbMenu"
+              >
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Game</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn nav-link">Profile</a>
+                </div>
+                <div class="wrap-btn">
+                  <a href="#" class="btn btn-lang">
+                    <span class="active">EN</span>|<span>KR</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- 메인 영역 -->
+      <main class="buydetail-main">
+        <!-- (좌)이미지영역 -->
+        <div class="wrap-left">
+          <div
+            class="backdrop"
+            style="background-image: url(../img/ex/ex_thumb1.jpg)"
+          ></div>
+          <div class="wrap-thumb">
+            <div class="thumb">
+              <img src="../img/ex/ex_thumb1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- (우)텍스트영역 -->
+        <div class="wrap-right">
+          <!-- 텍스트 상단영역 -->
+          <div class="wrap-top detail-top">
+            <!-- title -->
+            <div class="title">
+              <a href="" class="btn btn-id">
+                <div class="thumb"><img src="../img/ex/ex_thumb2.gif" /></div>
+                <div class="txt t-ell">Neowiz</div>
+              </a>
+              <h2>GB Sugar Sugar Mystery Box</h2>
+            </div>
+
+            <!-- timer -->
+            <div class="flipclock"></div>
+
+            <!-- price -->
+            <div class="price">
+              <h6>Remaining Amount <b>485 / 485</b></h6>
+              <h3 class="klay">687 KLAY<span>($ 698.95)</span></h3>
+            </div>
+
+            <!-- input, button (default) -->
+            <div class="wrap-btn">
+              <div class="input-group">
+                <button class="btn" type="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 25 24"
+                  >
+                    <path
+                      stroke="#FCFCFC"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7.428 12h10"
+                    />
+                  </svg>
+                </button>
+                <input type="number" class="form-control" />
+                <button class="btn" type="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 25 24"
+                  >
+                    <path
+                      fill="#FCFCFC"
+                      d="M7.428 11a1 1 0 1 0 0 2v-2Zm10 2a1 1 0 1 0 0-2v2Zm-4-6a1 1 0 1 0-2 0h2Zm-2 10a1 1 0 1 0 2 0h-2Zm-4-4h5v-2h-5v2Zm5 0h5v-2h-5v2Zm-1-6v5h2V7h-2Zm0 5v5h2v-5h-2Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <button class="btn btn-grad" type="button">BUY</button>
+              <button class="btn btn-gray btn-circle" type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29"
+                  height="29"
+                  fill="none"
+                  viewBox="0 0 29 29"
+                >
+                  <path
+                    fill="#D6D6D6"
+                    fill-opacity=".25"
+                    d="M7.25 9.667a7.25 7.25 0 1 1 14.5 0v2.212c0 .402 0 .603.01.8a8 8 0 0 0 .935 3.378c.093.174.197.346.403.69l.67 1.115c.613 1.023.92 1.534.804 1.948a1 1 0 0 1-.237.42c-.296.312-.893.312-2.085.312H6.75c-1.192 0-1.789 0-2.085-.312a1 1 0 0 1-.237-.42c-.115-.414.191-.925.805-1.948l.669-1.114c.206-.345.31-.517.403-.691a8 8 0 0 0 .935-3.377c.01-.198.01-.399.01-.8V9.666Z"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M17.37 21.75c.084 0 .151.068.145.15-.046.586-.357 1.141-.879 1.56-.566.452-1.335.707-2.136.707-.801 0-1.57-.255-2.136-.708-.522-.418-.834-.973-.879-1.559a.141.141 0 0 1 .144-.15h5.741Z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- text (default) -->
+            <div class="wrap-txt-sub">
+              <h5>Maximum : 20</h5>
+              <div class="caution">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="18"
+                  fill="none"
+                  viewBox="0 0 19 18"
+                >
+                  <path
+                    fill="#FD1717"
+                    d="M9.428 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.002 1.102-6.037-10.5a2.25 2.25 0 0 0-3.93 0l-6 10.5a2.25 2.25 0 0 0 1.92 3.398h12.09a2.25 2.25 0 0 0 1.957-3.398Zm-1.297 1.5a.749.749 0 0 1-.66.383H3.383a.75.75 0 0 1-.66-.383.75.75 0 0 1 0-.75l6-10.5a.75.75 0 0 1 1.335 0l6.037 10.5a.75.75 0 0 1 .038.765v-.015ZM9.428 6a.75.75 0 0 0-.75.75v3a.75.75 0 1 0 1.5 0v-3a.75.75 0 0 0-.75-.75Z"
+                  />
+                </svg>
+                <p>Insufficiant Balance : You need to <u>deposit</u> 45 KLAY</p>
+              </div>
+            </div>
+
+            <!-- button (soldout) -->
+            <!-- <div class="wrap-btn">
+              <button class="btn btn-lg" disabled>SOLD OUT</button>
+              <button class="btn btn-lg btn-grad-line">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="22"
+                  fill="none"
+                  viewBox="0 0 23 22"
+                >
+                  <path
+                    fill="#FF2F00"
+                    d="M20.136 13.75a2.75 2.75 0 0 0-1.742-2.549l1.715-6.416a.917.917 0 0 0-.166-.798.917.917 0 0 0-.724-.32H6.661L6.358 2.51a.917.917 0 0 0-.889-.678H3.636v1.833h1.127l2.274 8.489a.916.916 0 0 0 .916.678h9.433a.917.917 0 0 1 0 1.833H5.469a.917.917 0 1 0 0 1.834h1.082a2.75 2.75 0 1 0 5.17 0h2.163a2.75 2.75 0 1 0 4.969-.431 2.752 2.752 0 0 0 1.283-2.32ZM16.552 11H8.678L7.156 5.5h10.872L16.552 11Zm-7.416 7.333a.916.916 0 1 1 0-1.832.916.916 0 0 1 0 1.832Zm7.333 0a.916.916 0 1 1 0-1.833.916.916 0 0 1 0 1.833Z"
+                  />
+                </svg>
+                GO TO MARKETPLACE
+              </button>
+            </div> -->
+          </div>
+          <!-- 텍스트 하단영역(탭) -->
+          <div class="wrap-btm">
+            <!-- tab navigation button -->
+            <nav id="tab">
+              <div class="nav nav-tabs border-grad" role="tablist">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  type="button"
+                  role="tab"
+                >
+                  Description
+                </button>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  type="button"
+                  role="tab"
+                >
+                  Rules
+                </button>
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  type="button"
+                  role="tab"
+                >
+                  Series Content
+                </button>
+              </div>
+            </nav>
+            <!-- tab content -->
+            <div class="tab-content" id="tabCon">
+              <div class="tab-pane fade active show" role="tabpanel">
+                <h3>Project Details</h3>
+                <p>
+                  WonderfulDay is a decentralized NFT mint, trading and data
+                  display platform. Wonderful Tiger is the symbol of the
+                  WonderfulDay brand. Collect five different tigers to share 20M
+                  WON reward. Stake or trade any tiger NFT to get WON rewards.
+                  Web: https://nftwon.net
+                </p>
+                <h3>About collection</h3>
+                <p>
+                  BBF Inc. oversees the global operation and management of the
+                  P2E game Baby Shark BubbleFong Friends. Baby Shark BubbleFong
+                  Friends is a P2E game based on The Pinkfong Company's Pinkfong
+                  and Baby Shark IP characters and was developed with
+                  inspiration from classic arcade games that anyone could easily
+                  enjoy and play.
+                </p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel"></div>
+              <div class="tab-pane fade" role="tabpanel"></div>
+            </div>
+            <!-- item list -->
+            <div class="f-table list-dark">
+              <div class="thead">
+                <div class="tr">
+                  <div class="th"></div>
+                  <div class="th"></div>
+                  <div class="th">Rarity Level</div>
+                  <div class="th">Issue Amount</div>
+                  <div class="th">Probability</div>
+                </div>
+              </div>
+              <div class="tbody">
+                <a href="#">
+                  <div class="tr">
+                    <div class="td overflow-visible">
+                      <div class="thumb">
+                        <!-- <img src="../img/ex/ex_thumb4.png" alt="" /> -->
+                        <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="td">Torres - <br />09.4.11 v BLA</div>
+                    <div class="td">
+                      <img src="../img/tag_legendary.svg" alt="" />
+                      <!-- <img src="../img/tag_epic.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_rare.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_unique.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_normal.svg" alt="" /> -->
+                    </div>
+                    <div class="td">513</div>
+                    <div class="td">2.80%</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="tr">
+                    <div class="td overflow-visible">
+                      <div class="thumb">
+                        <!-- <img src="../img/ex/ex_thumb4.png" alt="" /> -->
+                        <img src="../img/ex/ex_thumb1.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="td">Torres - <br />09.4.11 v BLA</div>
+                    <div class="td">
+                      <img src="../img/tag_legendary.svg" alt="" />
+                      <!-- <img src="../img/tag_epic.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_rare.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_unique.svg" alt="" /> -->
+                      <!-- <img src="../img/tag_normal.svg" alt="" /> -->
+                    </div>
+                    <div class="td">513</div>
+                    <div class="td">2.80%</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <!-- <footer>
+        <div class="wrap-left">
+          <a href="">
+            <img src="../img/logo.svg" alt="logo" class="logo" />
+          </a>
+        </div>
+        <div class="wrap-right">
+          <p>
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). <br />Buy, sell, and
+            discover exclusive digital items.
+          </p>
+          <div class="wrap-link">
+            <a href="" class="link">About</a>
+            <a href="" class="link">Contact</a>
+            <a href="" class="link">Help</a>
+            <a href="" class="link">Terms of use</a>
+          </div>
+          <div class="wrap-btn-circle">
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_fb.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_tw.svg" alt="" />
+            </button>
+            <button type="button" class="btn btn-circle">
+              <img class="i" src="../img/btn_disc.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </footer> -->
+    </div>
+
+    <script type="text/javascript">
+      // flipclock
+      let clock;
+      $(document).ready(function () {
+        clock = $(".flipclock").FlipClock({
+          clockFace: "DailyCounter",
+          showSeconds: false,
+        });
+        clock.setTime(121212);
+        clock.setCountdown(true);
+      });
+
+      // scroll gnb style
+      $(document).scroll(function () {
+        let $nav = $("nav.fixed-top");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+    </script>
+  </body>
+</html>
