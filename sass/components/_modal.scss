@@ -19,7 +19,20 @@
   }
 
   .list-group {
-    margin: 6px 0 36px 0;
+    margin: 6px 0 0;
+    .btn-dwl.position-absolute {
+      top: calc(50% - 15px);
+      right: 20px;
+      background-color: #7d8490;
+      width: 30px;
+      height: 30px;
+      @include i-bg;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%23F7F9FC' d='M16.584 12.5a.75.75 0 0 0-1.5 0h1.5Zm-11.667 0a.75.75 0 0 0-1.5 0h1.5Zm5.833-8.334a.75.75 0 0 0-1.5 0h1.5ZM10 12.5l-.53.53a.75.75 0 0 0 1.06 0L10 12.5Zm-1.136-2.197a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.333 1.06a.75.75 0 0 0-1.06-1.06l1.06 1.06Zm1.97 3.72H5.834v1.5h8.333v-1.5Zm2.417-.917V12.5h-1.5v1.666h1.5Zm-11.667 0V12.5h-1.5v1.666h1.5Zm.917.917a.917.917 0 0 1-.917-.917h-1.5a2.417 2.417 0 0 0 2.417 2.417v-1.5Zm8.333 1.5a2.417 2.417 0 0 0 2.417-2.416h-1.5c0 .506-.41.916-.917.916v1.5ZM9.25 4.167V12.5h1.5V4.166h-1.5Zm1.28 7.803-1.666-1.667-1.06 1.06L9.47 13.03l1.06-1.06Zm0 1.06 1.667-1.666-1.06-1.061-1.667 1.666 1.06 1.061Z'/%3E%3C/svg%3E%0A");
+      background-size: 20px 20px;
+      &:hover {
+        background-color: #fc6825;
+      }
+    }
   }
 
   .wrap-btn {
@@ -158,6 +171,9 @@
 
   .modal-body {
     padding: 0 36px 0 36px;
+    &:last-child {
+      padding-bottom: 36px;
+    }
 
     p {
       font-style: normal;
@@ -633,13 +649,14 @@
       min-width: 0;
       min-height: 0;
       max-width: 100%;
-      max-height: calc(100vh - 7rem);
       width: fit-content;
       height: fit-content;
-      background-color: transparent;
+      background-color: hsl(0, 0%, 90%);
       overflow: hidden;
       border-radius: 0;
-      img {
+      img,
+      video {
+        max-width: calc(100vw - 7rem);
         max-height: calc(100vh - 7rem);
       }
     }
@@ -652,9 +669,6 @@
         url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239BA4BB'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
         center/1em auto no-repeat;
       z-index: 1000;
-      &:hover {
-        display: none;
-      }
     }
   }
 

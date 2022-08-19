@@ -102,6 +102,8 @@
       flex-direction: column;
       margin: 15px 0 25px 0;
       gap: 12px;
+      padding: 0;
+      width: 100%;
 
       .wrap-cate {
         display: flex;
@@ -129,6 +131,7 @@
         text-align: left;
         display: flex;
         gap: 5px;
+        width: 100%;
 
         .dropdown-menu {
           width: 100%;

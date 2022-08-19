@@ -1,19 +1,41 @@
 // general styles
 :root {
   accent-color: #fc6825;
+
+  *::-webkit-scrollbar {
+    // background-color: transparent;
+    width: 15px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(170, 170, 170, 0.5);
+    border-radius: 15px;
+    background-clip: padding-box;
+    border: 5px solid transparent;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 15px;
+  }
+}
+
+.container-onepage {
+  #app {
+    height: calc(100vh - 80px);
+    overflow: hidden;
+  }
 }
 
 body {
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   color: #030229;
   background-color: #fff;
+  overflow: auto;
 
   > div#app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    // padding-top: 75px;
-    padding-top: 95px;
+    padding-top: 80px;
   }
 }
 

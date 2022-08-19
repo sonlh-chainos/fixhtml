@@ -1,4 +1,12 @@
 // a, button, btn
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: none;
+}
+
 a,
 .btn-link {
   text-decoration: none;
@@ -247,6 +255,22 @@ a,
       h5,
       h6 {
         color: #fff;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .btn,
+  button,
+  a {
+    &:hover {
+      color: inherit;
+      background: inherit;
+      background-color: inherit;
+      svg * {
+        fill: inherit;
+        stroke: inherit;
       }
     }
   }

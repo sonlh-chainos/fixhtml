@@ -13857,11 +13857,30 @@ span.flatpickr-weekday {
 :root {
   accent-color: #fc6825;
 }
+:root *::-webkit-scrollbar {
+  width: 15px;
+}
+:root *::-webkit-scrollbar-thumb {
+  background-color: rgba(170, 170, 170, 0.5);
+  border-radius: 15px;
+  background-clip: padding-box;
+  border: 5px solid transparent;
+}
+:root *::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.container-onepage #app {
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
 
 body {
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   color: #030229;
   background-color: #fff;
+  overflow: auto;
 }
 body > div#app {
   display: -webkit-box;
@@ -13872,7 +13891,7 @@ body > div#app {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  padding-top: 95px;
+  padding-top: 80px;
 }
 
 main {
@@ -14341,6 +14360,13 @@ main .acc-table + .box-btm {
     max-width: calc(100% - 40px);
   }
 }
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: none;
+}
+
 a,
 .btn-link {
   text-decoration: none;
@@ -14581,6 +14607,21 @@ a,
   color: #fff;
 }
 
+@media (hover: none) {
+  .btn:hover,
+button:hover,
+a:hover {
+    color: inherit;
+    background: inherit;
+    background-color: inherit;
+  }
+  .btn:hover svg *,
+button:hover svg *,
+a:hover svg * {
+    fill: inherit;
+    stroke: inherit;
+  }
+}
 @media (max-width: 991.98px) {
   .btn-side {
     min-height: 35px;
@@ -16509,7 +16550,24 @@ main .wrap-list aside + div {
   padding-top: 3px;
 }
 .modal .list-group {
-  margin: 6px 0 36px 0;
+  margin: 6px 0 0;
+}
+.modal .list-group .btn-dwl.position-absolute {
+  top: calc(50% - 15px);
+  right: 20px;
+  background-color: #7d8490;
+  width: 30px;
+  height: 30px;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%23F7F9FC' d='M16.584 12.5a.75.75 0 0 0-1.5 0h1.5Zm-11.667 0a.75.75 0 0 0-1.5 0h1.5Zm5.833-8.334a.75.75 0 0 0-1.5 0h1.5ZM10 12.5l-.53.53a.75.75 0 0 0 1.06 0L10 12.5Zm-1.136-2.197a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.333 1.06a.75.75 0 0 0-1.06-1.06l1.06 1.06Zm1.97 3.72H5.834v1.5h8.333v-1.5Zm2.417-.917V12.5h-1.5v1.666h1.5Zm-11.667 0V12.5h-1.5v1.666h1.5Zm.917.917a.917.917 0 0 1-.917-.917h-1.5a2.417 2.417 0 0 0 2.417 2.417v-1.5Zm8.333 1.5a2.417 2.417 0 0 0 2.417-2.416h-1.5c0 .506-.41.916-.917.916v1.5ZM9.25 4.167V12.5h1.5V4.166h-1.5Zm1.28 7.803-1.666-1.667-1.06 1.06L9.47 13.03l1.06-1.06Zm0 1.06 1.667-1.666-1.06-1.061-1.667 1.666 1.06 1.061Z'/%3E%3C/svg%3E%0A");
+  background-size: 20px 20px;
+}
+.modal .list-group .btn-dwl.position-absolute:hover {
+  background-color: #fc6825;
 }
 .modal .wrap-btn {
   margin: 0;
@@ -16623,6 +16681,9 @@ main .wrap-list aside + div {
 }
 .modal .modal-body {
   padding: 0 36px 0 36px;
+}
+.modal .modal-body:last-child {
+  padding-bottom: 36px;
 }
 .modal .modal-body p {
   font-style: normal;
@@ -17093,18 +17154,19 @@ main .wrap-list aside + div {
   min-width: 0;
   min-height: 0;
   max-width: 100%;
-  max-height: calc(100vh - 7rem);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: transparent;
+  background-color: hsl(0deg, 0%, 90%);
   overflow: hidden;
   border-radius: 0;
 }
-.modal.pop-img .modal-content img {
+.modal.pop-img .modal-content img,
+.modal.pop-img .modal-content video {
+  max-width: calc(100vw - 7rem);
   max-height: calc(100vh - 7rem);
 }
 .modal.pop-img .btn-close {
@@ -17113,9 +17175,6 @@ main .wrap-list aside + div {
   right: 40px;
   background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239BA4BB'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
   z-index: 1000;
-}
-.modal.pop-img .btn-close:hover {
-  display: none;
 }
 .modal.pop-xl .modal-content {
   min-width: 812px;
@@ -18068,6 +18127,8 @@ nav .badge.active {
             flex-direction: column;
     margin: 15px 0 25px 0;
     gap: 12px;
+    padding: 0;
+    width: 100%;
   }
   .tab-content nav.wrap-btn-top .wrap-cate {
     display: -webkit-box;
@@ -18097,6 +18158,7 @@ nav .badge.active {
     display: -ms-flexbox;
     display: flex;
     gap: 5px;
+    width: 100%;
   }
   .tab-content nav.wrap-btn-top .dropdown .dropdown-menu {
     width: 100%;
@@ -18830,7 +18892,8 @@ div.f-table.table-recent .td:nth-child(4) {
       -ms-flex-align: center;
           align-items: center;
 }
-.thumb img {
+.thumb img,
+.thumb video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -19117,7 +19180,7 @@ div.f-table.table-recent .td:nth-child(4) {
 }
 
 nav.gnb {
-  height: 75px;
+  height: 80px;
   padding: 0 60px;
   margin: 0;
   background-color: #fff;
@@ -19954,17 +20017,9 @@ aside .btn-side.active .badge {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.nft-top .wrap-thumb .thumb img {
-  border-radius: 24px;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
+.nft-top .wrap-thumb .thumb img,
 .nft-top .wrap-thumb .thumb video {
   border-radius: 24px;
-  max-width: 100%;
-  max-height: 100%;
 }
 .nft-top .wrap-con {
   width: calc(100% - 460px);
@@ -20506,11 +20561,6 @@ aside .btn-side.active .badge {
     max-height: 500px;
     margin: 0 auto;
     height: auto;
-  }
-  .nft-top .wrap-thumb .thumb img,
-.nft-top .wrap-thumb .thumb video {
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -22377,7 +22427,7 @@ nav.gnb.darken .btn-connect {
   position: relative;
   display: grid;
   overflow: hidden;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 285px 1fr;
   grid-template-rows: 72px 1fr;
   height: 100vh;
   grid-template-areas: "header header" "sidebar c-main";
@@ -22411,6 +22461,7 @@ nav.gnb.darken .btn-connect {
   background-repeat: no-repeat;
   background-position: 45% center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' fill='none' viewBox='0 0 6 10'%3E%3Cpath fill='%23626978' fill-rule='evenodd' d='M5.566.435a.8.8 0 0 1 0 1.13L2.13 5l3.435 3.435a.8.8 0 1 1-1.132 1.13l-4-4a.8.8 0 0 1 0-1.13l4-4a.8.8 0 0 1 1.132 0Z' clip-rule='evenodd'/%3E%3C/svg%3E%0A");
+  top: calc(50% - 15px);
 }
 .container-admin .btn.btn-arrow-circle.btn-arrow-circle-left {
   -webkit-transform: rotate(-180deg);
@@ -22756,7 +22807,7 @@ nav.gnb.darken .btn-connect {
 .container-admin .container-main {
   grid-area: c-main;
   height: calc(100vh - 75px);
-  width: calc(100vw - 260px);
+  width: calc(100vw - 285px);
   overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
