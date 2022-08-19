@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div class="container-admin">
+      <div
+        class="modal pop-admin"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Add a Game</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <p>
+                  In order to add a game, you need to create a game account
+                  first. Please fill in the blank below.
+                </p>
+                <div class="wrap-form mb-4">
+                  <div class="thead">
+                    <div class="row">
+                      <div class="col-12 th">Game ID</div>
+                    </div>
+                  </div>
+                  <div class="tbody">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter..."
+                      aria-label=""
+                      aria-describedby=""
+                    />
+                    <p class="mt-2">
+                      Upper / lower cases of letters, numbers and - can be used.
+                      Special letters such as !, @, #, $, %, ^, &, *, (, ),
+                      cannot be used. Game ID cannot be changed.
+                    </p>
+                  </div>
+                </div>
+                <div class="wrap-form mb-3">
+                  <div class="thead">
+                    <div class="row">
+                      <div class="col-12 th">Title of the Game</div>
+                    </div>
+                  </div>
+                  <div class="tbody">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Enter..."
+                      aria-label=""
+                      aria-describedby=""
+                    />
+                    <p class="mt-2">
+                      You can change the title of the game anytime you want.
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target=""
+                  data-bs-toggle="modal"
+                >
+                  Create a Game Account
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dialog 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+
+      <script type="text/javascript">
+        $(".modal").show();
+
+        // tooltip
+        let tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      </script>
+    </div>
+  </body>
+</html>

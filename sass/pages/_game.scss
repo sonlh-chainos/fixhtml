@@ -86,7 +86,7 @@
         &.collapse {
           display: block;
 
-          > .markdown {
+          > div {
             @include t-ell2;
           }
         }
