@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- 모바일 간격조정을 위해 .pop-step-convert 클래스 추가 -->
+      <div
+        class="modal pop-step pop-lg"
+        tabindex="-1"
+        aria-labelledby=""
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Convert your KLAY</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="">
+                For compatibility, please convert your KLAY into wrapped KLAY
+                (WKLAY).
+              </p>
+              <div class="wrap-form mb-0">
+                <h3 class="title">
+                  From
+                  <span class="balance pull-right"
+                    >Your Balance : 10.0 KLAY</span
+                  >
+                </h3>
+                <div class="form wrap-price">
+                  <label for="" class="klay">KLAY</label>
+                  <input
+                    type="number"
+                    class="form-control price"
+                    placeholder="Amount"
+                    value="3"
+                  />
+                  <span class="unit">$1.00</span>
+                </div>
+                <p class="alert">
+                  <img src="../img/i_x_r.svg" alt="" class="i" />
+                  Offer must be at least the minimum price per unit of 2 WKLAY
+                </p>
+              </div>
+              <div class="wrap-btn my-3">
+                <button class="btn btn-circle btn-convert pull-center">
+                  <img src="../img/btn_convert.svg" alt="" />
+                </button>
+              </div>
+              <div class="wrap-form">
+                <h3 class="title">
+                  To
+                  <!-- result 값 불러오도록 영역 추가 -->
+                  <span class="balance pull-right"
+                    >Your Balance : 2.0 WKLAY (Result : 5.0 WKLAY)</span
+                  >
+                </h3>
+                <div class="form wrap-price">
+                  <label for="" class="klay wklay">WKLAY</label>
+                  <input
+                    type="number"
+                    class="form-control price"
+                    placeholder="Amount"
+                    value="3"
+                  />
+                  <span class="unit">$1.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="wrap-btn mt-lg">
+                <button
+                  type="button"
+                  class="btn btn-grad"
+                  data-bs-target="#popOffer012"
+                  data-bs-toggle="modal"
+                >
+                  Convert
+                </button>
+              </div>
+              <div class="sm">
+                <p>made with 🖤 by</p>
+                <a href="">
+                  <img src="../img/logo_pangea.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="none"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      fill="#626978"
+                      d="M9.335 11.333H2A1.333 1.333 0 0 1 .668 10V2.667c0-.737.597-1.334 1.333-1.334h2.667v1.334H2.001V10h7.334V7.333h1.333V10c0 .736-.597 1.333-1.333 1.333ZM5.8 7.138l-.94-.943L9.057 2H6.668V.667h4.667v4.666H10v-2.39L5.8 7.138Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
+      <div class="modal-backdrop show"></div>
+    </div>
+
+    <script type="text/javascript">
+      $(".modal").show();
+    </script>
+  </body>
+</html>

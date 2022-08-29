@@ -29,10 +29,9 @@ main .wrap-list {
   display: flex;
   align-items: center;
   justify-content: start;
-
+  gap: 16px;
   .i {
     width: 35px;
-    margin-right: 16px;
   }
 }
 

@@ -214,7 +214,7 @@
                       <div class="accordion-item">
                         <h4 class="accordion-header" id="heading11">
                           <button
-                            class="accordion-button btn btn-block li-item active"
+                            class="accordion-button btn btn-block li-item collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapse11"
@@ -239,7 +239,7 @@
                         </h4>
                         <div
                           id="collapse11"
-                          class="accordion-collapse collapse show"
+                          class="accordion-collapse collapse"
                           aria-labelledby="heading11"
                         >
                           <div class="accordion-body">
@@ -249,7 +249,7 @@
                             <button class="btn btn-block li-item">
                               Subscription Mechanism
                             </button>
-                            <button class="btn btn-block li-item active">
+                            <button class="btn btn-block li-item">
                               Mystery Box
                             </button>
                           </div>
@@ -313,262 +313,120 @@
       <!-- 메인 콘테이너 -->
       <div class="container-main">
         <!-- 메인 콘텐츠 영역 -->
-        <main class="admin-main">
-          <div class="wrap-title">
-            <!-- breadcrumb -->
-            <nav
-              class="wrap-breadcrumb"
-              style="--bs-breadcrumb-divider: '>'"
-              aria-label="breadcrumb"
-            >
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="#">Drawshop Kingdon Reserve</a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="#">Launch Tools</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Mystery Box
-                </li>
-              </ol>
-            </nav>
-            <h1>Create a new Mystery Box set</h1>
+        <main class="admin-main game-main">
+          <div class="wrap-title d-flex mb-4">
+            <h1>Drawshop Kingdom Reserve</h1>
+            <div class="wrap-btn ms-auto p-0">
+              <button
+                type="button"
+                class="btn btn-line-light"
+                onclick="location.href='information01.html';"
+              >
+                Edit
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="#A0A0A0"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m15.315 7.042-7.774 7.774a2 2 0 0 1-1.022.547l-2.353.47.471-2.352a2 2 0 0 1 .547-1.022l7.774-7.774m2.357 2.357 1.061-1.06a1 1 0 0 0 0-1.415l-.943-.943a1 1 0 0 0-1.414 0l-1.06 1.06m2.356 2.358-2.357-2.357"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="wrap-con">
-            <!-- 탭메뉴 -->
-            <nav class="admin-nav" id="tab">
-              <div class="nav nav-tabs" role="tablist">
-                <!-- 이전 step .nav-link에 .checked 클래스 부여 -->
-                <button
-                  class="nav-link checked"
-                  id="navTab-step1"
-                  onclick="location.href='mbox_admin03.html';"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tabCon-step1"
-                  type="button"
-                  role="tab"
-                  aria-controls="tabCon-step1"
-                  aria-selected="false"
-                >
-                  <span class="step">
-                    <span class="bg"></span>
-                    <span class="num">1</span>
-                  </span>
-                  Mystery Box Info
-                </button>
-                <button
-                  class="nav-link checked"
-                  id="navTab-step2"
-                  onclick="location.href='mbox_admin04.html';"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tabCon-step2"
-                  type="button"
-                  role="tab"
-                  aria-controls="tabCon-step2"
-                  aria-selected="true"
-                >
-                  <span class="step">
-                    <span class="bg"></span>
-                    <span class="num">2</span>
-                  </span>
-                  Rarity Setup
-                </button>
-                <button
-                  class="nav-link checked"
-                  id="navTab-step3"
-                  onclick="location.href='mbox_admin05.html';"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tabCon-step3"
-                  type="button"
-                  role="tab"
-                  aria-controls="tabCon-step3"
-                  aria-selected="false"
-                >
-                  <span class="step">
-                    <span class="bg"></span>
-                    <span class="num">3</span>
-                  </span>
-                  NFT Compose
-                </button>
-                <button
-                  class="nav-link checked"
-                  id="navTab-step4"
-                  onclick="location.href='mbox_admin06.html';"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tabCon-step3"
-                  type="button"
-                  role="tab"
-                  aria-controls="tabCon-step3"
-                  aria-selected="false"
-                >
-                  <span class="step">
-                    <span class="bg"></span>
-                    <span class="num">4</span>
-                  </span>
-                  Release Setup
-                </button>
-                <button
-                  class="nav-link checked"
-                  id="navTab-step4"
-                  onclick="location.href='mbox_admin06.html';"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tabCon-step3"
-                  type="button"
-                  role="tab"
-                  aria-controls="tabCon-step3"
-                  aria-selected="false"
-                >
-                  <span class="step">
-                    <span class="bg"></span>
-                    <span class="num">5</span>
-                  </span>
-                  Deploy Contract
-                </button>
+            <div class="wrap-thumb jumbotron">
+              <div class="thumb">
+                <img src="../img/ex/ex_thumb1.jpg" alt="" />
               </div>
-            </nav>
-            <!-- 탭메뉴 선택시 나타나는 콘텐츠 -->
-            <div class="tab-content" id="tabCon">
-              <!-- 탭메뉴 콘텐츠1 -->
-              <div
-                class="tab-pane fade"
-                id="tabCon-step1"
-                role="tabpanel"
-                aria-labelledby="navTab-step1"
-              ></div>
-              <!-- 탭메뉴 콘텐츠2 -->
-              <div
-                class="tab-pane fade"
-                id="tabCon-step2"
-                role="tabpanel"
-                aria-labelledby="navTab-step2"
-              ></div>
-              <!-- 탭메뉴 콘텐츠3 -->
-              <div
-                class="tab-pane fade"
-                id="tabCon-step3"
-                role="tabpanel"
-                aria-labelledby="navTab-step3"
-              ></div>
-              <!-- 탭메뉴 콘텐츠4 -->
-              <div
-                class="tab-pane fade active show"
-                id="tabCon-step4"
-                role="tabpanel"
-                aria-labelledby="navTab-step4"
-              >
-                <div class="text-center wrap-done">
-                  <h1 class="txt-grad">Congratulations !</h1>
-                  <p>
-                    The Release Set Up of
-                    <b class="fw-600">“Rocky Horror Show”</b> Mystery Box has
-                    been successfully completed.
-                  </p>
-                  <!-- <img src="../img/img_confetti.svg" class="my-4" />
-                   -->
-                  <div class="wrap-thumb">
-                    <div class="thumb">
-                      <img src="../img/ex/ex_img_s.jpeg" alt="" />
-                    </div>
-                  </div>
-                  <h2>Rocky Horror Picture Show</h2>
-                  <p>
-                    Wukong was about to be heated down by the scorching summer.
-                    With the burn- ing of his pipe, he was about to explode.
-                    <br />The setting was burning to red. Like Van Gogh's
-                    self-portrait, he was so dull that he could only
-                    <br />mechanically observe the smoky cigarette butts making
-                    a faint sound in front of him....
-                  </p>
-                  <div class="text-center wrap-boxes">
-                    <div class="li-box row px-4 m-auto">
-                      <div class="col-3">
-                        <div class="li">
-                          <span>Number of Items</span>
-                          <h4>14 Items</h4>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="li">
-                          <span>Rarity</span>
-                          <h4>5 Levels</h4>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="li">
-                          <span>Issue Amount</span>
-                          <h4>10,000</h4>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="li">
-                          <span>Price</span>
-                          <h4>5 Klay</h4>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="li">
-                          <span>Release Date</span>
-                          <h4>July 4 2022</h4>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="li">
-                          <span>Lockup Period</span>
-                          <h4>24 Hours</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="wrap-address">
-                    <div class="wrap-txt">
-                      <h5>Mystery Box Contract Address</h5>
-                      <p class="sm">
-                        0x446c225ec1693E5Bd5F8030866d66C0496c077cC
-                      </p>
-                    </div>
-                    <div class="wrap-btn btn-group">
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-sq">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="15"
-                            height="14"
-                            fill="none"
-                            viewBox="0 0 15 14"
-                          >
-                            <path
-                              fill="#7D8490"
-                              fill-rule="evenodd"
-                              d="M5.32 1.698a1.31 1.31 0 0 1 .925-.383h5.137a1.308 1.308 0 0 1 1.307 1.306v5.135a1.304 1.304 0 0 1-1.307 1.305v1.313a2.621 2.621 0 0 0 2.62-2.618V2.62A2.619 2.619 0 0 0 11.382 0H6.245a2.62 2.62 0 0 0-2.62 2.62h1.313c0-.346.137-.678.383-.923ZM1.314 6.245c0-.721.585-1.306 1.308-1.306h5.136c.723 0 1.307.585 1.307 1.306v5.134c0 .72-.585 1.306-1.307 1.306H2.621a1.307 1.307 0 0 1-1.308-1.306V6.245Zm1.308-2.62A2.62 2.62 0 0 0 0 6.245v5.134a2.62 2.62 0 0 0 2.62 2.619h5.137a2.62 2.62 0 0 0 2.62-2.62V6.246a2.62 2.62 0 0 0-2.62-2.62H2.621Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                        </button>
-                        <button type="button" class="btn btn-sq">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="none"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              fill="#7D8490"
-                              d="M11.75 14H3.5A1.5 1.5 0 0 1 2 12.5V4.25a1.5 1.5 0 0 1 1.5-1.5h3v1.5h-3v8.25h8.25v-3h1.5v3a1.5 1.5 0 0 1-1.5 1.5ZM7.775 9.28 6.717 8.22l4.72-4.72H8.75V2H14v5.25h-1.5V4.561l-4.725 4.72Z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="wrap-btn">
-                    <button class="btn btn-lg btn-grad">
-                      Go back to Mystery Box Manager page
-                    </button>
-                  </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-9">
+                <p>
+                  Wukong was about to be heated down by the scorching summer.
+                  With the burn- ing of his pipe, he was about to explode. The
+                  setting was burning to red. Like Van Gogh's self-portrait, he
+                  was so dull that he could only mechanically observe the smoky
+                  cigarette butts making a faint sound in front of him....
+                </p>
+              </div>
+              <div class="col-3">
+                <div class="wrap-btn text-end p-0" role="group" aria-label="">
+                  <button type="button" class="btn btn-sns">
+                    <img class="i" src="../img/i_tw.svg" alt="" />
+                  </button>
+                  <button type="button" class="btn btn-sns">
+                    <img class="i" src="../img/i_disc.svg" alt="" />
+                  </button>
+                  <button type="button" class="btn btn-sns">
+                    <img class="i" src="../img/i_glob.svg" alt="" />
+                  </button>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-con" style="margin-top: 90px">
+            <h2 class="form-label mb-4">Game Information</h2>
+            <div class="row">
+              <div class="col-6">
+                <a href="information01.html" class="box-item">
+                  <img src="../img/i_ga_market.svg" width="75" />
+                  <h3>Game Manager</h3>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="statistics.html" class="box-item">
+                  <img src="../img/i_ga_statistics.svg" width="75" />
+                  <h3>Statistics</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-con" style="margin-top: 70px">
+            <h2 class="form-label mb-4">Launch Tools</h2>
+            <div class="row">
+              <div class="col-4">
+                <a
+                  href="../html_studio_whitelist/whitelist_admin01.html"
+                  class="box-item"
+                >
+                  <img src="../img/i_ga_whitelist.svg" width="75" />
+                  <div class="wrap-txt">
+                    <h3>White List NFT</h3>
+                    <p>2 Projects</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-4">
+                <a
+                  href="../html_studio_subscription/subscription_admin01.html"
+                  class="box-item"
+                >
+                  <img src="../img/i_ga_subscription.svg" width="75" />
+                  <div class="wrap-txt">
+                    <h3>Subscription Mechanism</h3>
+                    <p>2 Sessions</p>
+                    <span class="tag active">Calculation</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-4">
+                <a
+                  href="../html_studio_mbox/mbox_admin02.html"
+                  class="box-item"
+                >
+                  <img src="../img/i_ga_mystery.svg" width="75" />
+                  <div class="wrap-txt">
+                    <h3>Mystery Box</h3>
+                    <p>4 Projects</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -609,12 +467,6 @@
       </div>
     </div>
 
-    <script type="text/javascript">
-      // scroll gnb style
-      $(document).scroll(function () {
-        let $nav = $("nav.fixed-top");
-        $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
-      });
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>

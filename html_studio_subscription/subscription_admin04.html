@@ -629,7 +629,13 @@
                             <span class="num circle">2</span>
                             <h3>Calculation</h3>
                           </div>
-                          <div class="col-5 td td-con">3 Hours</div>
+                          <div class="col-5 td td-con d-flex">
+                            <p>3 Hours</p>
+                            <!-- Start Calculation 까지 남은 시간 표시 (버튼 비활성화 상태에서 보이는 타이머) -->
+                            <p class="caution ms-auto">
+                              Active After 2days 00 : 00 : 00
+                            </p>
+                          </div>
                           <div class="col-4 td td-time">
                             <button class="btn btn-grad w-75">
                               <span class="txt">Start Calculation</span>
@@ -638,10 +644,41 @@
 
                           <!-- <div class="col-3 td"></div> -->
 
-                          <div
-                            class="col-9 offset-3 caution d-flex"
-                            style="margin-top: 36px"
-                          >
+                          <div class="col-9 offset-3 mt-5 mb-4">
+                            <div style="max-width: 540px">
+                              <div
+                                class="wrap-step wrap-step-gray row row-cols-5 text-start"
+                              >
+                                <!-- .checked : 완료된 스탭 -->
+                                <div class="col">
+                                  <div class="step checked">
+                                    <span></span>
+                                  </div>
+                                  <p>Preparing Calculation Process</p>
+                                </div>
+                                <div class="col">
+                                  <div class="step checked">
+                                    <span></span>
+                                  </div>
+                                  <p>Start Calculation</p>
+                                </div>
+                                <div class="col">
+                                  <!-- .active : 활성화된 스탭 -->
+                                  <div class="step active">
+                                    <span></span>
+                                  </div>
+                                  <p>Setting Approval</p>
+                                </div>
+                                <div class="col">
+                                  <div class="step">
+                                    <span></span>
+                                  </div>
+                                  <p>Done</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9 offset-3 caution d-flex">
                             <img
                               src="../img/i_caution.svg"
                               alt=""
@@ -787,6 +824,14 @@
         // dateFormat: "Y-m-d H:i",
       };
       flatpickr("input[type=datetime-local]", config);
+
+      // tooltip
+      let tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
     </script>
   </body>
 </html>

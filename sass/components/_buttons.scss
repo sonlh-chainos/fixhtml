@@ -265,12 +265,12 @@ a,
   button,
   a {
     &:hover {
-      color: inherit;
-      background: inherit;
-      background-color: inherit;
+      color: inherit !important;
+      background: inherit !important;
+      background-color: inherit !important;
       svg * {
-        fill: inherit;
-        stroke: inherit;
+        fill: inherit !important;
+        stroke: inherit !important;
       }
     }
   }
