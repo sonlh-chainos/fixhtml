@@ -514,7 +514,7 @@
       .tr {
         display: flex;
       }
-      .table-statistics {
+      .table {
         border-color: #dadcdf;
         h5,
         p {
@@ -538,7 +538,32 @@
         td,
         .th,
         .td {
-          padding: 20px;
+          padding: 12px;
+        }
+        .inner-header {
+          background-color: #fff;
+          text-align: left;
+          font-weight: 600;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          font-size: 18px;
+          border-top: 1px solid #dadcdf;
+          border-bottom: 1px solid #dadcdf;
+        }
+        tr.blank td {
+          background-color: #fff;
+          padding: 0;
+        }
+        th,
+        .th {
+          font-weight: 500;
+        }
+        td,
+        td {
+          font-weight: 400;
+          &.sticky {
+            font-weight: 500;
+          }
         }
         thead,
         .thead {
@@ -550,14 +575,12 @@
           th,
           .th {
             vertical-align: middle;
-            min-width: 180px;
           }
           td,
           .td {
             vertical-align: top;
             text-align: center;
             position: relative;
-            min-width: 220px;
             .d-flex {
               position: absolute;
               top: 0;
@@ -597,8 +620,18 @@
           td,
           .td {
             text-align: right;
-            min-height: 88px;
+            width: auto;
           }
+        }
+      }
+      .table-statistics {
+        th {
+          min-width: 160px;
+        }
+        td {
+          min-width: 180px;
+          max-width: 220px;
+          width: 20%;
         }
       }
     }
@@ -1059,6 +1092,11 @@
 
     .wrap-title {
       margin-bottom: 35px;
+
+      h2,
+      h5 {
+        margin-bottom: 0;
+      }
 
       h1 {
         font-weight: 600;

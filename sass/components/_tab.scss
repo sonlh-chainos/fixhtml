@@ -100,10 +100,12 @@
 
     nav.wrap-btn-top {
       flex-direction: column;
-      margin: 15px 0 25px 0;
       gap: 12px;
-      padding: 0;
-      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 15px 20px;
+      top: 60px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
 
       .wrap-cate {
         display: flex;
