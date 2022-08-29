@@ -18257,12 +18257,10 @@ nav .badge.active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 15px 0 25px 0;
     gap: 12px;
-    margin: 0 0 10px 0;
-    padding: 15px 20px;
-    top: 60px;
-    margin-left: -20px;
-    width: calc(100% + 40px);
+    padding: 0;
+    width: 100%;
   }
   .tab-content nav.wrap-btn-top .wrap-cate {
     display: -webkit-box;
@@ -23042,120 +23040,96 @@ nav.gnb.darken .btn-connect {
   display: -ms-flexbox;
   display: flex;
 }
-.container-admin main .wrap-table .table {
+.container-admin main .wrap-table .table-statistics {
   border-color: #dadcdf;
 }
-.container-admin main .wrap-table .table h5,
-.container-admin main .wrap-table .table p {
+.container-admin main .wrap-table .table-statistics h5,
+.container-admin main .wrap-table .table-statistics p {
   margin-bottom: 0;
 }
-.container-admin main .wrap-table .table h5 {
+.container-admin main .wrap-table .table-statistics h5 {
   line-height: 22px;
 }
-.container-admin main .wrap-table .table > :not(caption) > * > * {
+.container-admin main .wrap-table .table-statistics > :not(caption) > * > * {
   border-bottom-width: 0;
   border-right: 1px solid #dadcdf;
 }
-.container-admin main .wrap-table .table > :not(caption) > * > *:last-child {
+.container-admin main .wrap-table .table-statistics > :not(caption) > * > *:last-child {
   border-right: 0;
 }
-.container-admin main .wrap-table .table .sticky {
+.container-admin main .wrap-table .table-statistics .sticky {
   position: sticky;
 }
-.container-admin main .wrap-table .table th,
-.container-admin main .wrap-table .table td,
-.container-admin main .wrap-table .table .th,
-.container-admin main .wrap-table .table .td {
-  padding: 12px;
+.container-admin main .wrap-table .table-statistics th,
+.container-admin main .wrap-table .table-statistics td,
+.container-admin main .wrap-table .table-statistics .th,
+.container-admin main .wrap-table .table-statistics .td {
+  padding: 20px;
 }
-.container-admin main .wrap-table .table .inner-header {
-  background-color: #fff;
-  text-align: left;
-  font-weight: 600;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  font-size: 18px;
+.container-admin main .wrap-table .table-statistics thead tr,
+.container-admin main .wrap-table .table-statistics thead .tr,
+.container-admin main .wrap-table .table-statistics .thead tr,
+.container-admin main .wrap-table .table-statistics .thead .tr {
   border-top: 1px solid #dadcdf;
   border-bottom: 1px solid #dadcdf;
 }
-.container-admin main .wrap-table .table tr.blank td {
-  background-color: #fff;
-  padding: 0;
-}
-.container-admin main .wrap-table .table th,
-.container-admin main .wrap-table .table .th {
-  font-weight: 500;
-}
-.container-admin main .wrap-table .table td,
-.container-admin main .wrap-table .table td {
-  font-weight: 400;
-}
-.container-admin main .wrap-table .table td.sticky,
-.container-admin main .wrap-table .table td.sticky {
-  font-weight: 500;
-}
-.container-admin main .wrap-table .table thead tr,
-.container-admin main .wrap-table .table thead .tr,
-.container-admin main .wrap-table .table .thead tr,
-.container-admin main .wrap-table .table .thead .tr {
-  border-top: 1px solid #dadcdf;
-  border-bottom: 1px solid #dadcdf;
-}
-.container-admin main .wrap-table .table thead th,
-.container-admin main .wrap-table .table thead .th,
-.container-admin main .wrap-table .table .thead th,
-.container-admin main .wrap-table .table .thead .th {
+.container-admin main .wrap-table .table-statistics thead th,
+.container-admin main .wrap-table .table-statistics thead .th,
+.container-admin main .wrap-table .table-statistics .thead th,
+.container-admin main .wrap-table .table-statistics .thead .th {
   vertical-align: middle;
+  min-width: 180px;
 }
-.container-admin main .wrap-table .table thead td,
-.container-admin main .wrap-table .table thead .td,
-.container-admin main .wrap-table .table .thead td,
-.container-admin main .wrap-table .table .thead .td {
+.container-admin main .wrap-table .table-statistics thead td,
+.container-admin main .wrap-table .table-statistics thead .td,
+.container-admin main .wrap-table .table-statistics .thead td,
+.container-admin main .wrap-table .table-statistics .thead .td {
   vertical-align: top;
   text-align: center;
   position: relative;
+  min-width: 220px;
 }
-.container-admin main .wrap-table .table thead td .d-flex,
-.container-admin main .wrap-table .table thead .td .d-flex,
-.container-admin main .wrap-table .table .thead td .d-flex,
-.container-admin main .wrap-table .table .thead .td .d-flex {
+.container-admin main .wrap-table .table-statistics thead td .d-flex,
+.container-admin main .wrap-table .table-statistics thead .td .d-flex,
+.container-admin main .wrap-table .table-statistics .thead td .d-flex,
+.container-admin main .wrap-table .table-statistics .thead .td .d-flex {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-.container-admin main .wrap-table .table thead .wrap-thumb,
-.container-admin main .wrap-table .table .thead .wrap-thumb {
+.container-admin main .wrap-table .table-statistics thead .wrap-thumb,
+.container-admin main .wrap-table .table-statistics .thead .wrap-thumb {
   width: 65px;
   height: 65px;
 }
-.container-admin main .wrap-table .table thead h6,
-.container-admin main .wrap-table .table .thead h6 {
+.container-admin main .wrap-table .table-statistics thead h6,
+.container-admin main .wrap-table .table-statistics .thead h6 {
   font-weight: 400;
   color: #464f60;
 }
-.container-admin main .wrap-table .table tbody,
-.container-admin main .wrap-table .table .tbody {
+.container-admin main .wrap-table .table-statistics tbody,
+.container-admin main .wrap-table .table-statistics .tbody {
   border-top: 0;
 }
-.container-admin main .wrap-table .table tbody tr:nth-child(2n),
-.container-admin main .wrap-table .table tbody .tr:nth-child(2n),
-.container-admin main .wrap-table .table .tbody tr:nth-child(2n),
-.container-admin main .wrap-table .table .tbody .tr:nth-child(2n) {
+.container-admin main .wrap-table .table-statistics tbody tr:nth-child(2n),
+.container-admin main .wrap-table .table-statistics tbody .tr:nth-child(2n),
+.container-admin main .wrap-table .table-statistics .tbody tr:nth-child(2n),
+.container-admin main .wrap-table .table-statistics .tbody .tr:nth-child(2n) {
   background: #f7f9fc;
   border-radius: 8px;
 }
-.container-admin main .wrap-table .table tbody th,
-.container-admin main .wrap-table .table tbody .th,
-.container-admin main .wrap-table .table .tbody th,
-.container-admin main .wrap-table .table .tbody .th {
+.container-admin main .wrap-table .table-statistics tbody th,
+.container-admin main .wrap-table .table-statistics tbody .th,
+.container-admin main .wrap-table .table-statistics .tbody th,
+.container-admin main .wrap-table .table-statistics .tbody .th {
   text-align: left;
 }
-.container-admin main .wrap-table .table tbody th h5,
-.container-admin main .wrap-table .table tbody .th h5,
-.container-admin main .wrap-table .table .tbody th h5,
-.container-admin main .wrap-table .table .tbody .th h5 {
+.container-admin main .wrap-table .table-statistics tbody th h5,
+.container-admin main .wrap-table .table-statistics tbody .th h5,
+.container-admin main .wrap-table .table-statistics .tbody th h5,
+.container-admin main .wrap-table .table-statistics .tbody .th h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23164,20 +23138,12 @@ nav.gnb.darken .btn-connect {
       -ms-flex-align: center;
           align-items: center;
 }
-.container-admin main .wrap-table .table tbody td,
-.container-admin main .wrap-table .table tbody .td,
-.container-admin main .wrap-table .table .tbody td,
-.container-admin main .wrap-table .table .tbody .td {
+.container-admin main .wrap-table .table-statistics tbody td,
+.container-admin main .wrap-table .table-statistics tbody .td,
+.container-admin main .wrap-table .table-statistics .tbody td,
+.container-admin main .wrap-table .table-statistics .tbody .td {
   text-align: right;
-  width: auto;
-}
-.container-admin main .wrap-table .table-statistics th {
-  min-width: 160px;
-}
-.container-admin main .wrap-table .table-statistics td {
-  min-width: 180px;
-  max-width: 220px;
-  width: 20%;
+  min-height: 88px;
 }
 .container-admin main .wrap-done {
   padding-top: 20px;
@@ -23614,10 +23580,6 @@ nav.gnb.darken .btn-connect {
 }
 .container-admin main .wrap-title {
   margin-bottom: 35px;
-}
-.container-admin main .wrap-title h2,
-.container-admin main .wrap-title h5 {
-  margin-bottom: 0;
 }
 .container-admin main .wrap-title h1 {
   font-weight: 600;
