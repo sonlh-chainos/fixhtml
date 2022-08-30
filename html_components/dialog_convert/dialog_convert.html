@@ -7,33 +7,19 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../sass/main.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
 
   <body>
     <div id="app">
-      <div
-        class="modal pop-step pop-lg"
-        tabindex="-1"
-        aria-labelledby=""
-        aria-hidden="true"
-      >
+      <div class="modal pop-step pop-lg" tabindex="-1" aria-labelledby="">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h2 class="modal-title">Convert your KLAY</h2>
               <button
                 type="button"
-                class="btn-close"
+                class="btn btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
@@ -51,7 +37,15 @@
                   >
                 </h3>
                 <div class="form wrap-price">
-                  <label for="" class="klay">KLAY</label>
+                  <label for="" class="klay">
+                    <img
+                      src="./img/i_klay.svg"
+                      alt="klay"
+                      width="18"
+                      height="18"
+                    />
+                    KLAY</label
+                  >
                   <input
                     type="number"
                     class="form-control price"
@@ -61,13 +55,13 @@
                   <span class="unit">$1.00</span>
                 </div>
                 <p class="alert">
-                  <img src="../img/i_x_r.svg" alt="" class="i" />
+                  <img src="./img/i_x_r.svg" alt="" class="i" />
                   Offer must be at least the minimum price per unit of 2 WKLAY
                 </p>
               </div>
               <div class="wrap-btn my-3">
                 <button class="btn btn-circle btn-convert pull-center">
-                  <img src="../img/btn_convert.svg" alt="" />
+                  <img src="./img/btn_convert.svg" alt="" />
                 </button>
               </div>
               <div class="wrap-form">
@@ -75,11 +69,18 @@
                   To
                   <!-- result 값 불러오도록 영역 추가 -->
                   <span class="balance pull-right"
-                    >Your Balance : 2.0 WKLAY (Result : 5.0 WKLAY)</span
+                    >Your Balance : 2.0 WKLAY</span
                   >
                 </h3>
                 <div class="form wrap-price">
-                  <label for="" class="klay wklay">WKLAY</label>
+                  <label for="" class="klay wklay">
+                    <img
+                      src="./img/i_wklay.svg"
+                      alt="wklay"
+                      width="18"
+                      height="18"
+                    />WKLAY</label
+                  >
                   <input
                     type="number"
                     class="form-control price"
@@ -104,7 +105,7 @@
               <div class="sm">
                 <p>made with 🖤 by</p>
                 <a href="">
-                  <img src="../img/logo_pangea.svg" alt="" />
+                  <img src="./img/logo_pangea.svg" alt="" />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -127,9 +128,5 @@
       <!-- 모달 배경 (modal 사용시 자동으로 나타남, markup에서만 사용) -->
       <div class="modal-backdrop show"></div>
     </div>
-
-    <script type="text/javascript">
-      $(".modal").show();
-    </script>
   </body>
 </html>

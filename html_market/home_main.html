@@ -17,6 +17,62 @@
 
   <body>
     <div id="app">
+      <!-- top banner slide -->
+      <div class="carousel vertical slide banner-announcement" id="bannerTop">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="item-inner">
+              <a href="" class="link">
+                <p>
+                  Klaybay Service will be unavailable on
+                  <b class="active">
+                    Saturday, 11 Aug 2022 from 3:00 - 5:00 (KST)</b
+                  >
+                </p>
+              </a>
+              <div class="pagenum">
+                <span>1</span>
+                <span>/</span>
+                <span>2</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="item-inner">
+              <a href="" class="link">
+                <p>announcement</p>
+              </a>
+              <div class="pagenum">
+                <span>2</span>
+                <span>/</span>
+                <span>2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-btn">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#bannerTop"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#bannerTop"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="gradient"></div>
+      </div>
+
       <!-- gnb 메뉴 (PC) -->
       <nav id="gnb" class="gnb fixed-top pc-only">
         <div class="container-fluid">
@@ -1335,6 +1391,11 @@
       $(document).scroll(function () {
         let $nav = $("nav.fixed-top");
         $nav.toggleClass("scrolled", $(this).scrollTop() > 50);
+      });
+
+      // banner top
+      $(".carousel").carousel({
+        interval: 3000,
       });
     </script>
   </body>

@@ -624,9 +624,78 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row li-item">
+                        <div class="row li-item" style="padding: 36px 0">
                           <div class="col-3 td td-title">
                             <span class="num circle">2</span>
+                            <h3>Calculation</h3>
+                          </div>
+                          <div class="col-5 td td-con d-flex">
+                            <p>3 Hours</p>
+                            <!-- Start Calculation 까지 남은 시간 표시 (버튼 비활성화 상태에서 보이는 타이머) -->
+                            <p class="caution ms-auto">
+                              Active After 2days 00 : 00 : 00
+                            </p>
+                          </div>
+                          <div class="col-4 td td-time">
+                            <button class="btn btn-grad w-75">
+                              <span class="txt">Start Calculation</span>
+                            </button>
+                          </div>
+
+                          <!-- <div class="col-3 td"></div> -->
+
+                          <div class="col-9 offset-3 mt-5 mb-4">
+                            <div style="max-width: 540px">
+                              <div
+                                class="wrap-step wrap-step-gray row row-cols-5 text-start"
+                              >
+                                <!-- .checked : 완료된 스탭 -->
+                                <div class="col">
+                                  <div class="step checked">
+                                    <span></span>
+                                  </div>
+                                  <p>Preparing Calculation Process</p>
+                                </div>
+                                <div class="col">
+                                  <div class="step checked">
+                                    <span></span>
+                                  </div>
+                                  <p>Start Calculation</p>
+                                </div>
+                                <div class="col">
+                                  <!-- .active : 활성화된 스탭 -->
+                                  <div class="step active">
+                                    <span></span>
+                                  </div>
+                                  <p>Setting Approval</p>
+                                </div>
+                                <div class="col">
+                                  <div class="step">
+                                    <span></span>
+                                  </div>
+                                  <p>Done</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9 offset-3 caution d-flex">
+                            <img
+                              src="../img/i_caution.svg"
+                              alt=""
+                              class="i me-1"
+                            />
+                            <p class="form-text mt-0">
+                              청약이 종료되면, “Start Calculation”버튼이
+                              활성화됩니다. 청약공모종료 후 24시간 내에 관리자
+                              지갑으로 로그인하신 후 이 버튼을 눌러 청약의
+                              결과를 계산하여야 청약참여자가 Claim을 할 수 있는
+                              단계로 진행됩니다.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row li-item">
+                          <div class="col-3 td td-title">
+                            <span class="num circle">3</span>
                             <h3>Distribution</h3>
                           </div>
                           <div class="col-5 td td-con">n/a</div>

@@ -14,7 +14,30 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+      .tooltip-inner {
+        background: #f7f9fc;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #464f60;
+      }
+      .tooltip.bs-tooltip-right .tooltip-arrow:before {
+        border-right-color: #f7f9fc;
+      }
+
+      .tooltip.bs-tooltip-left .tooltip-arrow:before {
+        border-left-color: #f7f9fc;
+      }
+
+      .tooltip.bs-tooltip-bottom .tooltip-arrow:before {
+        border-bottom-color: #f7f9fc;
+      }
+
+      .tooltip.bs-tooltip-top .tooltip-arrow:before {
+        border-top-color: #f7f9fc;
+      }
+    </style>
   </head>
 
   <body>
@@ -357,7 +380,7 @@
                   Session Setup
                 </button>
                 <button
-                  class="nav-link checked"
+                  class="nav-link active"
                   id="navTab-step2"
                   data-bs-toggle="tab"
                   data-bs-target="#tabCon-step2"
@@ -373,7 +396,7 @@
                   Calculation Setup
                 </button>
                 <button
-                  class="nav-link active"
+                  class="nav-link"
                   id="navTab-step3"
                   data-bs-toggle="tab"
                   data-bs-target="#tabCon-step3"
@@ -408,283 +431,255 @@
             </nav>
             <!-- tab contents -->
             <div class="tab-content" id="tabCon">
-              <!-- tab step01 -->
+              <!-- tab step01-->
               <div
                 class="tab-pane fade"
                 id="tabCon-step1"
                 role="tabpanel"
                 aria-labelledby="navTab-step1"
               ></div>
-              <!-- tab step02 -->
+              <!-- tab step02: active -->
               <div
-                class="tab-pane fade"
+                class="tab-pane fade active show"
                 id="tabCon-step2"
                 role="tabpanel"
                 aria-labelledby="navTab-step2"
-              ></div>
-              <!-- tab step03: active -->
-              <div
-                class="tab-pane fade active show"
-                id="tabCon-step3"
-                role="tabpanel"
-                aria-labelledby="navTab-step3"
               >
                 <form>
-                  <!-- form - Launch Date and Time -->
+                  <!-- form - Calculation Mechanisms -->
                   <div class="wrap-form">
-                    <div class="mb-4 row">
-                      <div class="col-auto">
-                        <h3 class="form-label">Launch Date and Time</h3>
-                        <p class="form-text">
-                          Please set release Date and Time.
-                        </p>
-                      </div>
-                      <div class="col-auto pull-right">
-                        <span class="form-text sm">
-                          PST(Pacific Standard Time, UTC - 8:00)
-                        </span>
-                      </div>
+                    <div class="mb-4">
+                      <h3 class="form-label">Calculation Mechanisms</h3>
+                      <p class="form-text">
+                        아래의 3가지의 당첨방식중에서 한가지를 선택하여 세션을
+                        구성합니다.
+                      </p>
                     </div>
-                    <div class="row">
-                      <div class="col-3 mt-0">
-                        <div class="wrap-calendar">
+                    <div class="row wrap-radio li-line-radio">
+                      <div class="col-6 wrap-li-row">
+                        <div class="form-check li-item">
                           <input
-                            id="inputCalendar"
-                            type="text"
-                            class="form-control flatpickr-input"
-                            readonly="readonly"
+                            class="form-check-input"
+                            type="radio"
+                            name="radio00"
+                            id="radio01"
                           />
-                          <label for="inputCalendar" class="i-calendar">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="19"
-                              height="18"
-                              fill="none"
-                              viewBox="0 0 19 18"
-                            >
-                              <path
-                                fill="#030229"
-                                d="M14.324 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
-                              ></path>
-                              <path
-                                fill="#030229"
-                                d="M16.031 1.406h-.965V.703c0-.388-.332-.703-.742-.703s-.742.315-.742.703v.703h-3.377V.703c0-.388-.332-.703-.742-.703S8.72.315 8.72.703v.703H5.38V.703C5.38.315 5.049 0 4.639 0s-.743.315-.743.703v.703H2.97C1.332 1.406 0 2.668 0 4.22v10.968C0 16.738 1.332 18 2.969 18h5.677c.41 0 .743-.315.743-.703 0-.389-.333-.703-.743-.703H2.97c-.819 0-1.485-.631-1.485-1.407V4.22c0-.776.666-1.407 1.485-1.407h.927v.704c0 .388.333.703.743.703s.742-.315.742-.703v-.704h3.34v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h3.377v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h.965c.819 0 1.485.631 1.485 1.407v4.008c0 .388.332.703.742.703S19 8.615 19 8.227V4.219c0-1.551-1.332-2.813-2.969-2.813Z"
-                              ></path>
-                              <path
-                                fill="#030229"
-                                d="M14.51 9.492c-2.476 0-4.49 1.908-4.49 4.254 0 2.346 2.014 4.254 4.49 4.254 2.476 0 4.49-1.908 4.49-4.254 0-2.346-2.014-4.254-4.49-4.254Zm0 7.102c-1.658 0-3.006-1.278-3.006-2.848 0-1.57 1.348-2.848 3.006-2.848 1.657 0 3.006 1.278 3.006 2.848 0 1.57-1.349 2.848-3.006 2.848Z"
-                              ></path>
-                              <path
-                                fill="#030229"
-                                d="M15.586 13.043h-.334v-.738c0-.389-.332-.703-.742-.703s-.742.314-.742.703v1.441c0 .388.332.703.742.703h1.076c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703Zm-4.49-4.957c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Zm-3.229 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .389.332.704.742.704ZM4.639 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.743.314-.743.703c0 .388.333.703.743.703Zm0 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .389.333.704.743.704Zm0 3.058c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .388.333.703.743.703Zm3.228 0c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .388.332.703.742.703Zm0-6.117c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
-                              ></path>
-                            </svg>
+                          <label class="form-check-label" for="radio01">
+                            <img class="i default" src="../img/img_cm01.svg" />
+                            <img class="i active" src="../img/img_cm01_a.svg" />
+                            <h3>균등배정</h3>
                           </label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <!-- form - Subscription Duration Time -->
-                  <div class="wrap-form">
-                    <div class="mb-4">
-                      <div class="col-auto">
-                        <h3 class="form-label">Subscription Duration Time</h3>
-                        <p class="form-text">
-                          청약 메카니즘의 한 Session은 Prepration, Subscription,
-                          Calculation, istribution의 단계를 거쳐 진행되며, 한
-                          세션의 총 소요시간은 최소 12시간에서 최대 72시간까지
-                          설정할 수 있습니다.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- 즉시발급 : 이번스펙에서 제외 -->
-                    <!-- <div class="row wrap-box-light mt-4">
-                      <div class="col-auto wrap-title">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="23"
-                          height="23"
-                          fill="none"
-                          viewBox="0 0 23 23"
-                        >
-                          <g clip-path="url(#a)">
-                            <path
-                              fill="#464F60"
-                              stroke="#464F60"
-                              stroke-miterlimit="10"
-                              stroke-width=".5"
-                              d="M12.908 22.758h-2.815c-.657 0-1.407-.563-1.407-1.688V19.1c0-.939-.47-1.783-1.22-2.44-1.689-1.314-2.533-3.19-2.533-5.254.094-3.565 3.002-6.38 6.473-6.473 1.783 0 3.472.656 4.692 1.876 1.219 1.22 1.97 2.908 1.97 4.691 0 1.97-.845 3.847-2.44 5.066-.844.657-1.313 1.689-1.313 2.627v2.158c0 .75-.657 1.407-1.407 1.407ZM11.5 5.871c-3.002 0-5.535 2.533-5.629 5.535 0 1.783.75 3.472 2.158 4.504 1.032.844 1.595 1.97 1.595 3.19v1.97c0 .187 0 .75.47.75h2.814c.281 0 .47-.188.47-.469v-2.158c0-1.22.656-2.533 1.688-3.377 1.313-1.033 2.064-2.627 2.064-4.316 0-1.5-.563-2.908-1.689-4.034-1.032-1.032-2.44-1.595-3.94-1.595Z"
-                            />
-                            <path
-                              fill="#464F60"
-                              stroke="#464F60"
-                              stroke-miterlimit="10"
-                              stroke-width=".5"
-                              d="M13.845 19.943h-4.69c-.282 0-.47-.187-.47-.469 0-.281.188-.47.47-.47h4.69c.282 0 .47.189.47.47 0 .282-.188.47-.47.47ZM11.5 3.057c-.281 0-.47-.188-.47-.47V.711c0-.281.189-.469.47-.469.281 0 .47.188.47.47v1.875c0 .282-.189.47-.47.47Zm6.285 2.626c-.093 0-.281 0-.375-.093a.453.453 0 0 1 0-.657l1.314-1.314a.453.453 0 0 1 .657 0 .453.453 0 0 1 0 .657L18.067 5.59s-.188.093-.282.093Zm4.505 6.287h-1.877c-.282 0-.47-.188-.47-.47 0-.281.188-.469.47-.469h1.876c.281 0 .47.188.47.47 0 .28-.189.469-.47.469Zm-3.19 7.599c-.095 0-.282 0-.376-.094l-1.314-1.314a.453.453 0 0 1 0-.656.453.453 0 0 1 .657 0l1.314 1.314a.453.453 0 0 1 0 .656c0 .094-.094.094-.282.094Zm-15.2 0c-.093 0-.28 0-.374-.094a.453.453 0 0 1 0-.656l1.313-1.314a.453.453 0 0 1 .657 0 .453.453 0 0 1 0 .657l-1.314 1.313c-.093.094-.188.094-.281.094ZM2.587 11.97H.711c-.282 0-.47-.188-.47-.47 0-.281.188-.469.47-.469h1.876c.281 0 .47.188.47.47 0 .28-.189.469-.47.469Zm2.627-6.287c-.093 0-.281 0-.375-.094L3.526 4.182a.453.453 0 0 1 0-.657.453.453 0 0 1 .656 0L5.496 4.84a.453.453 0 0 1 0 .657c-.094.093-.188.187-.282.187Zm10.038 6.286c-.28 0-.469-.188-.469-.47 0-1.782-1.5-3.283-3.284-3.283-.28 0-.469-.188-.469-.47 0-.28.188-.469.47-.469a4.204 4.204 0 0 1 4.22 4.223c0 .282-.188.47-.469.47Z"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath id="a">
-                              <path fill="#fff" d="M0 0h23v23H0z" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                        <h5>Subscription시 즉시발급</h5>
-                      </div>
-                      <div class="col-auto pull-right">
-                        <div class="form-check form-switch">
+                      <div class="col-6 wrap-li-row">
+                        <div class="form-check li-item">
                           <input
                             class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="flexSwitchCheckDefault1"
-                            checked
+                            type="radio"
+                            name="radio00"
+                            id="radio02"
+                            checked=""
                           />
+                          <label class="form-check-label" for="radio02">
+                            <img class="i default" src="../img/img_cm02.svg" />
+                            <img class="i active" src="../img/img_cm02_a.svg" />
+                            <h3>고정가격비례배정</h3>
+                          </label>
                         </div>
                       </div>
-                      <div class="col-12">
-                        <p>
-                          청약시 즉시발급 옵션은 White List NFT와 Mystery Box의
-                          발행량이 1:1로 동일한 경우, 별도의 Winner Selection
-                          Algorithm 절차를 거치지 않고 청약 즉시 랜덤하게
-                          미스터리박스를 발행하는 기능입니다. 이 경우,
-                          청약기간이 Immediate로 설정됩니다.
-                        </p>
-                      </div>
-                    </div> -->
-                    <div class="row wrap-duration mt-5">
-                      <div class="li-line-group">
-                        <div class="row li-item">
-                          <div class="col-3 td td-title">
-                            <span class="num circle">1</span>
-                            <h3>Subscription</h3>
-                          </div>
-                          <div class="col-5 td td-con">
-                            <div
-                              class="dropdown dropdown-block"
-                              style="max-width: 254px"
-                            >
-                              <button
-                                class="btn dropdown-toggle"
-                                type="button"
-                                id="dropdown01"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                              >
-                                72 Hours (3 Days)
-                              </button>
-                              <ul
-                                class="dropdown-menu"
-                                aria-labelledby="dropdown01"
-                              >
-                                <li>
-                                  <button class="dropdown-item" type="button">
-                                    24 Hours (1 Day)
-                                  </button>
-                                </li>
-                                <li>
-                                  <button class="dropdown-item" type="button">
-                                    48 Hours (2 Days)
-                                  </button>
-                                </li>
-                                <li>
-                                  <button class="dropdown-item" type="button">
-                                    72 Hours (3 Days)
-                                  </button>
-                                </li>
-                                <li>
-                                  <button class="dropdown-item" type="button">
-                                    Immediate
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-4 td td-time">
-                            <div class="line">
-                              <div class="wrap-label">
-                                <label for="">Start</label>
-                                <span>:</span>
-                              </div>
-                              <div class="wrap-time">
-                                <time>2022. 8. 15.</time>
-                                <time>00 : 00 : 00 PST</time>
-                              </div>
-                            </div>
-                            <div class="line">
-                              <div class="wrap-label">
-                                <label for="">End</label>
-                                <span>:</span>
-                              </div>
-                              <div class="wrap-time">
-                                <time>2022. 8. 15.</time>
-                                <time>00 : 00 : 00 PST</time>
-                              </div>
-                            </div>
-                          </div>
+                      <!-- <div class="col-4 wrap-li-row">
+                        <div class="form-check li-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radio00"
+                            id="radio03"
+                          />
+                          <label class="form-check-label" for="radio03">
+                            <img class="i default" src="../img/img_cm03.svg" />
+                            <img class="i active" src="../img/img_cm03_a.svg" />
+                            <h3>변동가격비례배정</h3>
+                          </label>
                         </div>
-                        <div class="row li-item">
-                          <div class="col-3 td td-title">
-                            <span class="num circle">2</span>
-                            <h3>Distribution</h3>
-                          </div>
-                          <div class="col-5 td td-con">n/a</div>
-                          <div class="col-4 td td-time">
-                            <div class="line">
-                              <div class="wrap-label">
-                                <label for="">Start</label>
-                                <span>:</span>
-                              </div>
-                              <div class="wrap-time">
-                                <time>2022. 8. 15.</time>
-                                <time>00 : 00 : 00 PST</time>
-                              </div>
-                            </div>
-                            <div class="line">
-                              <div class="wrap-label">
-                                <label for="">End</label>
-                                <span>:</span>
-                              </div>
-                              <div class="wrap-time">
-                                발급 완료시 (보통 3시간 이내에 완료)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row li-item">
-                          <div class="col-3">
-                            <h4 class="fw-600">Processing Time</h4>
-                          </div>
-                          <div class="col-5">
-                            <h4 class="fw-500">
-                              75 Hours (3 Days and 3 Hours)
-                            </h4>
-                          </div>
-                        </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
 
-                  <!-- form - Klaybay Fee -->
-                  <!-- Klaybay Admin 로그인시에만 보여짐! -->
-                  <div class="wrap-form">
-                    <div class="mb-4">
-                      <h3 class="form-label">Klaybay Fee</h3>
-                      <p class="form-text">
-                        This is the fee that subscriber will pay to Klaybay
-                        platform. Game Administrator account cannot modify the
-                        fee rate.
-                      </p>
+                  <!-- Calculation Mechanisms option: 고정가격비례배정 선택시 -->
+                  <div class="tab-content option-content">
+                    <!-- form - 고정가격비례배정 -->
+                    <div class="wrap-form">
+                      <div class="row">
+                        <div class="col-auto">
+                          <h3 class="form-label">
+                            고정가격비례배정(주식공모방식배분)
+                          </h3>
+                          <div class="d-flex align-items-center mt-3 mb-4">
+                            <svg
+                              style="margin-right: 5px"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="8"
+                              height="8"
+                              fill="none"
+                              viewBox="0 0 8 8"
+                            >
+                              <circle
+                                cx="4"
+                                cy="4"
+                                r="4"
+                                fill="#464F60"
+                                fill-opacity=".8"
+                              />
+                            </svg>
+                            <p class="form-text mt-0 ms-2">
+                              지갑당 1~10개까지의 Ticket를 구매하고, 보유한
+                              Ticket의 갯수에 따라 랜덤당첨확률이 연동되는 방식.
+                            </p>
+                          </div>
+                          <p class="form-text" style="line-height: 28px">
+                            균등배정(전체물량 30%) 및 비례배정(전체물량 50%)
+                            <br />- 먼저 총 800개(균등배정 300개, 비례배정
+                            500개)의 NFT를 Initial Offering진행한다고 공지
+                            <br />- 균등배정은 개당 20klay, 비례배정은 개당
+                            15klay 가격 책정 <br />- 72시간 Klay 예치기간주며
+                            72시간 후 24시간 계산 기간 존재 <br />- 균등배정
+                            계산방식 : 예치량 20klay 이상 지갑 중 랜덤으로 300개
+                            지갑 선별 <br />(만약 참여 지갑갯수가 300개
+                            미만이라면 비례 배정 물량으로 이관) <br />- 비례배정
+                            계산방식 : (A 지갑의 klay 예치 갯수/전체 klay 예치
+                            갯수) X 500개 = A 지갑의 NFT 비례배정 갯수
+                            <br />(반올림 등의 방식으로 소숫점 처리 등을 어떻게
+                            해야할 지는 상세 방안 필요)
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="input-group" style="max-width: 254px">
-                      <input
-                        type="number"
-                        class="form-control before-text"
-                        aria-label=""
-                      />
-                      <span class="input-group-text">%</span>
+                    <!-- form - 배정물량 -->
+                    <div class="wrap-form">
+                      <div class="mb-4">
+                        <div class="col-auto">
+                          <h3 class="form-label">배정물량</h3>
+                          <p class="form-text">
+                            총 1000개물량 중 균등배정과 비례배정에 각각 몇
+                            개씩의 NFT를 배정할 것인지 결정합니다. 균등배정의
+                            <b>최대비율은 50%</b>입니다.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- range 기본형태만 만들어둔 상태, figma 참고해서 기능 만들어주세요:) -->
+                      <div class="row wrap-range">
+                        <div class="col-12 range-lg">
+                          <div class="slider-range-block">
+                            <div class="slider">
+                              <div class="range-container">
+                                <div class="ui-slider">
+                                  <div
+                                    class="ui-slider-range"
+                                    style="left: 0%; right: 30%"
+                                  ></div>
+                                  <div class="wrap-dot">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                  </div>
+                                  <div
+                                    class="ui-slider-handle"
+                                    data-which="start"
+                                    style="left: 70%"
+                                    data-bs-toggle="tooltip"
+                                    title="50% 이하 설정 불가"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 table-btm align-items-start">
+                          <span class="tag tag-a">비례배정</span>
+                          <div class="tr">
+                            <h4>배정비율 :</h4>
+                            <h4>70%</h4>
+                          </div>
+                          <div class="tr">
+                            <h4>배정갯수 :</h4>
+                            <h4>700개</h4>
+                          </div>
+                          <div class="tr">
+                            <h4>배당가격 :</h4>
+                            <div class="input-group" style="max-width: 178px">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm before-text"
+                                aria-label=""
+                                value="3000"
+                              />
+                              <span class="input-group-text">KLAY</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 table-btm align-items-end">
+                          <span class="tag">균등배정</span>
+                          <div class="tr">
+                            <h4>배정비율 :</h4>
+                            <h4>70%</h4>
+                          </div>
+                          <div class="tr">
+                            <h4>배정갯수 :</h4>
+                            <h4>700개</h4>
+                          </div>
+                          <div class="tr">
+                            <h4>배당가격 :</h4>
+                            <div class="input-group" style="max-width: 178px">
+                              <input
+                                type="number"
+                                class="form-control form-control-sm before-text"
+                                aria-label=""
+                                value="3000"
+                              />
+                              <span class="input-group-text">KLAY</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- form - 최대 스테이킹 금액 제한 -->
+                    <div class="wrap-form">
+                      <div class="mb-4 row">
+                        <div class="col-auto">
+                          <h3 class="form-label">최대 스테이킹 금액 제한</h3>
+                          <p class="form-text">
+                            한 지갑당 최대 스테이킹 금액을 제한할 수 있습니다.
+                          </p>
+                        </div>
+                        <div class="col-auto pull-right">
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="flexSwitchCheckDefault1"
+                              checked=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-group" style="max-width: 513px">
+                        <input
+                          type="number"
+                          class="form-control before-text"
+                          aria-label=""
+                          value="3000"
+                        />
+                        <span class="input-group-text">Klay</span>
+                      </div>
                     </div>
                   </div>
                 </form>
@@ -705,6 +700,13 @@
                   </div>
                 </div>
               </div>
+              <!-- tab step03 -->
+              <div
+                class="tab-pane fade"
+                id="tabCon-step3"
+                role="tabpanel"
+                aria-labelledby="navTab-step3"
+              ></div>
             </div>
           </div>
         </main>
@@ -745,17 +747,6 @@
     </div>
 
     <script type="text/javascript">
-      // flatpickr 캘린더 기능
-      config = {
-        enableTime: true,
-        monthSelectorType: "static",
-        disableMobile: "true",
-        defaultDate: "2022-10-20",
-        // dateFormat: false,
-        // dateFormat: "Y-m-d H:i",
-      };
-      flatpickr("input[type=datetime-local]", config);
-
       // tooltip
       let tooltipTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -763,6 +754,7 @@
       let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
+      tooltip.show();
     </script>
   </body>
 </html>

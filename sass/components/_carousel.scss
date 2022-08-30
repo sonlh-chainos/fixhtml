@@ -56,6 +56,145 @@
   }
 }
 
+// .vertical .carousel-inner {
+//   height: 100%;
+// }
+
+// .carousel.vertical .carousel-item {
+//   -webkit-transition: 0.6s ease-in-out top;
+//   -moz-transition: 0.6s ease-in-out top;
+//   -ms-transition: 0.6s ease-in-out top;
+//   -o-transition: 0.6s ease-in-out top;
+//   transition: 0.6s ease-in-out top;
+// }
+
+// .carousel.vertical .active {
+//   top: 0;
+// }
+
+// .carousel.vertical .next {
+//   top: 400px;
+// }
+
+// .carousel.vertical .prev {
+//   top: -400px;
+// }
+
+// .carousel.vertical .next.left,
+// .carousel.vertical .prev.right {
+//   top: 0;
+// }
+
+// .carousel.vertical .active.left {
+//   top: -400px;
+// }
+
+// .carousel.vertical .active + .carousel-item {
+//   top: 400px;
+// }
+
+// .carousel.vertical .carousel-item {
+//   left: 0;
+// }
+
+.carousel.vertical {
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+    transform: translateY(100%);
+  }
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+    transform: translateY(-100%);
+  }
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='17' fill='none' viewBox='0 0 10 17'%3E%3Cpath fill='%237D8490' fill-rule='evenodd' d='m1.28.427-.707.707L7.72 8.28.573 15.427l.707.707L9.134 8.28 1.28.427Z' clip-rule='evenodd'/%3E%3C/svg%3E%0A");
+    transform: rotate(-90deg);
+  }
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='17' fill='none' viewBox='0 0 10 17'%3E%3Cpath fill='%237D8490' fill-rule='evenodd' d='m1.28.427-.707.707L7.72 8.28.573 15.427l.707.707L9.134 8.28 1.28.427Z' clip-rule='evenodd'/%3E%3C/svg%3E%0A");
+    transform: rotate(90deg);
+  }
+}
+
+.banner-announcement {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  .carousel-item {
+    .item-inner {
+      display: flex;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 180px;
+      @include t-ell;
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        margin: 0;
+        color: #fff;
+      }
+      b.active {
+        font-weight: 600;
+        color: $c-a;
+      }
+    }
+  }
+  .pagenum {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 60px;
+    color: #7d8490;
+    font-size: 12px;
+  }
+  .wrap-btn {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 60px;
+    display: flex;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7d8490;
+    opacity: 1;
+  }
+  .carousel-control-prev {
+    border-right: 0;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 15px;
+    height: 15px;
+  }
+  &.carousel.vertical {
+    .carousel-control-prev-icon {
+      transform: rotate(180deg);
+    }
+    .carousel-control-next-icon {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@keyframes slideLtoR {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
 // @media (max-width: 991.98px)
 @include media-breakpoint-down(md) {
   .wrap-carousel {
@@ -72,5 +211,40 @@
   .wrap-carousel .carousel-indicators [data-bs-target] {
     width: 8px;
     height: 8px;
+  }
+
+  .banner-announcement {
+    .carousel-item {
+      .item-inner {
+        padding: 0 60px;
+      }
+    }
+    .wrap-btn {
+      top: 0;
+      right: 0;
+      flex-direction: column;
+    }
+    &.carousel.vertical {
+      .carousel-control-prev-icon {
+        transform: rotate(-90deg);
+      }
+      .carousel-control-next-icon {
+        transform: rotate(90deg);
+      }
+    }
+    .pagenum {
+      display: none;
+    }
+  }
+
+  .carousel {
+    .gradienet {
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+      }
+    }
   }
 }
