@@ -891,8 +891,9 @@
                       <div class="col-auto">
                         <h3 class="form-label">Reveal Lockup</h3>
                         <p class="form-text">
-                          Please set the Reveal Lockup Period. Until the Lockup
-                          Time, the NFT owners could not reveal the items.
+                          Please set the Reveal Lockup Period. Untile the Lockup
+                          Date and Time, the NFT owners could not reveal the
+                          items.
                         </p>
                       </div>
                       <div class="col-auto pull-right">
@@ -909,29 +910,42 @@
                     </div>
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <h5 class="m-0">Until After The Release :</h5>
+                        <h5 class="m-0">Lockup Ends at :</h5>
                       </div>
-                      <div class="col-2">
-                        <div class="dropdown dropdown-block">
-                          <button
-                            class="btn dropdown-toggle"
-                            type="button"
-                            id="dropdown01"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            12 hours
-                          </button>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdown01"
-                          >
-                            <li>
-                              <button class="dropdown-item" type="button">
-                                Normal
-                              </button>
-                            </li>
-                          </ul>
+                      <div class="col-3">
+                        <div class="wrap-calendar">
+                          <input
+                            id="inputCalendar"
+                            type="text"
+                            class="form-control flatpickr-input"
+                            readonly="readonly"
+                          />
+                          <label for="inputCalendar" class="i-calendar">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="19"
+                              height="18"
+                              fill="none"
+                              viewBox="0 0 19 18"
+                            >
+                              <path
+                                fill="#030229"
+                                d="M14.324 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M16.031 1.406h-.965V.703c0-.388-.332-.703-.742-.703s-.742.315-.742.703v.703h-3.377V.703c0-.388-.332-.703-.742-.703S8.72.315 8.72.703v.703H5.38V.703C5.38.315 5.049 0 4.639 0s-.743.315-.743.703v.703H2.97C1.332 1.406 0 2.668 0 4.22v10.968C0 16.738 1.332 18 2.969 18h5.677c.41 0 .743-.315.743-.703 0-.389-.333-.703-.743-.703H2.97c-.819 0-1.485-.631-1.485-1.407V4.22c0-.776.666-1.407 1.485-1.407h.927v.704c0 .388.333.703.743.703s.742-.315.742-.703v-.704h3.34v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h3.377v.704c0 .388.332.703.742.703s.742-.315.742-.703v-.704h.965c.819 0 1.485.631 1.485 1.407v4.008c0 .388.332.703.742.703S19 8.615 19 8.227V4.219c0-1.551-1.332-2.813-2.969-2.813Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M14.51 9.492c-2.476 0-4.49 1.908-4.49 4.254 0 2.346 2.014 4.254 4.49 4.254 2.476 0 4.49-1.908 4.49-4.254 0-2.346-2.014-4.254-4.49-4.254Zm0 7.102c-1.658 0-3.006-1.278-3.006-2.848 0-1.57 1.348-2.848 3.006-2.848 1.657 0 3.006 1.278 3.006 2.848 0 1.57-1.349 2.848-3.006 2.848Z"
+                              ></path>
+                              <path
+                                fill="#030229"
+                                d="M15.586 13.043h-.334v-.738c0-.389-.332-.703-.742-.703s-.742.314-.742.703v1.441c0 .388.332.703.742.703h1.076c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703Zm-4.49-4.957c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Zm-3.229 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .389.332.704.742.704ZM4.639 8.086c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.743.314-.743.703c0 .388.333.703.743.703Zm0 3.059c.41 0 .742-.315.742-.704 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .389.333.704.743.704Zm0 3.058c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.743.315-.743.703c0 .388.333.703.743.703Zm3.228 0c.41 0 .742-.315.742-.703 0-.388-.332-.703-.742-.703s-.742.315-.742.703c0 .388.332.703.742.703Zm0-6.117c.41 0 .742-.315.742-.703 0-.389-.332-.703-.742-.703s-.742.314-.742.703c0 .388.332.703.742.703Z"
+                              ></path>
+                            </svg>
+                          </label>
                         </div>
                       </div>
                     </div>
