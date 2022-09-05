@@ -10,8 +10,30 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
-// color - black, active, lightgray
+// color
+$c-w: #ffffff;
 $c-b: #030229;
+$c-err: #fd1717;
+$c-bg: rgba(217, 224, 236, 0.2);
+
+// active
+$c-a0: #ff2f00;
 $c-a: #fc6825;
+$c-a1: #fc6825;
+$c-a2: #fdb492;
+$c-a3: #fff0e9;
+
+// grey
+$c-g0: #464f60;
+$c-g1: #626978;
+$c-g2: #7d8490;
+$c-g3: #ccd2e3;
 $c-lg: #d9e0ec;
+$c-g4: #d9e0ec;
+$c-g5: #f0f2f4;
+$c-g6: #f7f9fc;
+
+// gradient
 $grad: linear-gradient(90deg, #ff2f00 0%, #fc6825 78.13%);
+$c-grad: linear-gradient(90deg, #ff2f00 0%, #fc6825 78.13%);
+$c-bg-grad: linear-gradient(180deg, #fefeff -16%, #f4f5f8 357.67%);

@@ -8,6 +8,8 @@ nav.gnb {
   flex-wrap: wrap;
   border-bottom: 0;
   position: sticky;
+  // upper than sidebar
+  z-index: 1080;
 
   .container-fluid {
     padding: 0;

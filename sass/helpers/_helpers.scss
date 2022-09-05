@@ -35,6 +35,62 @@
   width: 35%;
 }
 
+svg.fill-w {
+  fill: $c-w;
+}
+svg.fill-b {
+  fill: $c-b;
+}
+svg.fill-a1 {
+  fill: $c-a1;
+}
+svg.fill-g0 {
+  fill: $c-g0;
+}
+
+.c-w {
+  color: $c-w !important;
+}
+.c-b {
+  color: $c-b !important;
+}
+.c-err {
+  color: $c-err !important;
+}
+.c-a0 {
+  color: $c-a0 !important;
+}
+.c-a1 {
+  color: $c-a1 !important;
+}
+.c-a2 {
+  color: $c-a2 !important;
+}
+.c-a3 {
+  color: $c-a3 !important;
+}
+.c-g0 {
+  color: $c-g0 !important;
+}
+.c-g1 {
+  color: $c-g1 !important;
+}
+.c-g2 {
+  color: $c-g2 !important;
+}
+.c-g3 {
+  color: $c-g3 !important;
+}
+.c-g4 {
+  color: $c-g4 !important;
+}
+.c-g5 {
+  color: $c-g5 !important;
+}
+.c-g6 {
+  color: $c-g6 !important;
+}
+
 // @media (max-width: 991.98px)
 @include media-breakpoint-down(md) {
   .fixed-bottom {

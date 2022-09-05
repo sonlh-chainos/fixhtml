@@ -21,7 +21,8 @@
   margin: 0;
   position: fixed;
   top: 80px;
-  z-index: 12;
+  // upper than header
+  z-index: 1085;
   left: 50%;
   transform: translateX(-50%);
 

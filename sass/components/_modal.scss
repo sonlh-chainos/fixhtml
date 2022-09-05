@@ -33,6 +33,22 @@
         background-color: #fc6825;
       }
     }
+    .btn-radio {
+      .wrap-img {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 30px;
+          max-height: 30px;
+          width: auto;
+        }
+      }
+    }
   }
 
   .wrap-btn {
@@ -397,11 +413,73 @@
       }
 
       &.box-fill {
-        background: rgba(217, 224, 236, 0.2);
+        background: $c-g6;
+        border: 0;
         border-radius: 16px;
-        padding: 20px;
-        margin-top: 50px;
-        margin-bottom: 70px;
+        padding: 20px 24px;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        &.h-fixed {
+          height: 120px;
+        }
+        > div {
+          flex: 0 0 auto;
+          &.wrap-thumb .thumb {
+            width: 72px;
+            height: 72px;
+          }
+          &.wrap-title {
+            max-width: calc(100% - 200px);
+          }
+        }
+        h4.title {
+          margin-bottom: 4px;
+          // word-break: break-all;
+          line-height: 1.5;
+          font-weight: 500;
+        }
+        h6 {
+          font-size: 13px;
+          margin-bottom: 4px;
+        }
+        p {
+          font-size: 13px;
+          &.sm,
+          &.sm span {
+            font-size: 11px;
+          }
+        }
+        .wrap-price {
+          display: flex;
+          flex-direction: column;
+          margin-left: auto;
+          text-align: right;
+          justify-content: flex-end;
+          .klay {
+            justify-content: flex-end;
+          }
+          .klay::before {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &.align-center {
+          justify-content: center;
+          .token {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .i-token {
+              width: 24px;
+            }
+            h6 {
+              font-weight: 600;
+              color: #030229;
+              margin: 0;
+            }
+          }
+        }
       }
 
       &.box-line {
@@ -568,6 +646,71 @@
     }
   }
 
+  .wrap-whitelist {
+    .li-item {
+      display: flex;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ccd2e3;
+      &:first-child {
+        padding-top: 6px;
+      }
+
+      .wrap-con {
+        max-width: calc(100% - 150px);
+        h5 {
+          font-weight: 400;
+          word-break: break-all;
+          margin: 0;
+        }
+      }
+      .wrap-btn {
+        gap: 0;
+        margin-left: auto;
+        .btn {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .box-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .logo-clip {
+      width: 36px;
+    }
+    .wrap-img {
+      img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+    .wrap-txt {
+      margin-top: 6px;
+      p,
+      time {
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #030229;
+      }
+      .wrap-time {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        p {
+          color: #7d8490;
+        }
+        .time {
+          color: #ff2f00;
+        }
+      }
+    }
+  }
+
   .modal-footer {
     // padding: 0 43px 43px 43px;
     padding: 18px 36px 36px 36px;
@@ -576,7 +719,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    .wrap-btn {
+      width: 100%;
+      justify-content: center;
+    }
     .btn {
       font-weight: 600;
       font-size: 16px;
@@ -585,6 +731,14 @@
 
       &.btn-a-line {
         border: 1.5px solid #fc6825;
+      }
+
+      &.btn-connect {
+        height: 66px;
+        color: #030229;
+        font-weight: 500;
+        background: rgba(217, 224, 236, 0.2);
+        border-radius: 16px;
       }
     }
 
@@ -976,6 +1130,9 @@
       }
 
       .box {
+        &.box-fill {
+        }
+
         &.box-line {
           .title {
             line-height: 24px;

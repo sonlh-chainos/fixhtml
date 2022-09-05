@@ -446,26 +446,26 @@
                 <form>
                   <div class="wrap-form">
                     <div class="row">
-                      <div
-                        class="col-6 d-flex flex-column justify-content-between"
-                      >
+                      <div class="col-6 d-flex flex-column">
                         <div class="mb-4">
                           <h3 class="form-label">Symbol</h3>
-                          <p class="form-text">
+                          <p class="form-text" style="height: 48px">
                             Please fill Symbol name for KIP-17 format
                             <br />
                           </p>
                         </div>
-                        <div
-                          class="input-group float-start"
-                          style="max-width: 380px"
-                        >
+
+                        <div class="float-start" style="max-width: 380px">
+                          <!-- error message : .is-invalid, div.invalid-feedback -->
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control is-invalid"
                             aria-label=""
                             value="DRAWSHOP"
                           />
+                          <div class="invalid-feedback">
+                            * Symbol명은 영문 대문자 3~4자로 입력해주세요.
+                          </div>
                         </div>
                       </div>
                       <div class="col-6">
@@ -508,7 +508,7 @@
                   </div>
 
                   <div class="caution d-flex mt-5">
-                    <img src="../img/i_caution.svg" alt="" class="i me-1" />
+                    <img src="../img/i_caution.svg" alt="" class="i" />
                     <p class="form-text mt-0">
                       Please be aware that the information of this page
                       <u
